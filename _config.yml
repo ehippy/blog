@@ -1,5 +1,5 @@
-title:            Patrick McDavid 's Blog
-description:      Patrick McDavid is a technology leader in Colorado. I speak about serverless computing, team building, devops, and leadership development.
+title:            Patrick McDavid
+description:      Patrick McDavid is a technology leader in Colorado, speaking about serverless computing, team building, devops, and leadership development.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
@@ -17,7 +17,7 @@ owner:
   twitter:        '@ehippy'
   facebook:       patrick.mcdavid
   github:       ehippy  
-  stackexchange:  
+  stackexchange:  fusionjunky
   linkedin:     pmcdavid  
   instagram:      ehippy
   flickr:         
