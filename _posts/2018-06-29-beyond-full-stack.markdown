@@ -2,8 +2,7 @@
 layout: post
 title: "Beyond full stack"
 author: Patrick McDavid
-image: 
-  feature: bombbomb-team.jpg
+featured_image: images/bombbomb-team.jpg
 tags: [KanBan, Teams, Leadership]
 ---
 

@@ -2,8 +2,7 @@
 layout: post
 title: Monthly Hackathons at BombBomb
 description: Treat your engineers like artists.
-image: 
-  feature: roots.jpg
+featured_image: images/roots.jpg
 tags: [Hack, Leadership, Play, BombBomb]
 ---
 

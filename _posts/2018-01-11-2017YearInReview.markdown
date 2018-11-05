@@ -2,8 +2,7 @@
 layout: post
 title: "A look back at 2017"
 description: I look back on 2017
-image: 
-  feature: wrenSnow.jpg
+featured_image: images/wrenSnow.jpg
 tags: [Retrospective]
 ---
 
