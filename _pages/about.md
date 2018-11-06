@@ -5,13 +5,4 @@ description: Software engineering leader, architect, father, husband and philoso
 featured_image: /images/fam.jpg
 ---
 
-![](/images/fam.jpg)
-
-## Career
-* BombBomb, _Chief Technology Officer_, 2011-Present
-
-## Education
-* UCCS
-
-## Life
-
+Born in Colorado, I'm trying to [build a company](https://bombbomb.com), raise a family and help people grow.

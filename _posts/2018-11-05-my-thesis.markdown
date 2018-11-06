@@ -1,0 +1,27 @@
+---
+layout: post
+title: "My Thesis"
+author: Patrick McDavid
+featured_image: /images/winter-graf.jpg
+tags: [Writing, Education, Philosophy, Language]
+---
+
+I've been trying to spend a little more time reflecting on where I am, where I want to go, and where I've been. One of the largest single-product projects I've ever undertaken was my philosophy thesis, Spoken Worlds: five months of writing to produce about 9000 words on the subject of linguistic relativism.
+
+*Linguistic relativism* is an idea linguistic philosophy whose thrust is that people's thoughts are very much structured and *confined* by the language that they grow up in.
+
+> One of the most striking and immediate differences is a wholesale absence of a concept of time in Hopi thought ... [Hopi do] not distinguish between the past and the present as we do, but rather flows them together.
+
+Other languages don't distinguish between any number of categories that European languages take for granted. Europeans scoff at [Eskimos 50 words for snow](https://www.washingtonpost.com/national/health-science/there-really-are-50-eskimo-words-for-snow/2013/01/14/e0e3f4e0-59a0-11e2-beee-6e38f5215402_story.html?noredirect=on). We bemoan echo-chambers and group think in the blare of culture's furious noise machine, but what do the two sides of the same coin have in common?
+
+> A silent genocide of culture is underway. Globalization is homogenizing the planet’s speakers and thinkers into a handful of languages and histories
+
+If you haven't read it, [Wade Davis' *Light at the Edge of the World: A Journey Through the Realm of Vanishing Cultures*](https://www.amazon.com/dp/B009DQG1ZK/) is a sad, beautifully written exploration of a number of cultures' extinctions in the modern era. Spoken Worlds highlights this loss as it relates not just to the stories, habits and people that are being lost to history, but also to the glimmers of other ways of thinking that are lost as well.  
+
+Defending my thesis to the board, I was asked, "So What?". What a damning, deflating question.
+
+I'm still not sure. What got me excited in college was environmental sustainability. When I wrote this in 2011 and now, it's plain that humanity is crushing the limits of what can be carried into the future. In the last six years, Colorado's population has grown about 10%. [How will that growth be stopped?](https://en.wikipedia.org/wiki/Human_overpopulation)
+
+What is it about the way you and I think and speak that keeps us from being able to agree or compromise towards better futures? Our discourse is certainly tending away from productive and thoughtful. What should we learn from each other? What can't we see?
+
+If you're so inclined, you can read [Spoken Worlds](/spoken-worlds/) in its entirety.

@@ -8,3 +8,4 @@ Built with Jekyll, hosted on AWS, and themed by [artemsheludko](https://artemshe
 
  - BombBomb teams
  - scrum/kanban rollover
+ - Life changing magic of tidying review
