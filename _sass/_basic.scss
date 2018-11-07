@@ -161,7 +161,8 @@ p, ul, ol {
 }
 
 ul, ol {
-	list-style-position: inside;
+	list-style-position: outside;
+	padding-left: 4em;
 }
 
 blockquote {
@@ -171,6 +172,7 @@ blockquote {
 	font-weight: $blockquote-weight;
 	letter-spacing: $blockquote-spacing;
 	line-height: $blockquote-lineheight;
+	color: $text-accent-color;
 
 	@include mq(tabletp) {
 		font-size: $blockquote-medium;
