@@ -26,18 +26,26 @@ What comes through with 45 second investment of my time, and the 30 seconds of t
 
 I've sent hundreds of these in all different recruiting circumstances, and without fail prospects always remark about how it's different and interesting, and they'd be curious to make this technology a part of their lives. When I do get on the phone with them, there's already a far deeper connection that I'd have without this kind of outreach. 
 
+> "Wow! I was just watching your video! How did you do that?" 
+
 It's a double-whammy for BombBomb that we get to not only use this video outreach tool to make an excellent first impression, but also that the wow-moment the recipient feels can be part of their excitement for the opportunity to work on creating that for other people.
 
 Recruiters of all stripes can level up their outreach with simple videos like these. BombBomb offers the most complete solution for this, but there are lots of tools you can try to easily add this idea to your work.
+
+I send these videos through a number of mediums:
+* Email
+* LinkedIn messages (yes they work great!)
+* iMessage and sms
+* Facebook wall posts, etc
+
+Likewise, I don't just use video for one to one outreach, it's also great for soliciting referrals and brand and personal marketing on social. Imagine highlighting culture, office space and fun activities in the background (or foreground!) of these simple videos.
 
 ### A touch of magic
 After you've sent a video to someone, BombBomb watches as the email and video are opened and played, and then automatically lets me know the instant that happens.
 
 ![](/images/open-alert.png)
 
-When I see that message I pick up the phone and call that person. Imagine how that call goes:
-
-> "Wow! I was just watching your video! How did you do that?" 
+When I see that message I pick up the phone and call that person. Imagine how that call goes: "Wow! I was just watching your video! How did you do that?" 
 
 I am not sales person. Outreach like this isn't my natural habitat. I do get excited about programming and programmers, and that comes through with this simple toolkit. It's not hard to understand the ways this is 100x more powerful than text-based outreach. It's not hard to get started with tools like this. Recruiters just don't know about it.
 
