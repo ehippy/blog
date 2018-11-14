@@ -2,7 +2,7 @@
 
 Check it out at [https://patrickmcdavid.com](https://patrickmcdavid.com)
 
-Built with Jekyll, hosted on AWS, and themed by [artemsheludko](https://artemsheludko.github.io/adam-blog/)
+Built with Jekyll, hosted on AWS.
 
 ## todo topics
 
