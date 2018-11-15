@@ -14,7 +14,7 @@ I've been interviewing technologists for the last several years and this is a co
 * High performers in the middle of their careers want stability and good people around them.
 * Those same folks later in their careers tend to assume the former, but instead seek out *hard problems.*
 
-![](/images/best-group.png)
+![](/images/best-group.jpg)
 
 I can now measure my career as being two decades old. I was 16 in 1998, and in lieu of pursuing my drivers licenses, I was instead trying to start a web development company. A number of now lifelong friends and I called ourselves X over Zero web technologies. A testament to our youthful idealism, we were charmed with the idea of the [result of the equation X/0 being positive infinity](https://en.wikipedia.org/wiki/Division_by_zero). We had the now-defunct xoverzero.com and thought ourselves young entrepreneurs.
 
