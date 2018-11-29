@@ -432,3 +432,10 @@ section {
 		
 	}
 }
+
+p {
+	code {
+		background-color: $background-alt-color;
+		color: $accent-color;
+	}
+}
