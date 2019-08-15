@@ -16,7 +16,7 @@ I've been feeling a bit in-between lately. Maybe some goals would help?
  - Two moments every day for health: yoga, hiking, strength. Keep that watch happy. Work on feeling good and not dying.
 
 ![I lost 55 lbs in 2018, then gained it back.](/images/weight2019.png)
- - **Count calories every day.** I legitemetly lost 55lbs in 2018, then 6 months put most of it back on. 
+ - **Count calories every day.** I legitemetly lost 55lbs in 2018, then in 6 months put most of it back on. 
  - Hold my weight below 220lbs through 2020. For the kids, Patrick! 
  
 
