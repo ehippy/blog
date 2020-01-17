@@ -4,4 +4,15 @@ _site
 node_modules/
 yarn.lock
 .idea
+*/.DS_Store*
 .DS_Store
+.gitignore
+_includes/.DS_Store
+_pages/.DS_Store
+_projects/.DS_Store
+_sass/.DS_Store
+_sass/_includes/.DS_Store
+css/.DS_Store
+images/.DS_Store
+js/.DS_Store
+js/plugins/.DS_Store
