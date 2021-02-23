@@ -6,7 +6,7 @@ tags: [interviews]
 
 Keith Reid-Cleveland with BuiltInColorado [featured BombBomb and its engineering staff in a piece about our work environment, values and goals. ](https://www.builtincolorado.com/spotlight/09/17/2019/bombbomb-colorado-engineering-careers) Below is Keith's full interview with me about the team at BombBomb and what we look for in our people, and how we've beaten the odds as a bootstrapped SaaS in Colorado Springs. Enjoy!
 
-<hr />
+<!--more-->
 
 ### Describe your role and responsibilities at BombBomb. How does your role contribute to the larger company goals? 
 My main charges are to help define the 3-5 year vision of our company’s technology from technical, competitive and market perspectives. To that end I’m also responsible for maintaining and growing an engineering organization able to meet and exceed the company’s goals. Finally, our team is responsible for the reliable and swift delivery of these products to our customers. The technology has to sing if sales, marketing and customer success are going to be able to accomplish their missions.

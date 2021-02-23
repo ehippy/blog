@@ -10,6 +10,7 @@ I've recruited more than 30 excellent software developers and other technical st
 
 My résumé reads in large part like a software engineer, and as such I get several recruiter emails every day. They're bad without exception. "Hey I see you have some .Net experience yada yada". Likewise I field a few voicemails of the same kind a couple times a month. All of these go in the trash. Everyone understands how this plays out, everyone knows that's not working.
 
+<!--more-->
 
 ### Video Recruiting
 I sent the following video to a referral candidate that I'd not spoken with yet. All I had going into this video was a few seconds glance at their linkedin profile, and their email address. Watch this video and try and list the ways it's far more interesting than a voicemail or a text email.

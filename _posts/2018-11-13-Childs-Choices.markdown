@@ -10,6 +10,8 @@ My wife Briana and I reached an impasse with our three-year-old a few weekends a
 
 Parenting challenges come in waves. You’ll find a rhythm that works, you’ll have a few weeks (maybe) of steady plodding, then wham, the kid’s a little smarter, and you have to adapt. In our turn, Briana and I had been leveling a scattershot of consequences and pleas. Some landed, some missed. Under the staring October sunshine our son had brought our family of four to a standstill. 
 
+<!--more-->
+
 Briana explored some resources and turned us onto a pair of parenting books: [Parenting with Love and Logic](https://www.loveandlogic.com/parenting-with-love-and-logic), and [1-2-3 Magic](https://www.123magic.com/). These offered two distinct central tactical strategies for moments of parental difficulty, but were united in a couple of key themes. 
 
 ### Theme: Quiet

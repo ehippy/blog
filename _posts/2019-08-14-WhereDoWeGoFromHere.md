@@ -7,6 +7,8 @@ tags: [talks]
 
 I've been feeling a bit in-between lately. Maybe some goals would help?
 
+<!--more-->
+
 ### Attitude
  - **Cultivate an adequate counterbalance of positivity** about the future. Sometimes I get fatalistic about the next 40 years will be like on the biosphere and in the global economy. Being down about it a lot sucks. Not head in the sand;  breathing now.
  - Get help. People keep praising therapy, and I harbor a defensive posture about it. Expensive? In moderation, maybe a good investment.

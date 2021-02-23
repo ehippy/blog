@@ -6,6 +6,7 @@ tags: [interviews]
 
 My five year old has been taking some online programming classes that teach fundamentals using block programming. He's using this awesome iPad app [ScratchJr](https://apps.apple.com/us/app/scratchjr/id895485086) that focuses on movement and animation. It has some really neat fundamental concepts and sneaks in some clever stuff like interprocess messaging. 
 
+<!--more-->
 
 ### Block Programming
 Block programming is all about _seeing_ what you're doing. You aren't looking up method names in a wiki somehwere, you're dragging and dropping legos to make things happen. ScratchJr got me interested in where he should go next, and I quickly found Microsoft's MakeCode project. This is an awesome browser-based programming experience that's extensible and super-well supported. They even have a game-development-centric version called [MakeCode Arcade](https://arcade.makecode.com/). 
