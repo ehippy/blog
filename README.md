@@ -4,6 +4,13 @@ Check it out at [https://patrickmcdavid.com](https://patrickmcdavid.com)
 
 Built with Jekyll, hosted on AWS.
 
+## to get going on local run
+
+ - gem update
+ - bundle install
+ - bundle exec jekyll serve
+
+
 ## todo topics
 
  - BombBomb teams
