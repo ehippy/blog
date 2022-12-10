@@ -51,7 +51,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: jekyll-output
+          name: site_content
           path: ./_site
 
   # Deployment job
@@ -71,4 +71,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync /home/runner/work/blog/blog/_site s3://pmcd-test-github-actn --delete
+      run: aws s3 sync /site_content s3://pmcd-test-github-actn --delete
