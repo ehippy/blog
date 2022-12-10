@@ -1,6 +1,6 @@
 ---
 title: "Publishing Jekyll to S3 with GitHub Actions"
-featured_image: /images/princessLastStandScreenShot01.png
+featured_image: /images/gitHubActn.png
 tags: [cloud, Continuous Deployment]
 ---
 
