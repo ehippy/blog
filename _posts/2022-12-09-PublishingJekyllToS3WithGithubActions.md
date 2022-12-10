@@ -37,7 +37,7 @@ deploy:
     needs: build
 `````
 
-![Two step process graphic](/images/twoThings.png)]
+![Two step process graphic](/images/brokeTwoThingsTwo.png)]
 
 This makes `deploy` wait on `build`, indicated by the cute line in the pic there. Perfect.
 
