@@ -46,9 +46,6 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v1
 
   # Deployment job
   deploy:
@@ -63,4 +60,4 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./blog/ s3://pmcd-test-github-actn --delete
+      run: aws s3 sync /home/runner/work/blog/blog/_site s3://pmcd-test-github-actn --delete
