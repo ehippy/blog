@@ -4,8 +4,7 @@ featured_image: /images/gitHubActn.png
 tags: [cloud, Continuous Deployment]
 ---
 
-Blog'd been kind quiet, yeah? I picked it up to write some stuff and found that
-my old friend [travis-ci.org](https://www.travis-ci.org/) wasn't really a thing anymore. I used Travis to build and publish this site for many moons really reliably. It was one of the OG continuous integration and deployment sites out there. They went all corporate or something.
+Blog'd been kind quiet, yeah? I picked it up to write some stuff and found that my old friend [travis-ci.org](https://www.travis-ci.org/) wasn't really a thing anymore. I used Travis to build and publish this site for many moons really reliably. It was one of the OG continuous integration and deployment sites out there. They went all corporate or something.
 
 
 
@@ -14,8 +13,6 @@ So to dodge the corpos, I threw in with Microsoft over at GitHub using their Act
 After some putzing around with my ancient ruby versions and an upgrade of jekyll itself, their off the shelf action published the site to their own github host thing.
 
 But I really wanted the thing over on an S3 bucket where I've got all the domain name, SSL, CDN goodies set up.
-
-Getting that going involved three learnings: 
 
 ## GitHub Action Job Dependencies
 
