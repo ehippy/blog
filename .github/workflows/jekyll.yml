@@ -46,8 +46,6 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: LIST THE SHIT
-        run: ls -l
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -61,8 +59,6 @@ jobs:
     steps:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
-    - name: LIST THE SHIT
-      run: ls -l
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:

@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:DeleteObject",
+                "cloudfront:CreateInvalidation",
+                "s3:PutObjectAcl"
+            ],
+            "Resource": [
+                "arn:aws:s3:::patrickmcdavid.com",
+                "arn:aws:s3:::patrickmcdavid.com/*",
+                "arn:aws:cloudfront::213869164304:distribution/E2BXX0VHQEULW0"
+            ]
+        }
+    ]
+}
