@@ -46,6 +46,8 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: LIST THE SHIT
+        run: ls -l
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
