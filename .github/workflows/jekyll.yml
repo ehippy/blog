@@ -61,6 +61,8 @@ jobs:
     steps:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v3
+    - name: LIST THE SHIT
+      run: ls -l
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
