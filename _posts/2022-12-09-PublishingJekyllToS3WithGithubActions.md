@@ -108,12 +108,14 @@ Once you have an AWS user that can do the deed, you need to give GitHub the acce
 With these installed, you can bring them into play with the `aws-actions/configure-aws-credentials` build step like this:
 
 ```
+{% raw %}
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.BLOG_PUBLISH_AWS_KEY }}
         aws-secret-access-key: ${{ secrets.BLOG_PUBLISH_AWS_SECRET }}
         aws-region: us-east-1
+{% endraw %}
 ```
 
 With those installed, you've got a hot AWS CLI ready to rock. First you're gonna use `aws s3 sync` to push the new content up to S3. Use the `--delete` switch to clean out files that aren't part of the site anymote. Use the `--acl public-read` switch to set the files to be publically accessible for the website. You may not need to make the files readable.
