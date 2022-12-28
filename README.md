@@ -1,4 +1,5 @@
-# Patrick McDavid's blog [![Build Status](https://travis-ci.org/ehippy/blog.svg?branch=master)](https://travis-ci.org/ehippy/blog)
+# Patrick McDavid's blog
+[![Build Status](https://github.com/ehippy/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml)
 
 Check it out at [https://patrickmcdavid.com](https://patrickmcdavid.com)
 
