@@ -9,7 +9,7 @@ Built with Jekyll, hosted on AWS.
 
  - gem update
  - bundle install
- - bundle exec jekyll serve
+ - bundle exec jekyll serve --drafts
 
 
 ## todo topics
