@@ -13,3 +13,7 @@ What the engineer wants to accomplish with the computer has to be reached in com
 ### Repetition
 
 We improve what we practice. 
+
+#### ideas
+ - we practice being with others and their many types
+ - 
