@@ -12,6 +12,7 @@ GEM
     ffi (1.14.2)
     forwardable-extended (2.6.0)
     google-protobuf (3.21.12)
+    google-protobuf (3.21.12-x86_64-linux)
     http_parser.rb (0.8.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -67,12 +68,12 @@ GEM
 
 PLATFORMS
   ruby
+  x86_64-linux
 
 DEPENDENCIES
-  ffi (= 1.14.2)
   jekyll (= 4.3.1)
   jekyll-paginate
   jekyll-sitemap
 
 BUNDLED WITH
-   2.3.26
+   2.4.5
