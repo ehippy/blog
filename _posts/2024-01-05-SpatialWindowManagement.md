@@ -1,6 +1,6 @@
 ---
 title: "VisionOS is too big"
-featured_image: /images/VisionHomeScreenInKitchen-min.png
+featured_image: /images/VisionHomeScreenInKitchen-min.PNG
 tags: [VR, AR, Spatial Computing, Apple Vision Pro, Oculus Quest]
 ---
 
