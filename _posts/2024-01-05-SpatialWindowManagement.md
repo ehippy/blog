@@ -26,7 +26,10 @@ You can see messages is roughly twice as tall in a VisionOS window as in it's ne
 
 Compared to the legible little Messages on the laptop screen, we're eating something like 15x the space.
 
+## Why tho
 Information density creates cognitive load, so its sensible that for this first foray, Apple chose to start us with these oversized friendly windows so as to be unintimidating. 
 
+Maybe it's about click targets needing to be chonky? VisionOS would be signifigantly better if I could jam more infor in the view in front of me before I'm turning my head comical amounts. 
+
 ## All things in time
-These are day-one software quibbles on a platform that's utterly rich with promise. WWDC24 is four months away. Apple has the strongest general purpose operating system and developer story for any headset today. I like that this will likely kick Meta in the pants to think bigger about the importance of the UX of the OS itself, which will in turn prod Apple to go further too. What a bright horizon!
+These are day-one software quibbles on a platform that's utterly rich with promise. WWDC24 is four months away. Apple has the strongest general purpose operating system and developer story for any headset today. I like that this will likely kick Meta in the pants to think bigger about the importance of the UX of the OS itself, which will in turn prod Apple to go further too.
