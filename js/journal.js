@@ -116,6 +116,12 @@
 			window.open(thisTarget, '_blank');
 
 		}
+		// If link is pdf
+		if ( thisTarget.indexOf('.pdf') >= 0 ) {
+			// Go to the external link
+			window.open(thisTarget, '_blank');
+
+		}
 
 		// If we don't want to use ajax
 		else if ( $(this).hasClass('js-no-ajax') ) {

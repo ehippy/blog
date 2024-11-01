@@ -14,6 +14,8 @@ menu_settings:
       url: '/'
     - title: 'Projects'
       url: '/projects/'
+    - title: 'Résumé'
+      url: '/files/PatrickMcDavidResume2025.pdf'
     - title: 'About'
       url: '/about'
 
