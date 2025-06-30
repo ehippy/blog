@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Accidentally Carbon-Neutral"
+title: "How My Blog Ended Up Carbon-Neutral (Without Trying)"
 categories: [infrastructure, sustainability]
 tags: [aws, carbon, static-sites, web-performance, ethics]
 featured_image: /images/gardenKid.jpeg
