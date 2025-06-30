@@ -37,6 +37,8 @@ Ok, zero. Is that what it tells everybody? A little birdie took a peek at the sa
 ## Is that a lot?
 To ground this a bit more: the [average gas-powered commuter in the U.S. emits about 4.6 metric tons of CO₂ per year](https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle). Wait, I thought... am I putting 4 *tons* of gas in my car a year? It turns out *no*, assuming I'm filling up roughly a dozen times a year (yay work from home), I pump ~1.02 metric tons of gasoline into my car. So how does it jump from a ton of gasoline to many tons of CO₂? Burning 1 metric ton of gasoline produces over 3.2 metric tons of CO₂, because each carbon atom bonds with oxygen from the air, more than tripling its weight in the form of [carbon dioxide](https://www.epa.gov/ghgemissions/overview-greenhouse-gases#carbon-dioxide). I had no idea!
 
+![Gasoline gains weight when it's burned!](/images/32carbon.png)
+
 Anyway, that means the complex cloud software system above emits the equivalent of roughly **10 cars** annually, even though its actual server footprint is invisible to most of its users. I guess that feels more efficient to me than I suspected. That business serves millions of people and employs about a hundred with good jobs. Likewise the [carbon trading](https://www.epa.gov/climateleadership/scope-3-inventory-guidance) that AWS is doing shrinks that number 20x.
 
 
