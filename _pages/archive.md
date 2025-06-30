@@ -18,7 +18,7 @@ featured_image: /images/heron.jpeg
       </div>
     {% endif %}
     <div class="archive-content">
-      <a href="{{ post.url }}">{{ post.date | date: "%B" }}: {{ post.title }}</a>
+      <a href="{{ post.url }}">{{ post.title }}</a>
       {% if post.tags and post.tags.size > 0 %}
         <div class="tag-pills">
           {% for tag in post.tags %}
