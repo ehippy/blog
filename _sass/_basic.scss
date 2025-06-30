@@ -227,10 +227,10 @@ a {
 		font-size: 15px;
 	}
 
-	&:hover {
-		background: adjust-hue($accent-color,15%);
-		border-color: adjust-hue($accent-color,15%);
-		color: $background-color;
+        &:hover {
+                background: adjust-hue($accent-color, 15deg);
+                border-color: adjust-hue($accent-color, 15deg);
+                color: $background-color;
 	}
 
 	svg {
