@@ -12,14 +12,14 @@ menu_settings:
   menu_items:
     - title: 'Latest'
       url: '/'
+    - title: 'All Posts'
+      url: '/archive/'
     - title: 'Projects'
       url: '/projects/'
     - title: 'Résumé'
       url: '/files/PatrickMcDavidResume2025.pdf'
     - title: 'About'
       url: '/about'
-    - title: 'Archive'
-      url: '/archive/'
 
 grid_settings:
   grid_spacing: 10
