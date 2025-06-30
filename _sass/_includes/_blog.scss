@@ -124,12 +124,14 @@
 	}
 }
 
+
 .pagination__prev {
-	float: left;
-	padding-right: $grid-spacing/2;
+        float: left;
+        padding-right: calc(#{$grid-spacing} / 2);
 }
 
+
 .pagination__next {
-	float: right;
-	padding-left: $grid-spacing/2;
+        float: right;
+        padding-left: calc(#{$grid-spacing} / 2);
 }
