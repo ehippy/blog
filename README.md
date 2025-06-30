@@ -51,5 +51,41 @@ Built with Jekyll, hosted on AWS.
  - AI for Circular Economy: Using Machine Learning to Eliminate Waste in Manufacturing
  - The Ethics of Green AI: Balancing Innovation with Environmental Responsibility
 
-### 📝 Process & Methodology
- - scrum/kanban rollover
+## 🚀 Blog Improvement TODOs
+
+### 🌍 Sustainability & Performance (Inspired by "Accidentally Carbon-Neutral")
+- [ ] **Carbon footprint dashboard** - Add real-time carbon impact display for visitors
+- [ ] **Image optimization pipeline** - Implement WebP/AVIF conversion for all images
+- [ ] **CSS/JS minification** - Optimize and tree-shake all assets  
+- [ ] **Font optimization** - Switch to system fonts where possible, reduce font weights
+- [ ] **CDN performance audit** - Optimize CloudFront cache headers and edge locations
+- [ ] **Page weight budgets** - Set carbon budgets for new content creation
+- [ ] **Green Web Foundation badge** - Add verified green hosting badge to footer
+- [ ] **Carbon-aware builds** - Schedule CI/CD during low-carbon grid times
+
+### ✨ Content & UX Improvements
+- [ ] **Reading time estimates** - Add estimated reading time to posts
+- [ ] **Related posts suggestions** - Improve content discoverability
+- [ ] **Dark mode support** - Reduce screen energy consumption
+- [ ] **Offline reading** - Service worker for offline post access
+- [ ] **Search functionality** - Add client-side search for better UX
+- [ ] **Social sharing optimization** - Improve Open Graph and Twitter Card metadata
+
+### 🛠️ Technical Debt & Infrastructure
+- [ ] **Dependency audit** - Remove unused Jekyll plugins and dependencies
+- [ ] **Security headers** - Add proper CSP, HSTS, and security headers
+- [ ] **Accessibility audit** - Ensure WCAG 2.1 AA compliance
+- [ ] **Mobile optimization** - Improve mobile reading experience
+- [ ] **RSS feed enhancements** - Add full content to feed, improve metadata
+- [ ] **404 page improvements** - Better error handling and content suggestions
+
+### 🔧 Development Experience
+- [ ] **Pre-commit hooks** - Add linting and formatting automation
+- [ ] **Content templates** - Create post templates for different content types
+
+### 📈 SEO & Discoverability
+- [ ] **Structured data** - Add JSON-LD schema markup
+- [ ] **XML sitemap optimization** - Improve sitemap generation and submission
+- [ ] **Internal linking strategy** - Better cross-post linking
+- [ ] **Tag organization** - Reorganize and standardize post tags
+- [ ] **Archive page improvements** - Better post organization and filtering
