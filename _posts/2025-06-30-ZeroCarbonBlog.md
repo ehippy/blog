@@ -21,7 +21,7 @@ I was a big hippie in college: birks, hacky sack, environmental minor. The whole
 I like how **Open** and **Honest** get their place in this conversation. Ecology isn't just plants and soils, all us creatures digging around in dirt both digital and organic must be part of the plan. 
 
 ### OK, now let's try and measure it!
-I started searching on how organizations can quantify the environmental impact of their software creations. Quickly, [AWS’s Customer Carbon Footprint Tool](https://aws.amazon.com/blogs/aws/new-customer-carbon-footprint-tool/) appeared as the toy-of-the-day. It provides monthly estimates of emissions based on your AWS usage, broken down by service and region, and includes both “market-based” and “location-based” accounting models. I was tickled to find the folks at AWS had already built this in and turned this on for all their customers. This little site runs on AWS so I dashed into my account to find that they estimate it burns..... drum roll please..... 0 Estimated Metric Tons of Carbon (MTCO2e) per month.
+I started searching on how organizations can quantify the environmental impact of their software creations. Quickly, [AWS’s Customer Carbon Footprint Tool](https://aws.amazon.com/blogs/aws/new-customer-carbon-footprint-tool/) appeared as the toy-of-the-day. It provides monthly estimates of emissions based on your AWS usage, broken down by service and region, and includes both “market-based” and “location-based” accounting models. I was tickled to find the folks at AWS had already built this in and turned this on for all their customers. This little site runs on AWS so I dashed into my account to find that they estimate it burns..... drum roll please..... 0 Estimated Metric Tons of Carbon (MTCO₂e) per month.
 
 
 <img src="/images/0emissions.png"
@@ -43,16 +43,16 @@ Anyway, that means the complex system above emits the equivalent of about **10 c
 ## Can we make the dial jump back down?
 I was surprised by how many of these suggestions from the [Green Software Foundation’s guide](https://greensoftware.foundation/articles/10-recommendations-for-green-software-development) felt foreign to me:
 
-- **Measure what matters** – Track the energy use and carbon emissions of your software and infrastructure.
-- **Optimize code efficiency** – Reduce unnecessary computation, idle cycles, and processing overhead.
-- **Use carbon-aware design** – Time tasks to run when the grid is cleaner (e.g., at night or in renewable-rich regions).
-- **Minimize data transfer** – Compress assets, avoid unnecessary network calls, and cache intelligently.
-- **Choose efficient hardware** – Prefer modern, energy-efficient chips (e.g., ARM/Graviton) when deploying workloads.
+- **Measure what matters** – Track the energy use and carbon emissions of your software and infrastructure. ([Website Carbon Calculator](https://www.websitecarbon.com/), [CO2.js](https://github.com/thegreenwebfoundation/co2.js))
+- **Optimize code efficiency** – Reduce unnecessary computation, idle cycles, and processing overhead. ([Web Vitals](https://web.dev/vitals/))
+- **Use carbon-aware design** – Time tasks to run when the grid is cleaner (e.g., at night or in renewable-rich regions). ([Carbon-Aware SDK](https://github.com/Green-Software-Foundation/carbon-aware-sdk), [WattTime API](https://www.watttime.org/api-documentation/))
+- **Minimize data transfer** – Compress assets, avoid unnecessary network calls, and cache intelligently. ([WebP/AVIF guides](https://web.dev/serve-images-webp/), [CDN optimization](https://developers.cloudflare.com/cache/))
+- **Choose efficient hardware** – Prefer modern, energy-efficient chips (e.g., [ARM/Graviton](https://aws.amazon.com/ec2/graviton/)) when deploying workloads.
 - **Green your CI/CD** – Avoid redundant builds and tests; shut down idle environments and ephemeral infra.
 - **Stay serverless or static when possible** – Use architectures that don’t require always-on compute.
-- **Use sustainable regions** – Deploy in cloud regions with better carbon intensity and renewable coverage.
-- **Design for longevity** – Build apps and systems to last — fewer rewrites and migrations mean fewer emissions.
-- **Promote transparency and literacy** – Share sustainability practices with your team and community.
+- **Use sustainable regions** – Deploy in cloud regions with better carbon intensity and renewable coverage. ([AWS sustainability](https://sustainability.aboutamazon.com/about/the-cloud), [Google Cloud carbon-free energy](https://cloud.google.com/sustainability/region-carbon))
+- **Design for longevity** – Build apps and systems to last — fewer rewrites and migrations mean fewer emissions. ([Sustainable software design](https://principles.green/))
+- **Promote transparency and literacy** – Share sustainability practices with your team and community. ([Green Software Foundation](https://greensoftware.foundation/), [Climate Action Tech](https://climateaction.tech/))
 
 ## Integrating these ideas
 Looking at this list, I realize my accidentally carbon-neutral blog already hits several of these principles—it's static, efficiently hosted, and built to last. But the bigger revelation is how much room there is to apply these ideas to the systems I work on daily. Carbon-aware scheduling, efficient hardware choices, and measuring what matters aren't just nice-to-haves anymore; they're becoming table stakes for responsible engineering. I don't have to go hop into the greentech space to do this work, and neither do you.
