@@ -1,13 +1,14 @@
 ---
 title: About Me
-subtitle: Software engineering leader, architect, father, husband and philosopher
+subtitle: Software engineering leader, architect, father and philosopher
 featured_image: /images/toothbrushers.webp
 ---
 
-Patrick McDavid is a dynamic tech leader with a passion for using technology to enhance human connection and fun. With extensive experience in software architecture, particularly in C#, PHP, Python, and web APIs, Patrick is always looking for ways to optimize system performance and reliability. He has worked extensively with AWS to build scalable cloud solutions and actively contributes to and supports open source projects.
+I'm a software engineer who's spent my career building systems that connect people and solve real problems. I work primarily in C#, Python, and web APIs, with a lot of AWS thrown in for good measure. These days I'm thinking more about how the code we write affects the world—not just in terms of revenue, features and performance, but in terms of sustainability and human impact.
 
-Based in Colorado Springs, Colorado, Patrick is an adventurer who loves the outdoors. He enjoys camping trips with his two kids, exploring new trails on his e-bike, and spending time hiking. When he's at home, Patrick is often in the kitchen, where his nine-year-old is beginning to take an interest in cooking too.
+I live in Colorado Springs with my two kids, where we spend a lot of time outdoors. You'll find us camping, hiking, or swimming. My nine-year-old is getting into cooking, which means our kitchen experiments are getting more interesting (and messier).
 
-This site is [open source](https://github.com/ehippy/blog).
+This site is where I write about technology, philosophy, parenting, and whatever else catches my attention. It's also [open source](https://github.com/ehippy/blog) and accidentally carbon-neutral.
+
 
 [![Build Status](https://github.com/ehippy/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml)
