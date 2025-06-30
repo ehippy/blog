@@ -18,6 +18,8 @@ menu_settings:
       url: '/files/PatrickMcDavidResume2025.pdf'
     - title: 'About'
       url: '/about'
+    - title: 'Archive'
+      url: '/archive/'
 
 grid_settings:
   grid_spacing: 10
