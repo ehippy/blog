@@ -6,7 +6,7 @@ tags: [aws, carbon, static-sites, web-performance, ethics]
 featured_image: /images/gardenKid.jpeg
 ---
 
-I was a big hippie in college: birks, hacky sack, environmental minor. The whole deal. I've never been able to marry those halcyon days to the week to week technical work I've spent my career doing. Today, waiting on a little technical blocker, I thought about it some and went on a green-software micro-adventure.
+I was a big hippie in college: birks, hacky sack, environmental minor. The whole deal. I've never been able to marry those halcyon days to the week to week technical work I've spent my career doing. Today, waiting on a little technical blocker, I thought about it some and went on a [green-software](https://greensoftware.foundation/) micro-adventure.
 <!--more--> 
 
 ### The Sustainable Web Manifesto
@@ -29,15 +29,15 @@ I started searching on how organizations can quantify the environmental impact o
     alt="Carbon Neutral!" />
     
 
-My blog is about as simple as it gets: a static site hosted on [Amazon S3](https://aws.amazon.com/s3/), and served through [CloudFront](https://aws.amazon.com/cloudfront/); it costs in the neighborhood of 50 cents/mo to host. There's no server-side logic, no dynamic rendering, and, as you may surmise, very little traffic.
+My blog is about as simple as it gets: a [static site](https://jamstack.org/what-is-jamstack/) hosted on [Amazon S3](https://aws.amazon.com/s3/), and served through [CloudFront](https://aws.amazon.com/cloudfront/); it costs in the neighborhood of 50 cents/mo to host. There's no server-side logic, no dynamic rendering, and, as you may surmise, very little traffic.
 
 ### Make that dial jump
-Ok, zero. Is that what it tells everybody? A little birdie took a peek at the same dashboard for an app I used to have a hand in running a high-traffic, dynamic application with real-time APIs, queues, background workers, and a persistent database footprint. AWS reports its emissions at about **0.2 MTCO₂e/month (market-based)**, or **4.0 MTCO₂e/month (location-based)**. Ok, why's that so different? The first number: Market-Based, accounts for carbon offsets, the second number is the estimated raw carbon production in the locations you're running workloads.
+Ok, zero. Is that what it tells everybody? A little birdie took a peek at the same dashboard for an app I used to have a hand in running a high-traffic, dynamic application with real-time APIs, queues, background workers, and a persistent database footprint. AWS reports its emissions at about **0.2 MTCO₂e/month (market-based)**, or **4.0 MTCO₂e/month (location-based)**. Ok, why's that so different? The first number: Market-Based, accounts for [carbon offsets](https://www.epa.gov/climateleadership/scope-3-inventory-guidance), the second number is the estimated raw carbon production in the locations you're running workloads.
 
 ## Is that a lot?
-To ground this a bit more: the [average gas-powered commuter in the U.S. emits about 4.6 metric tons of CO₂ per year](https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle). Wait, I thought... am I putting 4 *tons* of gas in my car a year? It turns out *no*, assuming I'm filling up roughly a dozen times a year (yay work from home), I pump ~1.02 metric tons of gasoline into my car. So how does it jump from a ton of gasoline to many tons of CO2? Burning 1 metric ton of gasoline produces over 3.2 metric tons of CO₂, because each carbon atom bonds with oxygen from the air, more than tripling its weight in the form of carbon dioxide. I had no idea. 
+To ground this a bit more: the [average gas-powered commuter in the U.S. emits about 4.6 metric tons of CO₂ per year](https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle). Wait, I thought... am I putting 4 *tons* of gas in my car a year? It turns out *no*, assuming I'm filling up roughly a dozen times a year (yay work from home), I pump ~1.02 metric tons of gasoline into my car. So how does it jump from a ton of gasoline to many tons of CO₂? Burning 1 metric ton of gasoline produces over 3.2 metric tons of CO₂, because each carbon atom bonds with oxygen from the air, more than tripling its weight in the form of [carbon dioxide](https://www.epa.gov/ghgemissions/overview-greenhouse-gases#carbon-dioxide). I had no idea. 
 
-Anyway, that means the complex system above emits the equivalent of about **10 cars** annually, even though its actual server footprint is invisible to most of its users. I guess that feels more efficient to me than I suspected. That business serves millions of people and employs dozens. Likewise the carbon trading that AWS is doing shrinks that number 20x.
+Anyway, that means the complex system above emits the equivalent of roughly **10 cars** annually, even though its actual server footprint is invisible to most of its users. I guess that feels more efficient to me than I suspected. That business serves millions of people and employs dozens. Likewise the [carbon trading](https://www.epa.gov/climateleadership/scope-3-inventory-guidance) that AWS is doing shrinks that number 20x.
 
 
 ## Can we make the dial jump back down?
