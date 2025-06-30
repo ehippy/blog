@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Accidently Carbon-Neutral"
+title: "Accidentally Carbon-Neutral"
 categories: [infrastructure, sustainability]
 tags: [aws, carbon, static-sites, web-performance, ethics]
 featured_image: /images/gardenKid.jpeg
 ---
 
-I was a big hippie in college: birks, hacky sack, enironmental minor. The whole deal. I've never been able to marry those halcyon days to the week to week technical work I've spent my career doing. Today, waiting on a little technical blocker, I thought about it some and went on a green-software micro-adventure.
+I was a big hippie in college: birks, hacky sack, environmental minor. The whole deal. I've never been able to marry those halcyon days to the week to week technical work I've spent my career doing. Today, waiting on a little technical blocker, I thought about it some and went on a green-software micro-adventure.
 <!--more--> 
 
 ### The Sustainable Web Manifesto
-[These folks](https://www.sustainablewebmanifesto.com/) created an outline for how they'd like to see the web stay green, and I can't see too much wrong with it. 
+[These folks](https://www.sustainablewebmanifesto.com/) created an outline for how they'd like to see the web stay green, and I can't see too much wrong with it.
 - **Clean** – powered by renewable energy  
 - **Efficient** – uses the least energy and resources possible  
 - **Open** – accessible, standards-based, and universally available  
@@ -29,7 +29,7 @@ I started searching on how organizations can quantify the environmental impact o
     alt="Carbon Neutral!" />
     
 
-My blog is about as simple as it gets: a static site hosted on [Amazon S3](https://aws.amazon.com/s3/), and served through [CloudFront](https://aws.amazon.com/cloudfront/); it costs in the neighborhood of 50 cents/mo to host. There's no server-side logic, no dynamic rendering, and, as you may surmize, very little traffic.
+My blog is about as simple as it gets: a static site hosted on [Amazon S3](https://aws.amazon.com/s3/), and served through [CloudFront](https://aws.amazon.com/cloudfront/); it costs in the neighborhood of 50 cents/mo to host. There's no server-side logic, no dynamic rendering, and, as you may surmise, very little traffic.
 
 ### Make that dial jump
 Ok, zero. Is that what it tells everybody? A little birdie took a peek at the same dashboard for an app I used to have a hand in running a high-traffic, dynamic application with real-time APIs, queues, background workers, and a persistent database footprint. AWS reports its emissions at about **0.2 MTCO₂e/month (market-based)**, or **4.0 MTCO₂e/month (location-based)**. Ok, why's that so different? The first number: Market-Based, accounts for carbon offsets, the second number is the estimated raw carbon production in the locations you're running workloads.
