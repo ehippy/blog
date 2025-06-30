@@ -14,6 +14,4 @@ Built with Jekyll, hosted on AWS.
 
 ## todo topics
 
- - BombBomb teams
  - scrum/kanban rollover
- - Life changing magic of tidying review

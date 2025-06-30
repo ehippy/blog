@@ -1,5 +1,8 @@
 site: Patrick McDavid
 url: "http://patrickmcdavid.com"
+title: Patrick McDavid
+description: I'm a technology leader in Colorado speaking about serverless computing, team building, devops, and leadership development.
+author: Patrick McDavid
 
 collections:
   pages:
@@ -49,6 +52,7 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-feed
 
 paginate: 6
 paginate_path: "/page:num/"
