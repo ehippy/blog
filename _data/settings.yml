@@ -81,11 +81,11 @@ color_settings:
   dark_overlay_background_color: '#0d0d0d'
 
 font_settings:
-  font_embed: '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Muli:400,400i,600" rel="stylesheet">'
+  font_embed: '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,800|Muli:400,400i,600,800" rel="stylesheet">'
   title_font: '"Merriweather", sans-serif'
   body_font: '"Muli", sans-serif'
   regular_weight: 400
-  bold_weight: 600
+  bold_weight: 800
   site_title:
     small_size: 25
     medium_size: 30
