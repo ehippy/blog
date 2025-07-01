@@ -1,6 +1,6 @@
 basic_settings:
   site_title: Patrick McDavid
-  site_tagline: I'm a technology leader in Colorado speaking about serverless computing, team building, devops, and leadership development.
+  site_tagline: Technology leadership from Colorado - thoughts on cloud, SaaS, and the human side of engineering
   favicon_image: /images/favicon.png
 
 header_settings:
