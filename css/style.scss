@@ -368,6 +368,36 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 			background: linear-gradient(to bottom, rgba($dark-overlay-background-color, 0.2) 0%, rgba($dark-overlay-background-color, 0.4) 1%, rgba($dark-overlay-background-color, 0.8) 70%, rgba($dark-overlay-background-color, 0.9) 100%);
 		}
 	}
+
+	// Tag cloud dark mode styles
+	.tag-cloud-section {
+		h3 {
+			color: $dark-text-dark-color;
+		}
+	}
+	
+	.tag-cloud-item {
+		border-color: $dark-border-color;
+		color: $dark-text-medium-color;
+		
+		&:hover {
+			background-color: $dark-background-alt-color;
+			border-color: $dark-text-light-color;
+			color: $dark-text-dark-color;
+		}
+		
+		&.active {
+			background-color: $accent-color;
+			border-color: $accent-color;
+			color: white;
+			
+			&:hover {
+				background-color: adjust-hue($accent-color, 15deg);
+				border-color: adjust-hue($accent-color, 15deg);
+				color: white;
+			}
+		}
+	}
 }
 {% endif %}
 
