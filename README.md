@@ -63,21 +63,11 @@ Built with Jekyll, hosted on AWS.
 - [ ] **Green Web Foundation badge** - Add verified green hosting badge to footer
 - [ ] **Carbon-aware builds** - Schedule CI/CD during low-carbon grid times
 
-### ✨ Content & UX Improvements
-- [x] **Reading time estimates** - Add estimated reading time to posts
-- [x] **Related posts suggestions** - Improve content discoverability
-- [x] **Dark mode support** - Reduce screen energy consumption
-- [ ] **Offline reading** - Service worker for offline post access
-- [ ] **Search functionality** - Add client-side search for better UX
-- [ ] **Social sharing optimization** - Improve Open Graph and Twitter Card metadata
-
 ### 🛠️ Technical Debt & Infrastructure
 - [ ] **Dependency audit** - Remove unused Jekyll plugins and dependencies
 - [ ] **Security headers** - Add proper CSP, HSTS, and security headers
 - [ ] **Accessibility audit** - Ensure WCAG 2.1 AA compliance
 - [ ] **Mobile optimization** - Improve mobile reading experience
-- [ ] **RSS feed enhancements** - Add full content to feed, improve metadata
-- [ ] **404 page improvements** - Better error handling and content suggestions
 
 ### 🔧 Development Experience
 - [ ] **Pre-commit hooks** - Add linting and formatting automation
