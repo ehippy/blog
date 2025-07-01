@@ -64,7 +64,7 @@ Built with Jekyll, hosted on AWS.
 - [ ] **Carbon-aware builds** - Schedule CI/CD during low-carbon grid times
 
 ### ✨ Content & UX Improvements
-- [ ] **Reading time estimates** - Add estimated reading time to posts
+- [x] **Reading time estimates** - Add estimated reading time to posts
 - [ ] **Related posts suggestions** - Improve content discoverability
 - [ ] **Dark mode support** - Reduce screen energy consumption
 - [ ] **Offline reading** - Service worker for offline post access

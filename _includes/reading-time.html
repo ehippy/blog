@@ -1,0 +1,14 @@
+{% comment %}
+  Reading time calculation for Jekyll posts
+  Assumes an average reading speed of 225 words per minute
+  Usage: {% include reading-time.html content=page.content %}
+{% endcomment %}
+
+{% assign words = include.content | strip_html | number_of_words %}
+{% assign reading_time = words | divided_by: 225.0 | ceil %}
+
+{% if reading_time == 1 %}
+  <span class="reading-time">{{ reading_time }} min read</span>
+{% else %}
+  <span class="reading-time">{{ reading_time }} min read</span>
+{% endif %}
