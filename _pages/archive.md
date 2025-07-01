@@ -48,13 +48,30 @@ featured_image: /images/heron.jpeg
 {% endfor %}
 
 <script>
-function filterByTag(selectedTag, clickedButton) {
+function filterByTag(selectedTag, clickedButton, updateHash = true) {
   const tagButtons = document.querySelectorAll('.tag-cloud-item');
   const yearSections = document.querySelectorAll('.year-section');
   
   // Update active button
   tagButtons.forEach(btn => btn.classList.remove('active'));
-  clickedButton.classList.add('active');
+  if (clickedButton) {
+    clickedButton.classList.add('active');
+  } else {
+    // Find and activate the correct button when called from hash
+    const targetButton = document.querySelector(`[data-tag="${selectedTag}"]`);
+    if (targetButton) {
+      targetButton.classList.add('active');
+    }
+  }
+  
+  // Update URL hash
+  if (updateHash) {
+    if (selectedTag === 'all') {
+      history.pushState(null, null, window.location.pathname);
+    } else {
+      window.location.hash = selectedTag;
+    }
+  }
   
   // Filter posts
   yearSections.forEach(section => {
@@ -80,4 +97,31 @@ function filterByTag(selectedTag, clickedButton) {
     }
   });
 }
+
+// Handle initial page load with hash
+function handleInitialHash() {
+  const hash = window.location.hash.substring(1); // Remove the #
+  if (hash) {
+    // Check if the hash corresponds to a valid tag
+    const targetButton = document.querySelector(`[data-tag="${hash.toLowerCase()}"]`);
+    if (targetButton) {
+      filterByTag(hash.toLowerCase(), null, false);
+    }
+  }
+}
+
+// Handle hash changes (back/forward navigation)
+window.addEventListener('hashchange', function() {
+  const hash = window.location.hash.substring(1);
+  if (hash) {
+    filterByTag(hash.toLowerCase(), null, false);
+  } else {
+    filterByTag('all', null, false);
+  }
+});
+
+// Initialize on page load
+setTimeout(function() {
+  handleInitialHash();
+}, 50);
 </script>
