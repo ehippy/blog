@@ -1,7 +1,7 @@
 ---
 title: "Playing with Computers"
 featured_image: /images/breakfastNm.jpg
-tags: [Career, goals, hopes, programming]
+tags: [Career, Personal, Programming, BombBomb, AWS, Startup, Retrospective]
 ---
 
 I did poorly in high school. F's finally after years of C's and D's coming up through junior high. Instead of homework, I spent my nights pushing my 75mhz win95 box further and further online. Geocities and [early Bungie games](https://en.wikipedia.org/wiki/Myth:_The_Fallen_Lords). That phone line screamed moving bits around at 9600 baud. AOL discs piled up as I spent their promised "100 free hours" each to access the proto-internet. HTML and game-modding led to ColdFusion and IIS servers.

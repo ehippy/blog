@@ -1,7 +1,7 @@
 ---
 title: "Single-Table Database Design"
 featured_image: /images/arcs.jpg
-tags: [data, programming]
+tags: [DynamoDB, Database Design, AWS, NoSQL, Game Development, Single Table]
 ---
 
 I've wanted to do this videogame for years. I've started it handful of times, in C#, Python, Node. Well, with some time on my hands, I finally got around to really taking a good swing at it. I started by picking up the last version of it I'd started a couple years ago. For the last two weeks, I've been enjoying really getting into some fullstack creation.
