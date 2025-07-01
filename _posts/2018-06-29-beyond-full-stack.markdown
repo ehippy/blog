@@ -3,7 +3,7 @@ layout: post
 title: "Beyond full stack"
 author: Patrick McDavid
 featured_image: /images/bombbomb-team.jpg
-tags: [KanBan, Teams, Leadership]
+tags: [Engineering, Leadership, BombBomb]
 ---
 
 _This is reblogged from [my interview on BuiltIn Colorado](https://www.builtincolorado.com/2018/06/29/inside-bombbomb-dev-team-colorado-springs)_

@@ -1,7 +1,7 @@
 ---
 title: "VisionOS is too big"
 featured_image: /images/VisionHomeScreenInKitchen-min.PNG
-tags: [VR, AR, Spatial Computing, Apple Vision Pro, Oculus Quest]
+tags: [Technology, Innovation]
 ---
 
 When you pull on a modern headset running VisionOS or Meta's Android variant you get to place arbitrary software applications floating around you in space. It's a neat effect, and promises to liberate your software from the 15" laptop in front of you or the formerly spacious monitor on your desk. Apple's swings wildly towards freedom and chaos, Meta's is limited and safe.

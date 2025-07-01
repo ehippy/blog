@@ -3,7 +3,7 @@ layout: post
 title: Practicing Making Choices
 author: Patrick McDavid
 featured_image: /images/leo-blue.jpg
-tags: [Parenting, Books]
+tags: [Parenting, Education]
 ---
 
 My wife Briana and I reached an impasse with our three-year-old a few weekends ago. A beautiful fall morning’s hike in the neighborhood park came to a howling halt as the tyke staged a rebellion.

@@ -3,7 +3,7 @@ layout: post
 title: "My Thesis"
 author: Patrick McDavid
 featured_image: /images/winter-graf.jpg
-tags: [Writing, Education, Philosophy, Language]
+tags: [Writing, Education, Personal]
 ---
 
 I've been trying to spend a little more time reflecting on where I am, where I want to go, and where I've been. One of the largest single-product projects I've ever undertaken was my philosophy thesis, Spoken Worlds. Five months of writing to produce about 9000 words on the subject of linguistic relativism.

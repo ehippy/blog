@@ -3,7 +3,7 @@ layout: post
 title: NASDAQ CTO Summit
 description: Feeling jazzed to hear some CTOs and VPEs drop knowledge next week.
 featured_image: /images/post-6.jpg
-tags: [Travel, Leadership, CTO, NYC]
+tags: [Travel, Leadership, Technology]
 ---
 
 I've got a goal for 2018 to attend four tech and leadership conferences. But before we make it to 2018 I was excited to

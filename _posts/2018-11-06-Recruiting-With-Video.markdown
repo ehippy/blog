@@ -3,7 +3,7 @@ layout: post
 title: Recruiting Top Talent with Video
 author: Patrick McDavid
 featured_image: /images/laptop-graf.jpg
-tags: [Recruiting, Video, Hiring, HR, BombBomb, Talent]
+tags: [Recruiting, Video, BombBomb]
 ---
 
 I've recruited more than 30 excellent software developers and other technical staff to BombBomb in the last several years. This is my first  position recruiting and building teams, and I don't think I would have been nearly as successful with it if I hadn't been using simple one-to-one videos.

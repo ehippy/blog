@@ -3,7 +3,7 @@ layout: post
 title: "Working for the Best Company"
 author: Patrick McDavid
 featured_image: /images/best-company.jpg
-tags: [Awards, BombBomb, Leadership]
+tags: [BombBomb, Leadership, Career]
 ---
 
 What's important to you about where you work? Is it the people, the technologies, the processes? Is it success or fortune? 

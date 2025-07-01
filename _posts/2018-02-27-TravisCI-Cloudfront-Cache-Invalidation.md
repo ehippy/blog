@@ -3,7 +3,7 @@ layout: post
 title: CloudFront Invalidation with TravisCI
 author: Patrick McDavid
 featured_image: /images/cloudyMountain.jpg
-tags: [AWS, CloudFront, TravisCI]
+tags: [AWS, DevOps, Engineering]
 ---
 
 _This is reblogged from [my post on the BombBomb Developer Blog](https://developer.bombbomb.com/blog/2018/02/27/TravisCI-Cloudfront-Cache-Invalidation/)_

@@ -1,7 +1,7 @@
 ---
 title: "Publishing Jekyll to S3 with GitHub Actions"
 featured_image: /images/gitHubActn.png
-tags: [Jekyll, GitHub Actions, AWS, S3, CI/CD, Static Sites, DevOps]
+tags: [AWS, DevOps, Engineering]
 ---
 
 Blog'd been kind quiet, yeah? I picked it up to write some stuff and found that my old friend [travis-ci.org](https://www.travis-ci.org/) wasn't really a thing anymore. I used Travis to build and publish this site for many moons really reliably. It was one of the OG continuous integration and deployment sites out there. They went all corporate or something.

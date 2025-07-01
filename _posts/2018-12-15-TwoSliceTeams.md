@@ -2,7 +2,7 @@
 title: "Two-Slice Software Teams"
 subtitle: "Never leave an engineer on an island."
 featured_image: /images/pizza.jpg
-tags: [Teams, Engineering, Management, Leadership, Scaling, Amazon]
+tags: [Engineering, Leadership, Startups]
 ---
 
 Amazon's [Two-Pizza-Teams](https://www.theguardian.com/technology/2018/apr/24/the-two-pizza-rule-and-the-secret-of-amazons-success) is a scaling methodology that suggests organizational designers ensure independence and speed by keeping ownership of products to teams that can be fed by no more than two pizzas. These teams need total decision-making authority of their product, and a clear understanding of what success means for them. This works well for Amazon as these small teams behave as composable units of opportunity and service for customers internal and external.

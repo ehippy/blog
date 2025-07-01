@@ -3,7 +3,7 @@ layout: post
 title: "Podcast: Video Sales Strategies - The Bombcast!"
 author: Patrick McDavid
 featured_image: /images/product-cast.jpg
-tags: [Video, Sales, Podcast, BombBomb, Product, Marketing]
+tags: [Video, Speaking, BombBomb, Product]
 ---
 
 BombBomb's Bombcast invited myself and their VP of Product to talk about our Fall 2018 releases and some of the story behind them!
