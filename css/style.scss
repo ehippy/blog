@@ -168,17 +168,8 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 // - - - - - - - - - - Dark Mode Styles
 
 {% if site.data.settings.theme_settings.enable_dark_mode %}
-// Dark mode toggle button (styled as social icon)
+// Dark mode toggle (styled as social icon with green accent)
 .theme-toggle {
-	// Reset button styles and inherit social icon styling
-	border: none;
-	cursor: pointer;
-	font-size: inherit;
-	transition: all 0.15s ease-in-out;
-	
-	// Match social icon positioning for icons
-	position: relative;
-	
 	// Override social icon styling to make it green/special
 	background: $accent-color !important;
 	color: white !important;
@@ -195,14 +186,6 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 	
 	.theme-icon-sun {
 		display: none;
-	}
-
-	// Center the icons properly (matching socials styling)
-	.fas {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 	}
 }
 

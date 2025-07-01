@@ -49,7 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to toggle button
     if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
+        themeToggle.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            toggleTheme();
+        });
     }
 
     // Listen for system theme changes (only if default is auto)
