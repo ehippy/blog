@@ -65,11 +65,31 @@
 	<!-- Extra Header JS Code -->
 	{{ site.data.settings.advanced_settings.header_js }}
 	{% endif %}
+
+	{% if site.data.settings.theme_settings.enable_dark_mode %}
+	<!-- Dark mode theme detection script (prevent FOUC) -->
+	<script>
+		(function() {
+			const defaultTheme = '{{ site.data.settings.theme_settings.default_theme | default: "light" }}';
+			let theme = localStorage.getItem('theme');
+			
+			if (!theme) {
+				if (defaultTheme === 'auto') {
+					theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				} else {
+					theme = defaultTheme;
+				}
+			}
+			
+			document.documentElement.setAttribute('data-theme', theme);
+		})();
+	</script>
+	{% endif %}
 	
 </head>
 
 
-<body class="loading" data-site-url="{{ site.url }}" data-page-url="{{ page.url | replace: 'index.html', '' }}">
+<body class="loading" data-site-url="{{ site.url }}" data-page-url="{{ page.url | replace: 'index.html', '' }}" data-default-theme="{{ site.data.settings.theme_settings.default_theme | default: 'light' }}">
 
 
 	{% include header.html %}
@@ -97,6 +117,9 @@
 	<!-- Javascript Assets -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="/js/journal-min.js"></script>
+	{% if site.data.settings.theme_settings.enable_dark_mode %}
+	<script src="/js/dark-mode.js"></script>
+	{% endif %}
 
 	{% if site.data.settings.advanced_settings.footer_js %}
 	<!-- Extra Footer JS Code -->

@@ -71,6 +71,15 @@ color_settings:
   overlay_text_color: '#ffffff'
   error_color: '#D64541'
 
+  # Dark mode colors
+  dark_background_color: '#1a1a1a'
+  dark_background_alt_color: '#2d2d2d'
+  dark_text_dark_color: '#ffffff'
+  dark_text_medium_color: '#b0b0b0'
+  dark_text_light_color: '#808080'
+  dark_border_color: '#404040'
+  dark_overlay_background_color: '#0d0d0d'
+
 font_settings:
   font_embed: '<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Muli:400,400i,600" rel="stylesheet">'
   title_font: '"Merriweather", sans-serif'
@@ -161,3 +170,9 @@ advanced_settings:
   custom_styles: ""
   header_js: ""
   footer_js: ""
+
+# Dark mode settings
+theme_settings:
+  enable_dark_mode: true
+  default_theme: "auto" # "light" or "dark" or "auto" (follows system preference)
+  show_theme_toggle: true

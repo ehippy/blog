@@ -14,4 +14,13 @@
 			<i class="fab fa-mastodon" aria-hidden="true"></i>
 		</a>
 	</li>
+	
+	{% if site.data.settings.theme_settings.enable_dark_mode and site.data.settings.theme_settings.show_theme_toggle %}
+	<li class="socials__item">
+		<button class="theme-toggle socials__item__link" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+			<i class="theme-icon theme-icon-moon fas fa-moon" aria-hidden="true"></i>
+			<i class="theme-icon theme-icon-sun fas fa-sun" aria-hidden="true"></i>
+		</button>
+	</li>
+	{% endif %}
 </ul>

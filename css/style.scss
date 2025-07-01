@@ -30,6 +30,15 @@ $overlay-text-color: {{ site.data.settings.color_settings.overlay_text_color }};
 
 $error-color: {{ site.data.settings.color_settings.error_color }};
 
+// Dark mode colors
+$dark-background-color: {{ site.data.settings.color_settings.dark_background_color }};
+$dark-background-alt-color: {{ site.data.settings.color_settings.dark_background_alt_color }};
+$dark-text-dark-color: {{ site.data.settings.color_settings.dark_text_dark_color }};
+$dark-text-medium-color: {{ site.data.settings.color_settings.dark_text_medium_color }};
+$dark-text-light-color: {{ site.data.settings.color_settings.dark_text_light_color }};
+$dark-border-color: {{ site.data.settings.color_settings.dark_border_color }};
+$dark-overlay-background-color: {{ site.data.settings.color_settings.dark_overlay_background_color }};
+
 
 // Fonts
 
@@ -154,5 +163,229 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 
 @import "_includes/_portfolio";
 @import "_includes/_blog";
+
+
+// - - - - - - - - - - Dark Mode Styles
+
+{% if site.data.settings.theme_settings.enable_dark_mode %}
+// Dark mode toggle button (styled as social icon)
+.theme-toggle {
+	// Reset button styles and inherit social icon styling
+	border: none;
+	cursor: pointer;
+	font-size: inherit;
+	transition: all 0.15s ease-in-out;
+	
+	// Match social icon positioning for icons
+	position: relative;
+	
+	// Override social icon styling to make it green/special
+	background: $accent-color !important;
+	color: white !important;
+	
+	&:hover {
+		background: adjust-hue($accent-color, 15deg) !important;
+		color: white !important;
+	}
+	
+	// Show moon icon in light mode (default)
+	.theme-icon-moon {
+		display: block;
+	}
+	
+	.theme-icon-sun {
+		display: none;
+	}
+
+	// Center the icons properly (matching socials styling)
+	.fas {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+// Dark mode styles
+[data-theme="dark"] {
+	body {
+		background: $dark-background-color;
+		color: $dark-text-medium-color;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $dark-text-dark-color;
+	}
+
+	.page {
+		background: $dark-background-color;
+	}
+
+	// Switch theme toggle icons in dark mode
+	.theme-toggle {
+		.theme-icon-moon {
+			display: none;
+		}
+		
+		.theme-icon-sun {
+			display: block;
+		}
+	}
+
+	.header {
+		.header__title,
+		.header__tagline {
+			color: $dark-text-dark-color;
+		}
+	}
+
+	.menu__list__item__link {
+		color: $dark-text-medium-color;
+
+		&:hover {
+			color: $dark-text-dark-color;
+		}
+
+		&.active-link {
+			color: $dark-text-dark-color;
+		}
+	}
+
+	.post__content,
+	.page__content {
+		background: $dark-background-color;
+		color: $dark-text-medium-color;
+
+		p, li, td {
+			color: $dark-text-medium-color;
+		}
+
+		a {
+			color: $accent-color;
+		}
+
+		blockquote {
+			background: $dark-background-alt-color;
+			border-left-color: $dark-border-color;
+			color: $dark-text-light-color;
+		}
+
+		pre, code {
+			background: $dark-background-alt-color;
+			color: $dark-text-dark-color;
+		}
+
+		table {
+			border-color: $dark-border-color;
+
+			th, td {
+				border-color: $dark-border-color;
+				color: $dark-text-medium-color;
+			}
+
+			th {
+				background: $dark-background-alt-color;
+				color: $dark-text-dark-color;
+			}
+
+			tr:nth-child(2n) {
+				background: $dark-background-alt-color;
+			}
+		}
+	}
+
+	.footer {
+		background: $dark-background-alt-color;
+		color: $dark-text-medium-color;
+	}
+
+	.socials a {
+		color: $dark-text-medium-color;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	// Blog post styles
+	.blog-grid {
+		.blog-post {
+			background: $dark-background-alt-color;
+			border-color: $dark-border-color;
+
+			.blog-post__title a {
+				color: $dark-text-dark-color;
+			}
+
+			.blog-post__subtitle {
+				color: $dark-text-medium-color;
+			}
+
+			.blog-post__date {
+				color: $dark-text-light-color;
+			}
+		}
+	}
+
+	// Form styles
+	.contact-form {
+		input, textarea {
+			background: $dark-background-alt-color;
+			border-color: $dark-border-color;
+			color: $dark-text-dark-color;
+
+			&::placeholder {
+				color: $dark-text-light-color;
+			}
+		}
+
+		button {
+			background: $accent-color;
+			color: white;
+		}
+	}
+
+	// Tag pills on archive page
+	.tag-pill {
+		background-color: $dark-border-color;
+		color: $dark-text-medium-color;
+	}
+
+	// Button styling fix for dark mode
+	.button {
+		color: white !important;
+		
+		&:hover {
+			color: white !important;
+		}
+	}
+
+	// Archive post styling
+	.archive-post {
+		a {
+			color: $dark-text-dark-color;
+			
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+
+	// Header image styling for dark mode
+	.header-image {
+		filter: brightness(0.9) contrast(1.1);
+	}
+
+	.header-overlay {
+		background: rgba($dark-overlay-background-color, 0.8);
+
+		@include mq(tabletl) {
+			background: -moz-linear-gradient(top, rgba($dark-overlay-background-color, 0.2) 0%, rgba($dark-overlay-background-color, 0.4) 1%, rgba($dark-overlay-background-color, 0.8) 70%, rgba($dark-overlay-background-color, 0.9) 100%);
+			background: -webkit-linear-gradient(top, rgba($dark-overlay-background-color, 0.2) 0%, rgba($dark-overlay-background-color, 0.4) 1%, rgba($dark-overlay-background-color, 0.8) 70%, rgba($dark-overlay-background-color, 0.9) 100%);
+			background: linear-gradient(to bottom, rgba($dark-overlay-background-color, 0.2) 0%, rgba($dark-overlay-background-color, 0.4) 1%, rgba($dark-overlay-background-color, 0.8) 70%, rgba($dark-overlay-background-color, 0.9) 100%);
+		}
+	}
+}
+{% endif %}
 
 
