@@ -201,7 +201,6 @@ blockquote {
 a {
 	text-decoration: none;
 	color: $text-dark-color;
-	font-weight: $bold-weight;
 	@include transition(all 0.15s ease-in-out);
 
 	&:hover {
@@ -475,13 +474,13 @@ p {
 	}
 	
 	&.active {
-		background-color: #007bff;
-		border-color: #007bff;
+		background-color: $accent-color;
+		border-color: $accent-color;
 		color: white;
 		
 		&:hover {
-			background-color: #0056b3;
-			border-color: #004085;
+			background-color: adjust-hue($accent-color, 15deg);
+			border-color: adjust-hue($accent-color, 15deg);
 			color: white;
 		}
 	}

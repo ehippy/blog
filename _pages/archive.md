@@ -23,7 +23,7 @@ featured_image: /images/heron.jpeg
 <h3>{{ year.name }}</h3>
 <ul>
   {% for post in year.items %}
-  <li class="archive-post" data-tags="{% for tag in post.tags %}{{ tag | downcase | strip }}{% unless forloop.last %} {% endunless %}{% endfor %}">
+  <li class="archive-post" data-tags="{% for tag in post.tags %}{{ tag | downcase | strip }}{% unless forloop.last %}|{% endunless %}{% endfor %}">
     {% if post.featured_image %}
       <div class="archive-thumbnail">
         <a href="{{ post.url }}">
@@ -46,82 +46,3 @@ featured_image: /images/heron.jpeg
 </ul>
 </div>
 {% endfor %}
-
-<script>
-function filterByTag(selectedTag, clickedButton, updateHash = true) {
-  const tagButtons = document.querySelectorAll('.tag-cloud-item');
-  const yearSections = document.querySelectorAll('.year-section');
-  
-  // Update active button
-  tagButtons.forEach(btn => btn.classList.remove('active'));
-  if (clickedButton) {
-    clickedButton.classList.add('active');
-  } else {
-    // Find and activate the correct button when called from hash
-    const targetButton = document.querySelector(`[data-tag="${selectedTag}"]`);
-    if (targetButton) {
-      targetButton.classList.add('active');
-    }
-  }
-  
-  // Update URL hash
-  if (updateHash) {
-    if (selectedTag === 'all') {
-      history.pushState(null, null, window.location.pathname);
-    } else {
-      window.location.hash = selectedTag;
-    }
-  }
-  
-  // Filter posts
-  yearSections.forEach(section => {
-    const postsInYear = section.querySelectorAll('.archive-post');
-    let hasVisiblePosts = false;
-    
-    postsInYear.forEach(post => {
-      const postTags = post.dataset.tags;
-      
-      if (selectedTag === 'all' || postTags.includes(selectedTag)) {
-        post.style.display = 'flex';
-        hasVisiblePosts = true;
-      } else {
-        post.style.display = 'none';
-      }
-    });
-    
-    // Hide/show year section based on whether it has visible posts
-    if (hasVisiblePosts) {
-      section.style.display = 'block';
-    } else {
-      section.style.display = 'none';
-    }
-  });
-}
-
-// Handle initial page load with hash
-function handleInitialHash() {
-  const hash = window.location.hash.substring(1); // Remove the #
-  if (hash) {
-    // Check if the hash corresponds to a valid tag
-    const targetButton = document.querySelector(`[data-tag="${hash.toLowerCase()}"]`);
-    if (targetButton) {
-      filterByTag(hash.toLowerCase(), null, false);
-    }
-  }
-}
-
-// Handle hash changes (back/forward navigation)
-window.addEventListener('hashchange', function() {
-  const hash = window.location.hash.substring(1);
-  if (hash) {
-    filterByTag(hash.toLowerCase(), null, false);
-  } else {
-    filterByTag('all', null, false);
-  }
-});
-
-// Initialize on page load
-setTimeout(function() {
-  handleInitialHash();
-}, 50);
-</script>
