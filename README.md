@@ -65,7 +65,7 @@ Built with Jekyll, hosted on AWS.
 
 ### ✨ Content & UX Improvements
 - [x] **Reading time estimates** - Add estimated reading time to posts
-- [ ] **Related posts suggestions** - Improve content discoverability
+- [x] **Related posts suggestions** - Improve content discoverability
 - [x] **Dark mode support** - Reduce screen energy consumption
 - [ ] **Offline reading** - Service worker for offline post access
 - [ ] **Search functionality** - Add client-side search for better UX

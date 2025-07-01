@@ -398,6 +398,45 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 			}
 		}
 	}
+
+	// Related posts dark mode styles
+	.related-posts {
+		border-top-color: $dark-border-color;
+
+		h3 {
+			color: $dark-text-dark-color;
+		}
+	}
+
+	.related-post {
+		background: $dark-background-alt-color;
+		box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+
+		&:hover {
+			box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+		}
+	}
+
+	.related-post__title a {
+		color: $dark-text-dark-color;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	.related-post__meta {
+		color: $dark-text-light-color;
+
+		.tag {
+			background: rgba($accent-color, 0.2);
+			color: $accent-color;
+		}
+	}
+
+	.related-post__excerpt {
+		color: $dark-text-medium-color;
+	}
 }
 {% endif %}
 
