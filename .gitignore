@@ -16,3 +16,5 @@ css/.DS_Store
 images/.DS_Store
 js/.DS_Store
 js/plugins/.DS_Store
+.bundle/*
+vendor/*

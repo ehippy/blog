@@ -53,7 +53,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-assets
 
 paginate: 6
 paginate_path: "/page:num/"
