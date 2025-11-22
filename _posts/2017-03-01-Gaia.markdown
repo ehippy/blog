@@ -1,0 +1,18 @@
+---
+title: The Gaia and the Hydra
+subtitle: "Global Fault Tolerance"
+description: Philosophy Thesis
+featured_image: /images/hydra_final_by_forrestime.png
+tags: [Architecture, Python, G]
+---
+
+In a very beardy time, I spent a week with my man [Cheech](http://cheechcode.com/about.html) assembling some AWS infrastructure patterns into a fun global fault tolerance proof of concept project called Gaia.
+
+<br />
+<div align="center">
+    <iframe class="bbVideoIframe" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=2b3d7bea-5290-a860-f04e-b436d961c237" width="600" height="338" frameborder="0" scrolling="no" allowfullscreen="allowfullscreen"></iframe>
+</div>
+<br />
+This little foursome of software applications attacked and overwhelmed one another, it measured itself and in the end, danced onscreen. 
+
+*Slides:* [Google Slides](https://docs.google.com/presentation/d/16QUH4MP3EHF4-IExrU9JQNUKSdGySmvHD0mR6VGVoIM/edit?usp=sharing)

@@ -11,9 +11,6 @@ collections:
   posts:
     output: true
     permalink: /:slug/
-  projects:
-    output: true
-    permalink: /:slug/
 
 defaults:
   -
@@ -33,12 +30,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  -
-    scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
 
 markdown: kramdown
 

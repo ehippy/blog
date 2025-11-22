@@ -1,0 +1,62 @@
+---
+layout: post
+title: Icarus
+description: A Hot Mothership One-Shot
+featured_image: /images/IcarusItchCover.jpg
+tags: [Game Development, Side Projects]
+---
+
+<img src="/images/mothership.png"
+    style="float:right;width:15%; margin-left: 20px;"
+    alt="Mothership Players Survival Guide" />
+
+In late 2019 some lovely friends and I got together and played Dungeons and Dragons together every couple weeks for more than two years. It's one of my favorite gaming memories ever and it introduced me to tabletop role playing games. Since then I've run and played a number of different tabletop games, and my latest favorite is a neat [lo-fi, sci-fi, zine-flavored horror thing called Mothership](https://www.tuesdayknightgames.com/pages/mothership-rpg).
+<!--more--> 
+
+<img src="/images/Ypsilon-14.png    "
+    style="float:left;width:20%; margin-right: 20px;"
+    alt="The Haunting of Ypsilon-14" />
+
+One of the best things about Mothership is its rich third-party content ecosystem. There are hundreds of folks making all kinds of fun add-ons for the game. New stories, space ships, tools and more are published constantly. These range from [200 page, hardbound anthologies of fun stuff for $50](https://www.tuesdayknightgames.com/products/hull-breach) to little 10 page zines, all the way down to Mothership's hallmark trifolds. This yellow one to the left here is the quintessential mothership adventure, and the whole story fits on a double-sided sheet of paper.
+
+I adore these little publications because they're little fun-snacks. A whole scenario the game master can read and internalize in 15 minutes. The good ones all have some great hook, prime evil, or creative new thing for the players to stumble into and figure out.
+
+Well, I wrote my own:
+
+&nbsp;
+[![Notes about icarus](/images/IcarusItchCoverWithAwards.png)](https://kinggeekus.itch.io/icarus)
+
+I've never been a homebrew guy. I liked running authored adventures for my players, as I thought the whole endevour of dreaming a whole world up was so terribly daunting. But, a little tri-fold? Shoot I could manage that. I'd been puttering around with an idea for one for a month or two when I came across an [in-progress game jam specifically for Mothership tri-folds](https://itch.io/jam/triptech2) called TripTech<sup>2</sup>. This game jam only went on for three weeks, and I was coming to it with only half that remaining. 
+
+I met some buddies for an evening at the pub and we shot some thoughts around and came up with a tight little sci-fi thriller about a ship that's going to do a close, faster-than-light slingshot-maneuver over the surface over a star.
+
+![Notes about icarus](/images/icarusNotes.png)
+
+I brought the idea home and set to work trying to create a cast of characters and some challenges to overcome. Then for the next couple weeks I'd spend hours toiling over a hot design app to mash together something I liked. I found a person willing to do a little art for a ship. I fiddled and futzed with the language. Having to fit so much text into such precise little spaces was a fun little game.
+
+![Animated refinments to the layout](/images/icarusRefinements.gif)
+
+I was able to get a license for Icarus from the Mothership publisher, and I submitted my entry to the game jam. A few days later, after reading all 32 entries to the jam and voting on all of them the community results were in and Icarus won second place overall from the participants. 
+
+There was a second round of awards a week later by panel of distinguished authors and I'm thrilled to say Icarus was awarded:
+
+- The Jury Grand Prize for best overall entry
+- Best Writing
+- Game Design
+- Best Utility
+
+I was blown away. There were so many cool entries! I liked the size of this project as something that fit pretty cleanly in a couple weeks of evenings. I've got another floating around for a TripTech3 if it comes along. 
+
+![Dads rolling dice](/images/icarusOnTheTable.jpg)
+
+I had those same friends over last week and sat down to have a really fun analog good time laughing and rolling dice. They sent my little story through the ringer, they did a few different things I'd never expected. Two player characters died, but in the end they saved the day and escaped.
+
+Much fun was had by all.
+
+&nbsp;
+
+<div align="center">
+    <iframe frameborder="0" src="https://itch.io/embed/3991400?bg_color=000000&amp;fg_color=ffffff&amp;link_color=d45800&amp;border_color=656c73" width="552" height="167"><a href="https://kinggeekus.itch.io/icarus">Icarus: A Hot Mothership One-Shot by KingGeekus</a></iframe>
+</div>
+
+I put it up for sale on itch.io for a few bucks, it's selling a few copies a week. I'm looking forward to hearing from folks that run it how it went.
