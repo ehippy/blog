@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Icarus
+title: 'Icarus: My First Game Jam'
 description: A Hot Mothership One-Shot
-featured_image: /images/IcarusItchCover.jpg
+featured_image: /images/icarusOnTheTable.jpg
 tags: [Game Development, Side Projects]
 ---
 
@@ -40,7 +40,7 @@ I was able to get a license for Icarus from the Mothership publisher, and I subm
 
 There was a second round of awards a week later by panel of distinguished authors and I'm thrilled to say Icarus was awarded:
 
-- The Jury Grand Prize for best overall entry
+- The **Jury Grand Prize** for best overall entry
 - Best Writing
 - Game Design
 - Best Utility
@@ -59,4 +59,5 @@ Much fun was had by all.
     <iframe frameborder="0" src="https://itch.io/embed/3991400?bg_color=000000&amp;fg_color=ffffff&amp;link_color=d45800&amp;border_color=656c73" width="552" height="167"><a href="https://kinggeekus.itch.io/icarus">Icarus: A Hot Mothership One-Shot by KingGeekus</a></iframe>
 </div>
 
-I put it up for sale on itch.io for a few bucks, it's selling a few copies a week. I'm looking forward to hearing from folks that run it how it went.
+I put it up for sale on itch.io for a few bucks, it's selling a few copies a week. I'm looking forward to hearing from folks that run it how it went. I'm hoping to get the publishers of Mothership to stock some physical copies in their store. 
+
