@@ -2,7 +2,7 @@
 layout: post
 title: 'Icarus: My First Game Jam'
 description: 'Behind the scenes of creating Icarus: my entry in the TripTech² game jam for the Mothership RPG, from concept to Grand Prize and beyond.'
-featured_image: /images/icarusOnTheTable.jpg
+featured_image: /images/icarusDeluxe.jpg
 tags: [Game Development, Side Projects]
 ---
 
