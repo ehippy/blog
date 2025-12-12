@@ -11,6 +11,8 @@
         
         // Normalize the selected tag
         const normalizedSelectedTag = selectedTag.toLowerCase().trim();
+        // Escape for use in selector
+        const escapedTagSelector = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(normalizedSelectedTag) : normalizedSelectedTag.replace(/([ #;?%&,.+*~\':!^$\[\]()=>|\/])/g, '\\$1');
         
         // Update active button
         tagButtons.forEach(btn => btn.classList.remove('active'));
@@ -18,7 +20,7 @@
             clickedButton.classList.add('active');
         } else {
             // Find and activate the correct button when called from URL parameter
-            const targetButton = document.querySelector(`[data-tag="${normalizedSelectedTag}"]`);
+            const targetButton = document.querySelector(`[data-tag="${escapedTagSelector}"]`);
             if (targetButton) {
                 targetButton.classList.add('active');
             }
@@ -69,8 +71,10 @@
         if (tag) {
             // Decode and normalize the tag from URL
             const decodedTag = decodeURIComponent(tag).toLowerCase().trim();
+            // Escape for use in selector
+            const escapedTagSelector = typeof CSS !== 'undefined' && CSS.escape ? CSS.escape(decodedTag) : decodedTag.replace(/([ #;?%&,.+*~\':!^$\[\]()=>|\/])/g, '\\$1');
             // Check if the tag corresponds to a valid tag
-            const targetButton = document.querySelector(`[data-tag="${decodedTag}"]`);
+            const targetButton = document.querySelector(`[data-tag="${escapedTagSelector}"]`);
             if (targetButton) {
                 window.filterByTag(decodedTag, null, false);
             }

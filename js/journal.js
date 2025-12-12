@@ -40,7 +40,27 @@
 		$('body').addClass('loading');
 
 		// Load the page
-		$('.page-loader').load( state.hash + ' .page__content', function() {
+		// Use fetch + manual selector to avoid jQuery.load() parsing issues with query strings containing spaces
+		var urlPath = state.hash; // state.hash includes query params
+		fetch(urlPath)
+			.then(response => response.text())
+			.then(html => {
+				// Parse HTML and extract .page__content
+				var tempDiv = document.createElement('div');
+				tempDiv.innerHTML = html;
+				var content = tempDiv.querySelector('.page__content');
+				if (content) {
+					$('.page-loader').html(content.outerHTML);
+				}
+				// Call the callback
+				pageLoadComplete();
+			})
+			.catch(error => {
+				console.error('Failed to load page:', error);
+				$('body').removeClass('loading');
+			});
+		
+		function pageLoadComplete() {
 
 			// Find transition time
 			var transitionTime = 400;
@@ -94,8 +114,7 @@
 
 			}, transitionTime);
 
-		});
-
+		}
 	});
 
 
