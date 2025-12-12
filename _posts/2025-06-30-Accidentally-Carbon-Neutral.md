@@ -3,7 +3,7 @@ layout: post
 title: "Accidently Carbon-Neutral Blog"
 categories: [infrastructure, sustainability]
 tags: [AWS, Performance, Technology]
-featured_image: /images/gardenKid.jpeg
+featured_image: /images/gardenKid.jpg
 ---
 
 I was a big hippie in college: birks, hacky sack, environmental minor. The whole deal. I've never been able to marry those halcyon days to the week to week technical work I've spent my career doing. Today, waiting on a little technical blocker, I thought about it some and went on a [green-software](https://greensoftware.foundation/) micro-adventure.
@@ -24,7 +24,7 @@ I like how **Open** and **Honest** get their place in this conversation. Ecology
 I started searching on how organizations can quantify the environmental impact of their software creations. Quickly, [AWS’s Customer Carbon Footprint Tool](https://aws.amazon.com/blogs/aws/new-customer-carbon-footprint-tool/) appeared as the toy-of-the-day. It provides monthly estimates of emissions based on your AWS usage, broken down by service and region, and includes both “market-based” and “location-based” accounting models. I was tickled to find the folks at AWS had already built this in and turned this on for all their customers. This little site you're reading runs on AWS so I dashed into my account to find that they estimate it burns..... drum roll please..... **0 Estimated Metric Tons of Carbon (MTCO₂e) per month**.
 
 
-<img src="/images/0emissions.png"
+<img src="{% asset '0emissions.png' @path %}"
     style="float:right;width:30%;border-radius:20px;box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px; margin-left: 20px;"
     alt="Carbon Neutral!" />
     
@@ -37,7 +37,7 @@ Ok, zero. Is that what it tells everybody? A little birdie took a peek at the sa
 ## Is that a lot?
 To ground this a bit more: the [average gas-powered commuter in the U.S. emits about 4.6 metric tons of CO₂ per year](https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle). Wait, I thought... am I putting 4 *tons* of gas in my car a year? It turns out *no*, assuming I'm filling up roughly a dozen times a year (yay work from home), I pump ~1.02 metric tons of gasoline into my car. So how does it jump from a ton of gasoline to many tons of CO₂? Burning 1 metric ton of gasoline produces over 3.2 metric tons of CO₂, because each carbon atom bonds with oxygen from the air, more than tripling its weight in the form of [carbon dioxide](https://www.epa.gov/ghgemissions/overview-greenhouse-gases#carbon-dioxide). I had no idea!
 
-![Gasoline gains weight when it's burned!](/images/32carbon.png)
+{% asset '32carbon.png' %}
 
 Anyway, that means the complex cloud software system above emits the equivalent of roughly **10 cars** annually, even though its actual server footprint is invisible to most of its users. I guess that feels more efficient to me than I suspected. That business serves millions of people and employs about a hundred with good jobs. Likewise the [carbon trading](https://www.epa.gov/climateleadership/scope-3-inventory-guidance) that AWS is doing shrinks that number 20x.
 

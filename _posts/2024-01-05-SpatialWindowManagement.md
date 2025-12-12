@@ -18,11 +18,11 @@ You can use the Home screen to navigate between apps, however I feel like having
 Apple's software also has a lower bound on window sizes that seems limiting. There's only so much field of view in there, and the effective maximum of simultaneous viewable windows in about two. VisionOS windows are much larger than their screen-bound equivalents.
 
 
-![VisionOS apps are huge!](/images/VisionVsMacOS-min.PNG)]
+{% asset 'VisionVsMacOS-min.PNG' %}
 
 You can see messages is roughly twice as tall in a VisionOS window as in its neighboring macOS equivalent projected into VisionOS. Compare that to how large it would be on the MacBook monitor below, roughly 8 times as large!
 
-![VisionOS apps are huge!](/images/VisionVsMacbook-min.PNG)]
+{% asset 'VisionVsMacbook-min.PNG' %}
 
 Compared to the legible little Messages on the laptop screen, we're eating something like 15x the space.
 

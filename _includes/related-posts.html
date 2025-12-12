@@ -75,7 +75,7 @@ Excludes the current post and limits to 3 suggestions, randomly ordered
         <article class="related-post">
           {% if post.featured_image %}
             <a href="{{ post.url }}" class="related-post__image">
-              <div class="related-post__image-bg" style="background-image: url('{{ post.featured_image }}')"></div>
+              <div class="related-post__image-bg" style="background-image: url('{{ post.featured_image | asset_path }}');"></div>
             </a>
           {% endif %}
           <div class="related-post__content">

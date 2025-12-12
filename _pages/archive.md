@@ -27,7 +27,7 @@ featured_image: /images/heron.jpeg
     {% if post.featured_image %}
       <div class="archive-thumbnail">
         <a href="{{ post.url }}">
-          <img src="{{ post.featured_image }}" alt="{{ post.title }}">
+          <img src="{{ post.featured_image | asset_path }}" alt="{{ post.title }}" />
         </a>
       </div>
     {% endif %}

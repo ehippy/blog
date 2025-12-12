@@ -9,7 +9,7 @@ I've wanted to do this videogame for years. I've started it handful of times, in
 
 Part of this nascent codebase was a Postgres flavored `Sequelize` ORM that had a few tables in it, and after those couple weeks, I'd expanded to what you see here. 
 
-![Database diagram for Infight.io](/images/infightDbDiagram.png)]
+{% asset 'infightDbDiagram.png' %}
 
 `Guilds`, `Players`, `PlayerGuilds`, `Games`, `GamePlayers` and `Moves` are all these little bits and pieces of the information the game needs to let users have accounts and manage their play on this board game. This was all good, a nice normalized collection of what I needed. It's nice and old-school, cozy.
 

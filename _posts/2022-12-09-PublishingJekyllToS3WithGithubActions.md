@@ -23,7 +23,7 @@ build:
 deploy:
     ...
 ```
-![Incorrectly parallel step process graphic](/images/brokeTwoThings.png)]
+{% asset 'brokeTwoThings.png' %}
 
 Turns out though that by default, GitHub actions will run these concurrently. This is super speedy cool, but that left my deploy stop no content to push to S3. You can make one `Job` depend on another with the `needs` property like so:
 ```
@@ -34,7 +34,7 @@ deploy:
     needs: build
 `````
 
-![Two step process graphic](/images/brokeTwoThingsTwo.png)]
+{% asset 'brokeTwoThingsTwo.png' %}
 
 This makes `deploy` wait on `build`, indicated by the cute line in the pic there. Perfect.
 
@@ -100,7 +100,7 @@ Publishing to S3 requires some permissions and a couple commands. First off you 
 
 Once you have an AWS user that can do the deed, you need to give GitHub the access key and secret to act as that user when publishing. This in in your repository's `Settings > Secrets > Actions` section. Paste those in from AWS.
 
-![Secrets configuration screenshot](/images/gitHubActnSecrets.png)]
+{% asset 'gitHubActnSecrets.png' %}
 
 With these installed, you can bring them into play with the `aws-actions/configure-aws-credentials` build step like this:
 
@@ -129,7 +129,7 @@ Now, I refresh the CDN rather with an invalidation request:
       run: aws cloudfront create-invalidation --distribution-id E2BXX0VHQEULW0 --paths "/*"
 ```
 
-![Incorrectly parallel step process graphic](/images/twoThings.png)]
+{% asset 'twoThings.png' %}
 
 
 Bada-boom, these words you're reading ran through this little configuration! You can [see the full YAML here](https://github.com/ehippy/blog/blob/502a87ffddefc504fb664c0ca0b56aad453b5729/.github/workflows/jekyll.yml).

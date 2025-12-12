@@ -51,5 +51,18 @@ paginate_path: "/page:num/"
 excerpt_separator: <!--more-->
 
 assets:
-  compression:
-    js: uglifier
+  compression: true
+  plugins:
+    img:
+      optim:
+        {}
+  precompile:
+    - '**/*.jpg'
+    - '**/*.jpeg'
+    - '**/*.JPG'
+    - '**/*.JPEG'
+    - '**/*.png'
+    - '**/*.PNG'
+    - '**/*.gif'
+    - '**/*.GIF'
+    - '**/*.svg'

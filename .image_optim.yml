@@ -1,0 +1,12 @@
+# Image optimization configuration for image_optim gem
+# Disables tools that aren't installed
+
+pngout: false
+oxipng: false
+svgo: false
+
+# These are installed and will be used:
+# - jpegoptim (for JPG)
+# - optipng (for PNG)
+# - gifsicle (for GIF)
+# - pngquant (for PNG)

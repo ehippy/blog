@@ -44,7 +44,7 @@ Likewise, I don't just use video for one to one outreach, it's also great for so
 ### A touch of magic
 After you've sent a video to someone, BombBomb watches as the email and video are opened and played, and then automatically lets me know the instant that happens.
 
-![](/images/open-alert.png)
+{% asset 'open-alert.png' %}
 
 When I see that message I pick up the phone and call that person. Imagine how that call goes: "Wow! I was just watching your video! How did you do that?" 
 

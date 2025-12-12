@@ -47,7 +47,7 @@ Automation is the aim in software, so to some degree it's desireable to have bit
 ### Make a list, check it twice
 Have a spreadsheet that maps out your organizations' portfolio: the applications, major features and subsystems and the wellness thereof. Who knows these systems? What's the future interest in developing them? What should be actively sunset? Estimate the commitment it would take to give the care you want these systems to have.
 
-![](/images/FeatureMaturityMatrix.png)
+{% asset 'FeatureMaturityMatrix.png' %}
 
 You're going to be short of what you want, nobody ever gets ahead of the list. The question is are you putting resources where you expect to be growing the business? How many C-grade features do you have in the field that are a drag to support and make the staff cringe? Are you understaffed 15% of where you'd like to be or 40%? What's going to give? Have that conversation with the larger organization. Suggest specific changes: cuts, simplifications, pesky-time-stealers.
 

@@ -16,7 +16,7 @@ After a few hours of going about this manually she wondered to herself if there 
 ### Play!
 How could we use this for evil? We decided to try and make a standalone, offline hardware device that would aid you in locating the nearest cheeseburger wherever you were on the globe. Could we have done this with an iPhone and a quick search? Of course! Would that have been as much fun? Never! We had a trip to NYC coming up in a couple weeks and our hope was to take this thing out there, drop ourselves off in the middle of the city somewhere and make our way to a white castle with only a directional heading and a distance measurement.
 
-![](/images/compass.gif)
+{% asset 'compass.gif' %}
 
 
 ### Scraping and Geocoding
@@ -42,7 +42,7 @@ Anyway, for our little project, we wanted to whip the thing together quickly, so
 
 Assembly was very easy enough: the LCD board was built as a 'shield' which means it essentially snaps right on top of the Raspberry Pi itself (the green PCB poking out under there.) The power supply and GPS module required some solder.
 
-![](/images/hogan.jpg)
+{% asset 'hogan.jpg' %}
 
 Notice the fine electrical tape flourishes, the professional quality soldered points on the charging board, and the disheveled wrapping of the power cord around the li-ions. With the battery folded under the PCBs, the damned thing looked like a bomb. The wifi dongle allowed us to remotely update the software during development, and was pulled for runtime.
 
@@ -67,7 +67,7 @@ def bearing_to_cardinal(input_bearing):
 
 You would turn the finished product on by plugging in the power source from the battery, it would wait for a 3D GPS lock for about 30 seconds, then it would happily point you in the direction of the nearest selected restaurant, updating at about 10Hz as you moved around.
 
-![](/images/white-castle.jpg)
+{% asset 'white-castle.jpg' %}
 
 No big deal!
 

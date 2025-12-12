@@ -10,14 +10,14 @@ Here's the story of how I wrote [a little piece of Sci-Fi Horror](https://kingge
 <!--more--> 
 
 ## Mothership
-<img src="/images/mothership.png"
+<img src="{% asset 'mothership.png' @path %}"
     style="float:right;width:15%; margin-left: 20px;"
     alt="Mothership Players Survival Guide" />
 
 In late 2019 some lovely friends and I got together and played Dungeons and Dragons together every couple weeks for more than two years. It's one of my favorite gaming memories ever and it introduced me to tabletop role playing games. Since then I've run and played a number of different tabletop games, and my latest favorite is a neat [lo-fi, sci-fi, zine-flavored horror thing called Mothership](https://www.tuesdayknightgames.com/pages/mothership-rpg).
 
 
-<img src="/images/Ypsilon-14.png    "
+<img src="{% asset 'Ypsilon-14.png' @path %}    "
     style="float:left;width:20%; margin-right: 20px;"
     alt="The Haunting of Ypsilon-14" />
 
@@ -31,14 +31,14 @@ I've never been a homebrew guy. I liked running authored adventures for my playe
 
 TripTech's theme was "Impossibly Perfect", so I sketched out some too-good-to-be-true space horror scenarios. I met some buddies for an evening at the pub and we shot some thoughts around and came up with a tight little sci-fi thriller about a fast spaceship that's going to do a close, faster-than-light slingshot-maneuver over the surface of a star. I'm not sure we nailed impossibly perfect with a ship that can use a sun to hop from planet to planet, but it does turn out too good to be true.
 
-![Notes about icarus](/images/icarusNotes.png)
+{% asset 'icarusNotes.png' %}
 
 ## Building a dying ship
 
 I brought the idea home and set to work trying to create a cast of characters and some challenges to overcome. Then for the next couple weeks I'd spend an hour or two most nights toiling over a hot design app to mash together something I liked.
 
 <div style="float:right;margin-left:20px;">
-    <img src="/images/icarusRefinements.gif" alt="Animated refinements to the layout" />
+    <img src="{% asset 'icarusRefinements.gif' @path %}" alt="Animated refinements to the layout" />
 </div>
 
 I started with layout first, and ended up writing the whole thing in a graphic design program, Figma, rather than in a word processor. I don't think I'll ever do that again, its spelling/grammar tools are weak. I fiddled and futzed with the language: I went with fun on-the-nose names like **Dr. Haste** and **Engineer Patch** for the characters, which I think made it simple to internalize. 
@@ -54,15 +54,15 @@ I found a person willing to do a little art for a ship. I shared versions with t
 ## Shipping a disaster
 As I got close to final, I was able to get a license for *Icarus* from the Mothership publisher, and I submitted my entry to the game jam.
 
-[![Cover art for Icarus, featuring a burning star](/images/IcarusItchCoverWithAwards.png)](https://kinggeekus.itch.io/icarus)
+[![Cover art for Icarus, featuring a burning star]({% asset 'IcarusItchCoverWithAwards.png' @path %})](https://kinggeekus.itch.io/icarus)
 
 I felt like I'd done a good job, but also like I had some stiff competition from the other submissions. I spent the next few days reading and rating all 32 entries to the jam. I was particularly impressed with some of the entries with really slick art:
 
 <br />
 <div style="display: flex; gap: 10px; justify-content: center;">
-    <img src="/images/triptech_Minerva.png" alt="Minerva" style="width: 33%;" />
-    <img src="/images/triptech_NeonDreamGirl.png" alt="Neon Dream Girl" style="width: 33%;" />
-    <img src="/images/triptech_Xiao.png" alt="Xiao" style="width: 33%;" />
+    <img src="{% asset 'triptech_Minerva.png' @path %}" alt="Minerva" style="width: 33%;" />
+    <img src="{% asset 'triptech_NeonDreamGirl.png' @path %}" alt="Neon Dream Girl" style="width: 33%;" />
+    <img src="{% asset 'triptech_Xiao.png' @path %}" alt="Xiao" style="width: 33%;" />
 </div>
 It was fun to read through these murder mysteries, generation-ship intrigues and deadly dumpling houses.
 
@@ -82,7 +82,7 @@ I was blown away. There were so many cool entries! I think Icarus stood out in p
 ## Playing with fire, and some other dads
 I had those same friends over last week and sat down to have an analog good time laughing and rolling dice playing through Icarus. They sent my little story through the wringer, they did a few different things I never expected. One player's character died walking through fire to save his friends. Another character died being torn apart by a reprogrammed android. In the end they saved the day and escaped.
 
-![Dads rolling dice](/images/icarusOnTheTable.jpg)
+{% asset 'icarusOnTheTable.jpg' %}
 
 They were able to short-circuit one of the puzzle challenges and skip a whole corner of the ship, but that's fine, those NPCs are still lurking on the ship for the next session. Much fun was had by all.
 

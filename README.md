@@ -5,11 +5,36 @@ Check it out at [https://patrickmcdavid.com](https://patrickmcdavid.com)
 
 Built with Jekyll, hosted on AWS.
 
-## to get going on local run
+## Setup & Local Development
 
- - gem update
- - bundle install
- - bundle exec jekyll serve --drafts
+### macOS
+
+```bash
+# Install dependencies via Homebrew
+brew bundle
+
+# Install Ruby gems
+gem update
+bundle install
+
+# Serve locally with drafts
+bundle exec jekyll serve --drafts
+```
+
+### Linux / CI
+
+Dependencies are automatically installed via the GitHub Actions workflow. For manual setup:
+
+```bash
+sudo apt-get install optipng jpegoptim gifsicle pngquant advancecomp
+gem update
+bundle install
+bundle exec jekyll serve --drafts
+```
+
+### Explanation
+
+The blog uses jekyll-assets for fingerprinting and cache-busting. The Brewfile / GitHub Actions workflow ensures image optimization tools are available for `image_optim` compression.
 
 
 ## TODO Topics
