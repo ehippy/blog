@@ -18,3 +18,4 @@ js/.DS_Store
 js/plugins/.DS_Store
 .bundle/*
 vendor/*
+.jekyll-cache/*

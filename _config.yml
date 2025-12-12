@@ -44,12 +44,12 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-assets
 
 paginate: 6
 paginate_path: "/page:num/"
 excerpt_separator: <!--more-->
 
 assets:
-  compress:
-    css: true
-    js: true
+  compression:
+    js: uglifier
