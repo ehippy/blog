@@ -1,6 +1,12 @@
 <header class="header">
 
-	<div class="header-image header-image--on" style="background-image: url({{ page.featured_image }});"></div>
+	{% if page.featured_image %}
+	<div class="header-image header-image--on">
+		{% picture {{ page.featured_image }} alt="{{ page.title }}" %}
+	</div>
+	{% else %}
+	<div class="header-image header-image--on"></div>
+	{% endif %}
 	<div class="header-image"></div>
 
 	<div class="header-overlay"></div>

@@ -1,7 +1,7 @@
 ---
 title: All Posts
 permalink: /archive/
-featured_image: /images/heron.jpeg
+featured_image: heron.jpeg
 ---
 
 <!-- Tag Cloud -->

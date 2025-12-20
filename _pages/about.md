@@ -1,7 +1,7 @@
 ---
 title: About Me
 subtitle: Software engineering leader, architect, father and philosopher
-featured_image: /images/toothbrushers.webp
+featured_image: toothbrushers.webp
 ---
 
 I’ve spent the better part of two decades leading engineering work that scales. I’ve played key roles in guiding products from early-stage scrappiness to long-term viability — including one that became [a killer, high-growth product](https://bombbomb.com). My work tends to sit at the intersection of systems, people, and thoughtful progress.

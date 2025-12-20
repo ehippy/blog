@@ -2,7 +2,7 @@
 layout: page
 title: Résumé
 permalink: /resume/
-featured_image: /images/sage.png
+featured_image: sage.png
 ---
 
 <div style="width: 100%; height: 900px; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
