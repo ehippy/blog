@@ -29,10 +29,10 @@
 	<meta property="og:description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}{{ page.excerpt | strip_html }}{% endif %}" />
 	<meta property="og:image" content="{{ site.url }}{{ page.featured_image }}" />
 
-	{% if site.data.settings.font_settings.font_embed %}
-	<!-- Font Embed Code -->
-	{{ site.data.settings.font_settings.font_embed }}
-	{% endif %}
+	<!-- Font Embed Code - loaded async to avoid render blocking -->
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,800|Muli:400,400i,600,800&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,800|Muli:400,400i,600,800&display=swap" media="print" onload="this.media='all'">
+	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,800|Muli:400,400i,600,800&display=swap"></noscript>
 
 	<!-- Styles -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
