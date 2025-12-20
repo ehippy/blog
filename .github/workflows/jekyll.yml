@@ -50,6 +50,12 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+      - name: Minify JavaScript
+        run: |
+          npm install -g terser
+          if [ -f ./_site/js/app.js ]; then
+            terser ./_site/js/app.js -c -m -o ./_site/js/app.js
+          fi
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -74,10 +80,10 @@ jobs:
       run: |
         # Cache generated images forever (content hash in filename)
         aws s3 sync ./site_content/generated s3://patrickmcdavid.com/generated --delete --acl public-read --cache-control "public, max-age=31536000, immutable"
-        # Cache CSS/JS for 1 day
-        aws s3 sync ./site_content/css s3://patrickmcdavid.com/css --delete --acl public-read --cache-control "public, max-age=86400"
-        aws s3 sync ./site_content/js s3://patrickmcdavid.com/js --delete --acl public-read --cache-control "public, max-age=86400"
-        # Don't cache HTML (or short cache)
-        aws s3 sync ./site_content s3://patrickmcdavid.com --delete --acl public-read --cache-control "public, max-age=3600" --exclude "generated/*" --exclude "css/*" --exclude "js/*"
+        # Cache CSS/JS for 1 day with gzip
+        aws s3 sync ./site_content/css s3://patrickmcdavid.com/css --delete --acl public-read --cache-control "public, max-age=86400" --content-encoding gzip
+        aws s3 sync ./site_content/js s3://patrickmcdavid.com/js --delete --acl public-read --cache-control "public, max-age=86400" --content-encoding gzip
+        # Don't cache HTML (or short cache) with gzip
+        aws s3 sync ./site_content s3://patrickmcdavid.com --delete --acl public-read --cache-control "public, max-age=3600" --content-encoding gzip --exclude "generated/*" --exclude "css/*" --exclude "js/*"
     - name: Invalidate Cloudfront
       run: aws cloudfront create-invalidation --distribution-id E2BXX0VHQEULW0 --paths "/*"
