@@ -218,7 +218,7 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 	.header {
 		.header__title,
 		.header__tagline {
-			color: white;
+			color: $dark-text-dark-color;
 		}
 	}
 
