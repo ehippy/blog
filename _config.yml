@@ -58,7 +58,7 @@ picture:
     original: original
     webp: webp
     jpeg: [jpeg]
-  quality: 75
+  quality: 70
   markup: picture
 
   presets:
@@ -70,6 +70,7 @@ picture:
       sizes:
         0: 400px
         600: 600px
+        700: 700px
         800: 800px
 
 assets:
