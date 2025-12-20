@@ -13,9 +13,10 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site_content
+          path: ./site_content
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
       - name: Validate HTML
         run: |
           npm install -g html-validate
-          html-validate "./_site/**/*.html"
+          html-validate "./site_content/**/*.html"
