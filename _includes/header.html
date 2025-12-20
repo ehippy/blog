@@ -2,7 +2,7 @@
 
 	{% if page.featured_image %}
 	<div class="header-image header-image--on">
-		{% picture {{ page.featured_image }} alt="{{ page.title }}" %}
+		{% picture {{ page.featured_image }} alt="{{ page.title }}" fetchpriority="high" %}
 	</div>
 	{% else %}
 	<div class="header-image header-image--on"></div>
