@@ -84,10 +84,10 @@
 <body class="loading" data-site-url="{{ site.url }}" data-page-url="{{ page.url | replace: 'index.html', '' }}" data-default-theme="{{ site.data.settings.theme_settings.default_theme | default: 'light' }}">
 
 
-	{% include header.html %}x
+	{% include header.html %}
 
 	
-	<div class="page">
+	<main class="page">
 
 		<div class="page__content" data-page-title="{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}" data-image="{{ page.featured_image }}">
 
@@ -95,7 +95,7 @@
 
 		</div>
 
-	</div>
+	</main>
 
 
 	{% include footer.html %}
