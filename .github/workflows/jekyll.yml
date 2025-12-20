@@ -35,7 +35,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2.2' # Updated to Ruby 3.2.x for nokogiri compatibility
+          ruby-version: '2.7.8' # Pin to Ruby 2.7.x for jekyll-assets compatibility
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Setup Pages
