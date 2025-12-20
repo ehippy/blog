@@ -3,7 +3,7 @@ title: The Gaia and the Hydra
 subtitle: "Global Fault Tolerance"
 description: Philosophy Thesis
 featured_image: hydra_final_by_forrestime.png
-tags: [Software Engineering]
+tags: [Software Engineering, Projects]
 ---
 
 In a very beardy time, I spent a week with my man [Cheech](http://cheechcode.com/about.html) assembling some AWS infrastructure patterns into a fun global fault tolerance proof of concept project called Gaia.

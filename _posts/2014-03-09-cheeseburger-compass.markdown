@@ -3,7 +3,7 @@ title: "Cheeseburger Compass"
 subtitle: "A handheld device to that navigates to flavor"
 description: A GIS / python / raspberry pi collaboration!
 featured_image: white-castle.jpg
-tags: [Software Engineering]
+tags: [Software Engineering, Projects]
 ---
 
 ### Work work...
