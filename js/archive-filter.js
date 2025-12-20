@@ -89,13 +89,6 @@
         const tag = urlParams.get('tag');
         const decodedTag = tag ? decodeURIComponent(tag) : null;
         
-        console.log('Archive filtering check:', { 
-            tagButtonsFound: tagButtons.length, 
-            tagFromUrl: tag,
-            decodedTag: decodedTag,
-            currentPath: window.location.pathname,
-            currentUrl: window.location.href 
-        });
         
         if (tagButtons.length > 0) {
             handleInitialQuery();
@@ -104,63 +97,11 @@
         return false;
     }
 
-    // Handle popstate (back/forward navigation)
-    window.addEventListener('popstate', function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const tag = urlParams.get('tag');
-        if (tag) {
-            const decodedTag = decodeURIComponent(tag).toLowerCase().trim();
-            setTimeout(() => window.filterByTag(decodedTag, null, false), 50);
-        } else {
-            setTimeout(() => window.filterByTag('all', null, false), 50);
-        }
-    });
-
-    // Observer to detect when archive content is loaded (for AJAX navigation)
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            // Check if tag cloud elements were added
-            if (mutation.addedNodes) {
-                for (let node of mutation.addedNodes) {
-                    if (node.nodeType === 1) { // Element node
-                        if (node.querySelector && node.querySelector('.tag-cloud-item')) {
-                            console.log('Archive content detected via AJAX, initializing...');
-                            setTimeout(initializeArchiveFiltering, 50);
-                            return;
-                        }
-                        // Also check if the node itself is a tag cloud item
-                        if (node.classList && node.classList.contains('tag-cloud-item')) {
-                            console.log('Tag cloud items detected, initializing...');
-                            setTimeout(initializeArchiveFiltering, 50);
-                            return;
-                        }
-                    }
-                }
-            }
-        });
-    });
-
-    // Start observing the document for changes
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    });
-
     // Initialize on DOM ready
-    function initialize() {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => initializeArchiveFiltering());
+    } else {
         initializeArchiveFiltering();
     }
-
-    // Try multiple initialization approaches
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initialize);
-    } else {
-        initialize();
-    }
-
-    // Also try with delays for various timing scenarios
-    setTimeout(initialize, 50);
-    setTimeout(initialize, 100);
-    setTimeout(initialize, 200);
 
 })();

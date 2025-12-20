@@ -1,53 +1,42 @@
 //
-// Journal JS - Simplified
+// Journal JS - Simplified (Vanilla JS)
 //
 
-(function ($) {
-	'use strict';
+function pageFunctions() {
+	// Show content
+	document.body.classList.remove('loading');
 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page Functions
+	// Active links - highlight current page
+	document.querySelectorAll('.active-link').forEach(el => el.classList.remove('active-link'));
+	const currentPath = window.location.pathname;
+	const currentLink = document.querySelector(`a[href="${currentPath}"]`);
+	if (currentLink) currentLink.classList.add('active-link');
 
-	function pageFunctions() {
+	// Images - extract from paragraphs and wrap
+	document.querySelectorAll('.single p > img').forEach(img => {
+		const p = img.parentElement;
+		const wrap = document.createElement('div');
+		wrap.className = 'image-wrap';
+		p.parentElement.insertBefore(wrap, p.nextSibling);
+		wrap.appendChild(img);
+		p.remove();
+	});
+}
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Show content
-		$('body').removeClass('loading');
+// Run on load
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', pageFunctions);
+} else {
+	pageFunctions();
+}
 
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Active links
-		// Switch active link states
-		$('.active-link').removeClass('active-link');
-		var currentPath = window.location.pathname;
-		$('a[href="' + currentPath + '"]').addClass('active-link');
-
-		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Images
-		$('.single p > img').each( function() {
-			var thisP = $(this).parent('p');
-			$(this).insertAfter(thisP);
-			$(this).wrapAll('<div class="image-wrap"></div>');
-			thisP.remove();
-		});
+// Menu toggle
+document.addEventListener('click', function(e) {
+	if (e.target.closest('.js-menu-toggle')) {
+		document.body.classList.toggle('menu--open');
 	}
 
-	// Run functions on load
-	pageFunctions();
-
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Menu
-
-	$(document).on('click', '.js-menu-toggle', function (){
-		// If already open
-		if ( $('body').hasClass('menu--open') ) {
-			$('body').removeClass('menu--open');
-		}
-		// If not open
-		else {
-			$('body').addClass('menu--open');
-		}
-	});
-
-	$(document).on('click', '.menu__list__item__link', function (){
-		// If menu is open when you click a link on mobile
-		if ( $('body').hasClass('menu--open') ) {
-			$('body').removeClass('menu--open');
-		}
-	});
-	
-}(jQuery));
+	if (e.target.closest('.menu__list__item__link') && document.body.classList.contains('menu--open')) {
+		document.body.classList.remove('menu--open');
+	}
+});

@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
-    console.log('Dark mode script loaded. Toggle:', !!themeToggle);
-
     // Get default theme from data attribute or fallback to auto
     const getDefaultTheme = () => {
         const bodyElement = document.body;
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function setTheme(theme, auto = false) {
         html.setAttribute('data-theme', theme);
         updateToggleIcon(auto ? 'auto' : theme);
-        console.log('Theme set to:', theme, auto ? '(auto)' : '(manual)');
     }
     
     // Function to update the toggle icon based on current mode
