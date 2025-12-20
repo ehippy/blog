@@ -54,10 +54,10 @@ Built with Jekyll, hosted on AWS.
 ## 🚀 Blog Improvement TODOs
 
 ### 🌍 Sustainability & Performance (Inspired by "Accidentally Carbon-Neutral")
-- [ ] **Carbon footprint dashboard** - Add real-time carbon impact display for visitors
-- [ ] **Image optimization pipeline** - Implement WebP/AVIF conversion for all images
-- [ ] **CSS/JS minification** - Optimize and tree-shake all assets  
-- [ ] **Font optimization** - Switch to system fonts where possible, reduce font weights
+- [x] **Carbon footprint dashboard** - Add real-time carbon impact display for visitors
+- [x] **Image optimization pipeline** - Implement WebP/AVIF conversion for all images
+- [x] **CSS/JS minification** - Optimize and tree-shake all assets  
+- [x] **Font optimization** - Switch to system fonts where possible, reduce font weights
 - [ ] **CDN performance audit** - Optimize CloudFront cache headers and edge locations
 - [ ] **Page weight budgets** - Set carbon budgets for new content creation
 - [ ] **Green Web Foundation badge** - Add verified green hosting badge to footer
@@ -66,8 +66,8 @@ Built with Jekyll, hosted on AWS.
 ### 🛠️ Technical Debt & Infrastructure
 - [ ] **Dependency audit** - Remove unused Jekyll plugins and dependencies
 - [ ] **Security headers** - Add proper CSP, HSTS, and security headers
-- [ ] **Accessibility audit** - Ensure WCAG 2.1 AA compliance
-- [ ] **Mobile optimization** - Improve mobile reading experience
+- [x] **Accessibility audit** - Ensure WCAG 2.1 AA compliance
+- [x] **Mobile optimization** - Improve mobile reading experience
 
 ### 🔧 Development Experience
 - [ ] **Pre-commit hooks** - Add linting and formatting automation
