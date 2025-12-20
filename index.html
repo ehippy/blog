@@ -43,8 +43,8 @@ featured_image: me_coffee.jpg
 			</a>		
 			{% endif %}
 			<div class="blog-post__content">
-				<p>{{ post.excerpt }}</p>
-				<p><a href="{{ post.url }}" class="button">Read {{ post.title }}</a>
+				{{ post.excerpt }}
+				<p><a href="{{ post.url }}" class="button">Read {{ post.title }}</a></p>
 			</div>
 
 		</article>
@@ -57,7 +57,7 @@ featured_image: me_coffee.jpg
 
 {% if paginator.total_pages > 1 %}
 
-<nav class="pagination">
+<nav class="pagination" aria-label="Pagination">
 
 	{% if paginator.previous_page %}
 	<div class="pagination__prev">
