@@ -44,7 +44,7 @@ jobs:
       - name: Install image processing dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libvips libpng-dev libjpeg-dev libwebp-dev
+          sudo apt-get install -y libvips-dev libpng-dev libjpeg-dev libwebp-dev libheif-dev
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
