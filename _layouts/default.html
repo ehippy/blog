@@ -11,6 +11,10 @@
 	<title>{% if page.url == "/" %}{{ site.data.settings.basic_settings.site_title }} – {{ page.title }}{% else %}{{ page.title }} – {{ site.data.settings.basic_settings.site_title }}{% endif %}</title>
 	<meta name="description" content="{% if page.description %}{{ page.description | strip_html }}{% else %}{{ page.excerpt | strip_html }}{% endif %}">
 
+	<!-- Preconnect to font services -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>>
+
 	<!-- RSS Feed -->
 	{% feed_meta %}
 
@@ -103,10 +107,10 @@
 
 
 	<!-- Javascript Assets -->
-	<script src="/js/journal.js"></script>
-	<script src="/js/archive-filter.js"></script>
+	<script defer src="/js/journal.js"></script>
+	<script defer src="/js/archive-filter.js"></script>
 	{% if site.data.settings.theme_settings.enable_dark_mode %}
-	<script src="/js/dark-mode.js"></script>
+	<script defer src="/js/dark-mode.js"></script>
 	{% endif %}
 
 	{% if site.data.settings.advanced_settings.footer_js %}
