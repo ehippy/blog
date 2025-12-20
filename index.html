@@ -20,7 +20,11 @@ featured_image: me_coffee.jpg
 
 			{% if post.featured_image %}
 			<a href="{{ post.url }}" class="blog-post__image">
-			{% picture {{ post.featured_image }} alt="{{ post.title }}" %}
+			{% if forloop.first %}
+				{% picture {{ post.featured_image }} alt="{{ post.title }}" fetchpriority="high" %}
+			{% else %}
+				{% picture {{ post.featured_image }} alt="{{ post.title }}" %}
+			{% endif %}
 			</a>		
 			{% endif %}
 			<div class="blog-post__content">
