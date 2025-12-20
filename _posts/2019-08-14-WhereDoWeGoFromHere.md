@@ -2,7 +2,7 @@
 title: "Personal Goal Sheet!"
 subtitle: "It's simple and fun!"
 featured_image: /images/wrenAndLeo.jpg
-tags: [Personal, Parenting, Engineering]
+tags: [Personal, Personal Growth, Software Engineering]
 ---
 
 I've been feeling a bit in-between lately. Maybe some goals would help?

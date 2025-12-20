@@ -3,7 +3,7 @@ title: "Spoken Worlds"
 subtitle: "Language and Culture’s Creation of Reality"
 description: Philosophy Thesis
 featured_image: /images/aspens.JPG
-tags: [Philosophy, Language]
+tags: [Ideas, Language]
 ---
 
 _[TL;DR](/my-thesis/)_

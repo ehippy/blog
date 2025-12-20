@@ -3,7 +3,7 @@ title: "OSXonIntel.com"
 subtitle: "A petition asking Apple to port OSX to Intel hardware"
 description: A petition site from twenty years ago
 featured_image: /images/osxOnIntelScreen.png
-tags: [Computing]
+tags: [Technology]
 ---
 
 Six months before the release of Mac OS X in 2001, some friends and I were excited about Apple's new OS. Linux in a whiz-bang wrapper? Yes please! Being broke children we weren't interested in the prospect of having to buy to Macs to run it. 

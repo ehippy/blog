@@ -3,7 +3,7 @@ layout: post
 title: "A look back at 2017"
 description: I look back on 2017
 featured_image: /images/wrenSnow.jpg
-tags: [Personal, Career, BombBomb, Parenting]
+tags: [Personal, Business, Personal Growth]
 ---
 
 2017 was a year of upheaval and growth by necessity.

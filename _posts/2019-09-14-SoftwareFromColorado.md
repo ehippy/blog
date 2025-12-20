@@ -1,7 +1,7 @@
 ---
 title: "Software, from the heart of Colorado"
 featured_image: /images/BombBomb_portraits_WEB_02.png
-tags: [BombBomb, Engineering, Leadership, Startups]
+tags: [Software Engineering, Business]
 ---
 
 Keith Reid-Cleveland with BuiltInColorado [featured BombBomb and its engineering staff in a piece about our work environment, values and goals. ](https://www.builtincolorado.com/spotlight/09/17/2019/bombbomb-colorado-engineering-careers) Below is Keith's full interview with me about the team at BombBomb and what we look for in our people, and how we've beaten the odds as a bootstrapped SaaS in Colorado Springs. Enjoy!

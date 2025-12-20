@@ -2,7 +2,7 @@
 title: "Recruit the best with Video"
 subtitle: "It's simple and fun!"
 featured_image: /images/elephant.jpg
-tags: [Recruiting, Video, Speaking]
+tags: [Speaking]
 ---
 
 I was very kindly invited to speak at DisurptHR Denver in April on the subject of using video to recruit the excellent talent. Here's a recording of that talk!

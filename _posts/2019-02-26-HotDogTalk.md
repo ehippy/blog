@@ -2,7 +2,7 @@
 title: "DVLP Denver Serverless Presentation"
 subtitle: "Never leave an engineer on an island."
 featured_image: /images/jaws.jpg
-tags: [AWS, Speaking, Machine Learning, Engineering]
+tags: [Infrastructure, Speaking, AI/ML, Software Engineering]
 ---
 
 One of my favorite technology events, [DVLP Denver](https://developdenver.org/) was kind enough to allow me present a talk I'm pretty fond of, [Serverless Hotdog Detection](https://docs.google.com/presentation/d/1dD4L0T2ms08jJcvriuyi0J6vaKQjI-1E6JLXYoLvtgM/edit?usp=sharing) last fall. I was delighted to see that they posted the video of it yesterday!

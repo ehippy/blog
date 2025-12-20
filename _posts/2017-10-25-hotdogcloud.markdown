@@ -3,7 +3,7 @@ layout: post
 title: Serverless Hotdog Detection
 description: Hotdog.cloud is a little web app that detects and celebrates hotdogs!
 featured_image: /images/hotdogcollage.jpg
-tags: [Presentation, Talk, Serverless, Machine Learning, Javascript, AWS, Rekognition]
+tags: [Speaking, Infrastructure, AI/ML, Software Engineering]
 ---
 
 <sub><sup>_Photo credit to [Umai Hotdogs](http://umaihotdogs.com/) of Sacremento for their scrumptious looking dogs._</sup></sub>

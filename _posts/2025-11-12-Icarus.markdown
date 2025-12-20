@@ -3,7 +3,7 @@ layout: post
 title: 'Icarus: My First Game Jam'
 description: 'Behind the scenes of creating Icarus: my entry in the TripTech² game jam for the Mothership RPG, from concept to Grand Prize and beyond.'
 featured_image: /images/icarusDeluxe.jpg
-tags: [Game Development, Side Projects]
+tags: [Game Design, Projects]
 ---
 
 Here's the story of how I wrote [a little piece of Sci-Fi Horror](https://kinggeekus.itch.io/icarus) for a game jam and ended up winning some stellar awards! Read on for a casual design diary of a ship in deep shit.

@@ -1,7 +1,7 @@
 ---
 title: "Game Dev with Microsoft Makecode Arcade"
 featured_image: /images/princessLastStandScreenShot01.png
-tags: [Game Development, Education, Parenting]
+tags: [Game Design, Personal Growth]
 ---
 
 My five year old has been taking some online programming classes that teach fundamentals using block programming. He's using this awesome iPad app [ScratchJr](https://apps.apple.com/us/app/scratchjr/id895485086) that focuses on movement and animation. It has some really neat fundamental concepts and sneaks in some clever stuff like interprocess messaging. 

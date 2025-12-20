@@ -2,7 +2,7 @@
 layout: post
 title: "Accidently Carbon-Neutral Blog"
 categories: [infrastructure, sustainability]
-tags: [AWS, Performance, Technology]
+tags: [Infrastructure, Technical Excellence, Technology]
 featured_image: /images/gardenKid.jpeg
 ---
 
