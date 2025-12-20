@@ -1,0 +1,21 @@
+name: HTML Validation
+
+on:
+  workflow_run:
+    workflows: ["Deploy Jekyll site to S3"]
+    types: [completed]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site_content
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
+      - name: Validate HTML
+        run: |
+          npm install -g html-validate
+          html-validate "./_site/**/*.html"
