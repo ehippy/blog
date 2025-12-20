@@ -50,6 +50,10 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+      - name: Minify HTML
+        run: |
+          npm install -g html-minifier
+          find ./_site -type f -name "*.html" -exec html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --use-short-doctype --minify-css true --minify-js true -o {} {} \;
       - name: Minify JavaScript
         run: |
           npm install -g terser
