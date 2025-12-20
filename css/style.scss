@@ -297,7 +297,7 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 			border-color: $dark-border-color;
 
 			.blog-post__title a {
-				color: white;
+				color: $dark-text-dark-color;
 			}
 
 			.blog-post__subtitle {
