@@ -98,7 +98,7 @@ I put it [up for sale on itch.io for a couple bucks](https://kinggeekus.itch.io/
 <br />
 <br />
 <div align="center">
-    <iframe frameborder="0" src="https://itch.io/embed/3991400?bg_color=000000&amp;fg_color=ffffff&amp;link_color=d45800&amp;border_color=656c73" width="552" height="167"><a href="https://kinggeekus.itch.io/icarus">Icarus: A Hot Mothership One-Shot by KingGeekus</a></iframe>
+    <iframe frameborder="0" src="https://itch.io/embed/3991400?bg_color=000000&amp;fg_color=ffffff&amp;link_color=d45800&amp;border_color=656c73" width="552" height="167" title="Icarus: A Hot Mothership One-Shot game"><a href="https://kinggeekus.itch.io/icarus">Icarus: A Hot Mothership One-Shot by KingGeekus</a></iframe>
 </div>
 
 I'm looking forward to hearing from folks that run it how it went. I'm hoping to get the publishers of Mothership to stock some physical copies in their store. We'll see. In any case, what a fun ride. I may run Icarus for some other friends soon, and TripTech3 is only a few months away.

@@ -16,7 +16,7 @@ My résumé reads in large part like a software engineer, and as such I get seve
 I sent the following video to a referral candidate that I'd not spoken with yet. All I had going into this video was a few seconds glance at their linkedin profile, and their email address. Watch this video and try and list the ways it's far more interesting than a voicemail or a text email.
 
 <div align="center" style='padding: 40px;'>
-    <iframe class="bbVideoIframe" width="600" height="338" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=6B9E9D96-EBB9-4C17-8D7A-3BDE0156A5D8" frameborder="0" scrolling="no" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
+    <iframe class="bbVideoIframe" width="600" height="338" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=6B9E9D96-EBB9-4C17-8D7A-3BDE0156A5D8" frameborder="0" scrolling="no" mozallowfullscreen webkitallowfullscreen allowfullscreen title="Recruiting with video demonstration"></iframe>
 </div>
 
 What comes through with 45 second investment of my time, and the 30 seconds of the viewer's time are:
@@ -56,7 +56,7 @@ Sometimes people worry about coming off as awkward, or being imperfect on camera
 In closing I'd like to share a prototypical recruiting video from a few years ago. T-shirt, goofiness, speaking too fast, the whole thing. As raw as this is, it worked. Imagine what it could do in the hands of a professional recruiter.
 
 <div align="center" style='padding: 40px;'>
-    <iframe class="bbVideoIframe" width="600" height="338" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=608e0945-57c4-50fc-4942-191918f9c15c" frameborder="0" scrolling="no" mozallowfullscreen webkitallowfullscreen allowfullscreen></iframe>
+    <iframe class="bbVideoIframe" width="600" height="338" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=608e0945-57c4-50fc-4942-191918f9c15c" frameborder="0" scrolling="no" mozallowfullscreen webkitallowfullscreen allowfullscreen title="Impact of video recruiting example"></iframe>
 </div>
 
 Again, there are a number of tools out there to get started sending simple videos, but if you want the one with instant push-notifications, and industry leading speed and quality, [give BombBomb a try](https://bombbomb.com).
