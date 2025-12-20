@@ -8,4 +8,11 @@ presets:
     formats:
       - webp
       - original
-
+  archive:
+    sizes:
+      0: 150px
+      480: 200px
+      768: 250px
+    formats:
+      - webp
+      - original

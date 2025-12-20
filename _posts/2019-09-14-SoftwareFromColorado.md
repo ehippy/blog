@@ -1,6 +1,6 @@
 ---
 title: "Software, from the heart of Colorado"
-featured_image: /images/BombBomb_portraits_WEB_02.png
+featured_image: BombBomb_portraits_WEB_02.png
 tags: [Software Engineering, Business]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Podcast: Video Sales Strategies - The Bombcast!"
 author: Patrick McDavid
-featured_image: /images/product-cast.jpg
+featured_image: product-cast.jpg
 tags: [Speaking, Product Strategy]
 ---
 

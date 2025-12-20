@@ -2,7 +2,7 @@
 layout: post
 title: Monthly Hackathons at BombBomb
 description: Treat your engineers like artists.
-featured_image: /images/roots.jpg
+featured_image: roots.jpg
 tags: [Technology, Business, Software Engineering]
 ---
 

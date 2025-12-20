@@ -1,6 +1,6 @@
 ---
 title: "Email Authentication: Securing Digital Communication in an Insecure World"
-featured_image: /images/SunsetDesk.png
+featured_image: SunsetDesk.png
 tags: [Technical Excellence, Technology]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Recruit the best with Video"
 subtitle: "It's simple and fun!"
-featured_image: /images/elephant.jpg
+featured_image: elephant.jpg
 tags: [Speaking]
 ---
 

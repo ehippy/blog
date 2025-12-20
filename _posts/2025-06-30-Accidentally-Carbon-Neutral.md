@@ -3,7 +3,7 @@ layout: post
 title: "Accidently Carbon-Neutral Blog"
 categories: [infrastructure, sustainability]
 tags: [Infrastructure, Technical Excellence, Technology]
-featured_image: /images/gardenKid.jpeg
+featured_image: gardenKid.jpeg
 ---
 
 I was a big hippie in college: birks, hacky sack, environmental minor. The whole deal. I've never been able to marry those halcyon days to the week to week technical work I've spent my career doing. Today, waiting on a little technical blocker, I thought about it some and went on a [green-software](https://greensoftware.foundation/) micro-adventure.

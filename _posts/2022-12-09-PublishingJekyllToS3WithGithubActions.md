@@ -1,6 +1,6 @@
 ---
 title: "Publishing Jekyll to S3 with GitHub Actions"
-featured_image: /images/gitHubActn.png
+featured_image: gitHubActn.png
 tags: [Infrastructure, Software Engineering]
 ---
 

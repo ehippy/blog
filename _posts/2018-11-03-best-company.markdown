@@ -2,7 +2,7 @@
 layout: post
 title: "Working for the Best Company"
 author: Patrick McDavid
-featured_image: /images/best-company.jpg
+featured_image: best-company.jpg
 tags: [Business]
 ---
 

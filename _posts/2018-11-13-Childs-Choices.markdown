@@ -2,7 +2,7 @@
 layout: post
 title: Practicing Making Choices
 author: Patrick McDavid
-featured_image: /images/leo-blue.jpg
+featured_image: leo-blue.jpg
 tags: [Personal Growth]
 ---
 

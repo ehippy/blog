@@ -1,7 +1,7 @@
 ---
 title: "DVLP Denver Serverless Presentation"
 subtitle: "Never leave an engineer on an island."
-featured_image: /images/jaws.jpg
+featured_image: jaws.jpg
 tags: [Infrastructure, Speaking, AI/ML, Software Engineering]
 ---
 

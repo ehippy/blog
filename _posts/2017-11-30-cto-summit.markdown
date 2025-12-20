@@ -2,7 +2,7 @@
 layout: post
 title: NASDAQ CTO Summit
 description: Feeling jazzed to hear some CTOs and VPEs drop knowledge next week.
-featured_image: /images/post-6.jpg
+featured_image: post-6.jpg
 tags: [Travel, Business, Technology]
 ---
 

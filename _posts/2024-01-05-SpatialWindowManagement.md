@@ -1,6 +1,6 @@
 ---
 title: "VisionOS is too big"
-featured_image: /images/VisionHomeScreenInKitchen-min.PNG
+featured_image: VisionHomeScreenInKitchen-min.PNG
 tags: [Technology]
 ---
 

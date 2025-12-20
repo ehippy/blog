@@ -2,7 +2,7 @@
 title: "OSXonIntel.com"
 subtitle: "A petition asking Apple to port OSX to Intel hardware"
 description: A petition site from twenty years ago
-featured_image: /images/osxOnIntelScreen.png
+featured_image: osxOnIntelScreen.png
 tags: [Technology]
 ---
 

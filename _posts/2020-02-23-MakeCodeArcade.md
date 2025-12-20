@@ -1,6 +1,6 @@
 ---
 title: "Game Dev with Microsoft Makecode Arcade"
-featured_image: /images/princessLastStandScreenShot01.png
+featured_image: princessLastStandScreenShot01.png
 tags: [Game Design, Personal Growth]
 ---
 

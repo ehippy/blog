@@ -1,6 +1,6 @@
 ---
 title: "Single-Table Database Design"
-featured_image: /images/arcs.jpg
+featured_image: arcs.jpg
 tags: [Infrastructure, Game Design, Software Engineering]
 ---
 

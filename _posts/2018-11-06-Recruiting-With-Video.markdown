@@ -2,7 +2,7 @@
 layout: post
 title: Recruiting Top Talent with Video
 author: Patrick McDavid
-featured_image: /images/laptop-graf.jpg
+featured_image: laptop-graf.jpg
 tags: [Speaking]
 ---
 

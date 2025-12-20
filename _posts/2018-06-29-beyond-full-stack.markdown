@@ -2,7 +2,7 @@
 layout: post
 title: "Beyond full stack"
 author: Patrick McDavid
-featured_image: /images/bombbomb-team.jpg
+featured_image: bombbomb-team.jpg
 tags: [Software Engineering, Business]
 ---
 

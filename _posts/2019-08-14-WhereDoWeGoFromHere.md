@@ -1,7 +1,7 @@
 ---
 title: "Personal Goal Sheet!"
 subtitle: "It's simple and fun!"
-featured_image: /images/wrenAndLeo.jpg
+featured_image: wrenAndLeo.jpg
 tags: [Personal, Personal Growth, Software Engineering]
 ---
 

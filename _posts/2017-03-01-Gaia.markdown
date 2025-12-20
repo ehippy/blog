@@ -2,7 +2,7 @@
 title: The Gaia and the Hydra
 subtitle: "Global Fault Tolerance"
 description: Philosophy Thesis
-featured_image: /images/hydra_final_by_forrestime.png
+featured_image: hydra_final_by_forrestime.png
 tags: [Software Engineering]
 ---
 

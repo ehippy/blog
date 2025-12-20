@@ -1,7 +1,7 @@
 ---
 title: "Two-Slice Software Teams"
 subtitle: "Never leave an engineer on an island."
-featured_image: /images/pizza.jpg
+featured_image: pizza.jpg
 tags: [Software Engineering, Business]
 ---
 

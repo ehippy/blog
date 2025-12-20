@@ -2,7 +2,7 @@
 layout: post
 title: "My Thesis"
 author: Patrick McDavid
-featured_image: /images/winter-graf.jpg
+featured_image: winter-graf.jpg
 tags: [Ideas, Personal Growth, Personal]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Playing with Computers"
-featured_image: /images/breakfastNm.jpg
+featured_image: breakfastNm.jpg
 tags: [Business, Personal, Software Engineering]
 ---
 
