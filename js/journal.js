@@ -3,9 +3,6 @@
 //
 
 function pageFunctions() {
-	// Show content
-	document.body.classList.remove('loading');
-
 	// Active links - highlight current page
 	document.querySelectorAll('.active-link').forEach(el => el.classList.remove('active-link'));
 	const currentPath = window.location.pathname;
@@ -24,11 +21,7 @@ function pageFunctions() {
 }
 
 // Run on load
-if (document.readyState === 'loading') {
-	document.addEventListener('DOMContentLoaded', pageFunctions);
-} else {
-	pageFunctions();
-}
+pageFunctions();
 
 // Menu toggle
 document.addEventListener('click', function(e) {

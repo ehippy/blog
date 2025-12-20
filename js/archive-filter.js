@@ -97,11 +97,7 @@
         return false;
     }
 
-    // Initialize on DOM ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => initializeArchiveFiltering());
-    } else {
-        initializeArchiveFiltering();
-    }
+    // Initialize archive filtering
+    initializeArchiveFiltering();
 
 })();
