@@ -29,8 +29,8 @@ contact_settings:
   send_button_text: 'Send Message'
 
 social_settings:
-  facebook_url: 'https://www.facebook.com/patrick.mcdavid'
-  twitter_url: 'https://www.twitter.com/ehippy'
+  facebook_url: ''
+  twitter_url: ''
   instagram_url: 'https://www.instagram.com/ehippy/'
   snapchat_url: ''
   youtube_url: ''
