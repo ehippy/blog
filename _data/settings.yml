@@ -15,7 +15,7 @@ menu_settings:
     - title: 'All Posts'
       url: '/archive/'
     - title: 'Résumé'
-      url: '/files/PatrickMcDavidResume2025.pdf'
+      url: '/resume/'
     - title: 'About'
       url: '/about'
 
