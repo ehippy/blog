@@ -9,6 +9,8 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Download site artifact
         uses: actions/download-artifact@v4
         with:
@@ -19,4 +21,4 @@ jobs:
       - name: Validate HTML
         run: |
           npm install -g html-validate
-          html-validate "./site_content/**/*.html"
+          html-validate "./site_content/**/*.html" --config .github/htmlvalidate.json
