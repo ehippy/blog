@@ -44,10 +44,34 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll_picture_tag
 
 paginate: 6
 paginate_path: "/page:num/"
 excerpt_separator: <!--more-->
+
+picture:
+  source: images
+  output: generated
+  default_preset: default
+  formats:
+    original: original
+    webp: webp
+    jpeg: [jpeg]
+  quality: 80
+  markup: picture
+
+  presets:
+    default:
+      attr:
+        picture: class=lazy-load
+        img: class=lazy-load
+      pict: markup=picture
+      sizes:
+        0: 400px
+        600: 600px
+        800: 800px
+        1200: 1000px
 
 assets:
   compress:
