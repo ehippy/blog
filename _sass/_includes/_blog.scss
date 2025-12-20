@@ -104,17 +104,25 @@
 
 .blog-post__subtitle {
 	margin-top: 5px;
-	color: $text-light-color;
+	color: $text-medium-color;
 }
 
 .reading-time {
-	color: $text-light-color;
+	color: $text-medium-color;
 	font-style: italic;
+}
+
+.post-date {
+	color: $text-medium-color;
+}
+
+.post-meta {
+	color: $text-medium-color;
 }
 
 .archive-meta {
 	margin-top: 5px;
-	color: $text-light-color;
+	color: $text-medium-color;
 }
 
 .pagination {
