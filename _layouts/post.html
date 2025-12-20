@@ -2,6 +2,28 @@
 layout: default
 ---
 
+{% if page.title and page.date %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | escape }}",
+  "description": "{% if page.description %}{{ page.description | escape }}{% else %}{{ page.excerpt | strip_html | escape }}{% endif %}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.data.settings.basic_settings.site_title }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.data.settings.basic_settings.site_title }}",
+    "url": "{{ site.url }}"
+  }{% if page.tags and page.tags.size > 0 %},
+  "keywords": "{{ page.tags | join: ', ' | escape }}"{% endif %}
+}
+</script>
+{% endif %}
+
 <section class="intro">
 
 	<div class="wrap">

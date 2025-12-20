@@ -5,6 +5,21 @@ description: Patrick McDavid's blog about software engineering, game design, and
 featured_image: me_coffee.jpg
 ---
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.data.settings.basic_settings.site_title }}",
+  "url": "{{ site.url }}",
+  "description": "{{ site.data.settings.basic_settings.site_tagline }}",
+  "sameAs": [
+    {% if site.data.settings.social_settings.github_url %}"{{ site.data.settings.social_settings.github_url }}"{% if site.data.settings.social_settings.linkedin_url or site.data.settings.social_settings.twitter_url %},{% endif %}{% endif %}
+    {% if site.data.settings.social_settings.linkedin_url %}"{{ site.data.settings.social_settings.linkedin_url }}"{% if site.data.settings.social_settings.twitter_url %},{% endif %}{% endif %}
+    {% if site.data.settings.social_settings.twitter_url %}"{{ site.data.settings.social_settings.twitter_url }}"{% endif %}
+  ]
+}
+</script>
+
 <section class="blog single">
 
 	<div class="wrap">
