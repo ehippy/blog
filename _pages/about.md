@@ -27,7 +27,9 @@ I live in Colorado Springs with my two kids, where we spend a lot of time outdoo
 
 This site is where I write about technology, [philosophy](/my-thesis/), [parenting](/childs-choices/), and whatever else catches my attention. It's also [open source](https://github.com/ehippy/blog){:target="_blank"} and [accidentally carbon-neutral](/accidentally-carbon-neutral/).
 
-[![HTML Validation](https://github.com/ehippy/blog/actions/workflows/validate.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/validate.yml)
+## Nerdy site details
 
 
-[![Build Status](https://github.com/ehippy/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml){:target="_blank"}
+
+
+[![Build Status](https://github.com/ehippy/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml){:target="_blank"} [![HTML Validation](https://github.com/ehippy/blog/actions/workflows/validate.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/validate.yml){:target="_blank"} 

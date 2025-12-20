@@ -11,3 +11,17 @@ Built with Jekyll, hosted on AWS.
  - gem update
  - bundle install
  - bundle exec jekyll serve --drafts
+
+
+## TODO: Badge Expansion 🎖️
+
+Potential badges to stack:
+- [ ] **Lighthouse Performance** - PageSpeed score via Lighthouse CI
+- [ ] **Uptime Monitor** - UptimeRobot or StatusPage to prove reliability
+- [ ] **Security** - Dependabot alerts or OWASP security scan
+- [ ] **Jekyll Version** - Static badge showing `4.3.3`
+- [ ] **License** - MIT or project license
+- [ ] **Last Commit** - Auto-updates when site deploys
+- [ ] **Accessibility (WCAG)** - axe or WAVE compliance check
+- [ ] **Code Size** - Total bundle size or lines of code
+- [ ] **Cloudflare/CDN Status** - Flex the edge network
