@@ -295,62 +295,10 @@ a {
 	min-width: 0;
 }
 
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page loading
-
-.page-loader {
-	display: none;
-}
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page styles
 
 .page {
 	@include transition(all 0.4s ease-in-out);
-}
-
-body.loading {
-
-	.loader {
-		opacity: 1;
-		visibility: visible;
-		@include transition(all 0.4s ease-in-out 1s);
-	}
-
-	.page {
-		opacity: 0;
-		visibility: hidden;
-		@include transition(all 0.4s ease-in-out);
-	}
-
-	.footer {
-		opacity: 0;
-		visibility: hidden;
-		@include transition(all 0.4s ease-in-out);
-	}
-}
-
-.loader {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	@include translate(-50%,-50%);
-	width: 60px;
-	height: 15px;
-
-	opacity: 0;
-	visibility: hidden;
-	@include transition(all 0.2s ease-in-out);
-
-	@include mq(tabletl) {
-		left: 65%;
-	}
-
-	@include mq(desktop) {
-		left: 62.5%;
-	}
-
-	svg {
-		width: 100%;
-		height: 100%;
-		fill: rgba($text-dark-color,0.2);
-	}
 }
 
 .page,

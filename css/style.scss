@@ -5,7 +5,6 @@
 
 @import "_reset";
 @import "_mixins";
-@import "_plugins";
 
 
 
@@ -153,9 +152,7 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 
 @import "_includes/_content";
 @import "_includes/_socials";
-@import "_includes/_gallery";
 @import "_includes/_syntax";
-@import "_includes/_contact-form";
 
 
 
@@ -307,24 +304,6 @@ $grid-spacing: {{ site.data.settings.grid_settings.grid_spacing }}px;
 			.blog-post__date {
 				color: $dark-text-light-color;
 			}
-		}
-	}
-
-	// Form styles
-	.contact-form {
-		input, textarea {
-			background: $dark-background-alt-color;
-			border-color: $dark-border-color;
-			color: $dark-text-dark-color;
-
-			&::placeholder {
-				color: $dark-text-light-color;
-			}
-		}
-
-		button {
-			background: $accent-color;
-			color: white;
 		}
 	}
 
