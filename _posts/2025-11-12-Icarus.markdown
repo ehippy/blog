@@ -38,7 +38,7 @@ TripTech's theme was "Impossibly Perfect", so I sketched out some too-good-to-be
 I brought the idea home and set to work trying to create a cast of characters and some challenges to overcome. Then for the next couple weeks I'd spend an hour or two most nights toiling over a hot design app to mash together something I liked.
 
 <div style="float:right;margin-left:20px;">
-  {% picture icarusRefinements.gif alt="Animated refinements to the layout" %}
+    <img src="/images/icarusRefinements.gif" alt="Animated refinements to the layout" />
 </div>
 
 I started with layout first, and ended up writing the whole thing in a graphic design program, Figma, rather than in a word processor. I don't think I'll ever do that again, its spelling/grammar tools are weak. I fiddled and futzed with the language: I went with fun on-the-nose names like **Dr. Haste** and **Engineer Patch** for the characters, which I think made it simple to internalize. 
