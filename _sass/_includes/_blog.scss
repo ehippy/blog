@@ -233,21 +233,22 @@
 	overflow: hidden;
 	text-decoration: none;
 
+	picture,
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	&:hover picture,
+	&:hover img {
+		transform: scale(1.05);
+	}
+
 	@include mq(tabletp) {
 		height: 200px;
-	}
-}
-
-.related-post__image-bg {
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	transition: transform 0.3s ease;
-
-	.related-post:hover & {
-		transform: scale(1.05);
 	}
 }
 
