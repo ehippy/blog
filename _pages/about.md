@@ -32,4 +32,4 @@ This site is where I write about technology, [philosophy](/my-thesis/), [parenti
 
 
 
-[![Build Status](https://github.com/ehippy/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml){:target="_blank"} [![HTML Validation](https://github.com/ehippy/blog/actions/workflows/validate.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/validate.yml){:target="_blank"} [![Lighthouse Performance](https://img.shields.io/badge/lighthouse-run_report-blue?logo=lighthouse)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml){:target="_blank"} 
+[![Build Status](https://github.com/ehippy/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml){:target="_blank"} [![HTML Validation](https://github.com/ehippy/blog/actions/workflows/validate.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/validate.yml){:target="_blank"} [![Lighthouse CI](https://github.com/ehippy/blog/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/lighthouse.yml){:target="_blank"} 
