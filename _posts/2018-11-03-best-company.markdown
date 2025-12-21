@@ -34,7 +34,7 @@ I joined BombBomb as a coder. They needed someone to lash together ideas as a so
 
 Then, in 2016, BombBomb started really growing in earnest, and my job changed: coaching, recruiting, product management, strategy. These were all challenges I'd faced in their infant stages, this was next level. Those around me faced similar new tests. Bruises and glory. New records and fights. 
 
-<div align="center">
+<div style="text-align: center;">
     <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBombBomb%2Fvideos%2F567408943689598%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true" title="BombBomb company video"></iframe>
 </div>
 

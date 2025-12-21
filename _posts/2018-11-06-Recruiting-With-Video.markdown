@@ -55,7 +55,7 @@ Sometimes people worry about coming off as awkward, or being imperfect on camera
 
 In closing I'd like to share a prototypical recruiting video from a few years ago. T-shirt, goofiness, speaking too fast, the whole thing. As raw as this is, it worked. Imagine what it could do in the hands of a professional recruiter.
 
-<div align="center" style='padding: 40px;'>
+<div style="text-align: center; padding: 40px;">
     <iframe class="bbVideoIframe" width="600" height="338" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=608e0945-57c4-50fc-4942-191918f9c15c" frameborder="0" scrolling="no" mozallowfullscreen webkitallowfullscreen allowfullscreen title="Impact of video recruiting example"></iframe>
 </div>
 
