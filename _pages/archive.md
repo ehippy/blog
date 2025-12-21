@@ -7,11 +7,11 @@ featured_image: heron.jpeg
 <!-- Tag Cloud -->
 <div class="tag-cloud-section">
   <div class="tag-cloud">
-    <button class="tag-cloud-item active" data-tag="all" onclick="filterByTag('all', this)">All Posts</button>
+    <button type="button" class="tag-cloud-item active" data-tag="all" onclick="filterByTag('all', this)">All Posts</button>
     {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq | sort %}
     {% for tag in all_tags %}
       {% if tag != '' %}
-        <button class="tag-cloud-item" data-tag="{{ tag | downcase | strip }}" onclick="filterByTag('{{ tag | downcase | strip }}', this)">{{ tag | strip }}</button>
+        <button type="button" class="tag-cloud-item" data-tag="{{ tag | downcase | strip }}" onclick="filterByTag('{{ tag | downcase | strip }}', this)">{{ tag | strip }}</button>
       {% endif %}
     {% endfor %}
   </div>
