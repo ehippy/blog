@@ -9,7 +9,7 @@ tags: [Software Engineering, Projects]
 In a very beardy time, I spent a week with my man [Cheech](http://cheechcode.com/about.html) assembling some AWS infrastructure patterns into a fun global fault tolerance proof of concept project called Gaia.
 
 <br />
-<div align="center">
+<div class="align-center">
     <iframe class="bbVideoIframe" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=2b3d7bea-5290-a860-f04e-b436d961c237" width="600" height="338" allowfullscreen="allowfullscreen" title="Gaia and Hydra project demonstration"></iframe>
 </div>
 <br />

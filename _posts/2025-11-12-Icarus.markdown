@@ -97,7 +97,7 @@ They were able to short-circuit one of the puzzle challenges and skip a whole co
 I put it [up for sale on itch.io for a couple bucks](https://kinggeekus.itch.io/icarus). I invite you to take a look. I even added a little supplement to flesh out the titular ship herself in case she survives the scenario and the players, perhaps, comandeer her. 😉
 <br />
 <br />
-<div align="center">
+<div class="align-center">
     <iframe src="https://itch.io/embed/3991400?bg_color=000000&amp;fg_color=ffffff&amp;link_color=d45800&amp;border_color=656c73" width="552" height="167" title="Icarus: A Hot Mothership One-Shot game"></iframe>
 </div>
 

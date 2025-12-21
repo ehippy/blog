@@ -15,7 +15,7 @@ My résumé reads in large part like a software engineer, and as such I get seve
 ### Video Recruiting
 I sent the following video to a referral candidate that I'd not spoken with yet. All I had going into this video was a few seconds glance at their linkedin profile, and their email address. Watch this video and try and list the ways it's far more interesting than a voicemail or a text email.
 
-<div align="center" style='padding: 40px;'>
+<div class="align-center" style='padding: 40px;'>
     <iframe class="bbVideoIframe" width="600" height="338" src="//bbemaildelivery.com/bbext/?p=vidEmbed&id=6B9E9D96-EBB9-4C17-8D7A-3BDE0156A5D8" mozallowfullscreen webkitallowfullscreen allowfullscreen title="Recruiting with video demonstration"></iframe>
 </div>
 
