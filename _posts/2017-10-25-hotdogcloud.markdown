@@ -12,7 +12,7 @@ Last night I [gave a talk at coloradoSprings.js](https://www.meetup.com/colorado
 
 I wish I'd went to the trouble of recording the presentation, and will try that the next time I give one, but for now I can offer you the [slide deck](https://docs.google.com/presentation/d/1dD4L0T2ms08jJcvriuyi0J6vaKQjI-1E6JLXYoLvtgM), and this quick write-up.
 
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRt-eZmBMsODFd77pOK362Ky40d8xSXgi3a7eLFpC_k1EqWFGRyXPFrbXFV5_kQ1moodSxF_6ijZDX9/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Serverless Hotdog Detection presentation"></iframe>
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRt-eZmBMsODFd77pOK362Ky40d8xSXgi3a7eLFpC_k1EqWFGRyXPFrbXFV5_kQ1moodSxF_6ijZDX9/embed?start=false&loop=false&delayms=3000" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Serverless Hotdog Detection presentation"></iframe>
 
 ## Hotdog Cloud?
 <img src="/images/dogClip.gif" style="float:right;padding-left:20px;" alt="Animated hotdog clip">
