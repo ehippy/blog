@@ -2,7 +2,6 @@
 [![Build Status](https://github.com/ehippy/blog/actions/workflows/jekyll.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/jekyll.yml)
 [![HTML Validation](https://github.com/ehippy/blog/actions/workflows/validate.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/validate.yml)
 [![Lighthouse CI](https://github.com/ehippy/blog/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/lighthouse.yml)
-[![WCAG Accessibility](https://github.com/ehippy/blog/actions/workflows/accessibility.yml/badge.svg)](https://github.com/ehippy/blog/actions/workflows/accessibility.yml)
 
 Check it out at [https://patrickmcdavid.com](https://patrickmcdavid.com)
 
