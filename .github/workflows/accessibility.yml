@@ -20,14 +20,10 @@ jobs:
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
       
-      - name: Install pa11y
-        run: npm install -g pa11y-ci
+      - name: Install axe-core
+        run: npm install -g @axe-core/cli
       
       - name: Run accessibility tests
         run: |
-          # Test key pages against WCAG AA standards (pa11y-ci defaults to WCAG2AA)
-          pa11y-ci \
-            ./_site/index.html \
-            ./_site/about/index.html \
-            ./_site/archive/index.html \
-            $(find ./_site -name "index.html" -path "*/_posts/*" | head -5)
+          # Test all pages against WCAG AA standards
+          find ./_site -name "index.html" -type f | xargs axe
