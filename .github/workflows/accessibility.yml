@@ -25,8 +25,8 @@ jobs:
       
       - name: Run accessibility tests
         run: |
-          # Test key pages against WCAG AA standards
-          pa11y-ci --standard WCAG2AA \
+          # Test key pages against WCAG AA standards (pa11y-ci defaults to WCAG2AA)
+          pa11y-ci \
             ./_site/index.html \
             ./_site/about/index.html \
             ./_site/archive/index.html \
