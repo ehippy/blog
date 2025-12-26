@@ -1,0 +1,33 @@
+name: WCAG Accessibility Check
+
+on:
+  workflow_run:
+    workflows: ["Deploy Jekyll site to S3"]
+    types: [completed]
+
+jobs:
+  accessibility:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site_content
+          path: ./_site
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
+      
+      - name: Install pa11y
+        run: npm install -g pa11y-ci
+      
+      - name: Run accessibility tests
+        run: |
+          # Test key pages against WCAG AA standards
+          pa11y-ci --standard WCAG2AA \
+            ./_site/index.html \
+            ./_site/about/index.html \
+            ./_site/archive/index.html \
+            $(find ./_site -name "index.html" -path "*/_posts/*" | head -5)
