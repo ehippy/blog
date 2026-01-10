@@ -55,6 +55,7 @@ excerpt_separator: <!--more-->
 picture:
   source: images
   output: generated
+  fast_build: true
   default_preset: default
   formats:
     original: original
