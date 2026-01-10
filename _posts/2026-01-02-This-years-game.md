@@ -53,7 +53,7 @@ I've futzed with video game design in the past with my competitive multiplayer [
 
 After that brainstorm here's an outline I'd like to pursue:
 
-# Discord-attached Survival Horror Co-Op Survival Game
+## Discord-attached Survival Horror Co-Op Survival Game
 The game can be added to a discord server wherein a channel is selected for the game to live. 
 
 Players join the channel and roll up characters. On their own time, and then opt those characters into the next scenario. 
@@ -72,7 +72,7 @@ If their characters survive the scenario, they get a chance to improve their sta
 
 As they take actions and roll dice their exploits are posted back to the channel. Other users can observe and encourage. 
 
-## But wait, there's more... 
+### But wait, there's more... 
 We make a scenario builder where folks can author their own environments and challenges. 
 
 I’ll check back in a while!
