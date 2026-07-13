@@ -55,7 +55,7 @@ function updateToggleIcon(mode) {
         
         // Add auto icon
         const autoIcon = document.createElement('i');
-        autoIcon.className = 'fas fa-adjust';
+        autoIcon.className = 'fas fa-circle-half-stroke';
         autoIcon.setAttribute('aria-hidden', 'true');
         themeToggle.appendChild(autoIcon);
         
