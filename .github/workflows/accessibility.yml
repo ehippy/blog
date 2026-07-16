@@ -5,7 +5,7 @@ on:
     workflows: ["Deploy Jekyll site to S3"]
     types: [completed]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 jobs:
   accessibility:
