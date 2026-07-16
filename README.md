@@ -15,4 +15,4 @@ Built with Jekyll, hosted on AWS.
 
 
 ## TODO: Badge Expansion 🎖️
-- [ ] **Accessibility (WCAG)** - axe or WAVE compliance check
+- [x] **Accessibility (WCAG)** - axe or WAVE compliance check (via GitHub Actions)

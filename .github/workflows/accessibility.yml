@@ -1,0 +1,41 @@
+name: WCAG Accessibility Check
+
+on:
+  workflow_run:
+    workflows: ["Deploy Jekyll site to S3"]
+    types: [completed]
+  pull_request:
+    branches: [master]
+
+jobs:
+  accessibility:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.2'
+          bundler-cache: true
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+      - name: Install axe-core CLI
+        run: npm install -g @axe-core/cli
+      - name: Run axe-core accessibility tests
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          runs: 1
+          uploads: true
+          configPath: './lighthouserc.json'
+      - name: Run axe-core on rendered pages
+        run: |
+          axe lighthouse:ci/runs/latest/*.html --exit --formatters json:axe-report.json
+      - name: Upload axe results
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-report
+          path: axe-report.json
+          if-no-files-found: ignore
