@@ -40,6 +40,39 @@ section = ["RSS"]
     lineNos = false
     style = "base16-snazzy"
 
+# jekyll_picture_tag → tools/generate_images.sh (shelled out to libvips/cwebp) →
+# now Hugo Pipes' native image processing (layouts/partials/picture-core.html).
+# Images live in static/images/ (so favicon.png, OG-image URLs, and the raw
+# fallback <img src> all keep serving from /images/ unprocessed), but adding an
+# explicit [[module.mounts]] block replaces Hugo's implicit defaults, so the
+# usual set has to be re-declared alongside the extra mount that also exposes
+# static/images/ as assets/images/ for resources.Get to resize/re-encode.
+[module]
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"
+
 [permalinks]
   # Jekyll derived a post's URL from its filename (date prefix stripped), not
   # its title. Posts now use dated filenames (2018-11-03-best-company.md) for

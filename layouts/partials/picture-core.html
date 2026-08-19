@@ -1,0 +1,66 @@
+{{- /* Port of jekyll_picture_tag, now on Hugo's native image pipeline (Hugo
+     Extended's built-in libwebp — no external libvips/cwebp process).
+     Reads presets from data/picture.yml. Emits a responsive <picture> with
+     webp + original sources sized via srcset, resized on the fly via
+     resources.Get + .Resize (see the assets/images mount in hugo.toml) and
+     published under Hugo's own content-hashed /images/ filenames.
+     Animated GIFs are the one exception: Hugo's resize flattens GIF animation
+     to a single frame (https://github.com/gohugoio/hugo/issues/5030) and
+     can't encode animated WebP either, so those are served as a plain,
+     unprocessed <img> to keep the animation intact.
+     $: dict "imgName" "alt" "preset" (default|archive) "fetchpriority" ("high" or omitted) */ -}}
+{{- $imgName := .imgName -}}
+{{- with $imgName }}
+  {{- $alt := $.alt -}}
+  {{- $ext := $imgName | path.Ext | lower -}}
+  {{- if eq $ext ".gif" }}
+    <img class="lazy-load" src="/images/{{ $imgName }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
+  {{- else }}
+    {{- $preset := ($.preset | default "default") -}}
+    {{- $cfg := index (index ((hugo.Data).picture) "presets") $preset -}}
+    {{- with $cfg -}}
+      {{- $sizes := slice -}}
+      {{- range $cfg.sizes }}
+        {{- $sizes = $sizes | append (int (strings.TrimSuffix "px" .)) -}}
+      {{- end -}}
+      {{- $lastWidth := 0 -}}
+      {{- range $sizes -}}
+        {{- if gt . $lastWidth }}{{ $lastWidth = . }}{{ end -}}
+      {{- end -}}
+      {{- $sizesAttr := printf "(max-width: %dpx) 100vw, %dpx" $lastWidth $lastWidth -}}
+      {{- $imgRes := resources.Get (printf "images/%s" $imgName) -}}
+      {{- with $imgRes -}}
+        {{- $isJpeg := or (eq $ext ".jpg") (eq $ext ".jpeg") -}}
+        <picture class="lazy-load">
+          {{- range $format := $cfg.formats }}
+            {{- $isOriginal := eq $format "original" -}}
+            {{- $type := "" -}}
+            {{- if $isOriginal }}
+              {{- if $isJpeg }}{{ $type = "image/jpeg" }}{{ else if eq $ext ".png" }}{{ $type = "image/png" }}{{ else if eq $ext ".webp" }}{{ $type = "image/webp" }}{{ end -}}
+            {{- else }}
+              {{- $type = "image/webp" -}}
+            {{- end }}
+            {{- $srcSet := slice -}}
+            {{- range $w := $sizes }}
+              {{- $spec := "" -}}
+              {{- if $isOriginal }}
+                {{- $spec = printf "%dx%s" $w (cond $isJpeg " q70" "") -}}
+              {{- else }}
+                {{- $spec = printf "%dx webp q70" $w -}}
+              {{- end }}
+              {{- $resized := $imgRes.Resize $spec -}}
+              {{- $srcSet = $srcSet | append (printf "%s %dw" $resized.RelPermalink $w) -}}
+            {{- end }}
+            <source type="{{ $type }}" srcset="{{ delimit $srcSet ", " }}" sizes="{{ $sizesAttr }}">
+          {{- end }}
+          {{- $origSrcSet := slice -}}
+          {{- range $w := $sizes }}
+            {{- $resized := $imgRes.Resize (printf "%dx%s" $w (cond $isJpeg " q70" "")) -}}
+            {{- $origSrcSet = $origSrcSet | append (printf "%s %dw" $resized.RelPermalink $w) -}}
+          {{- end }}
+          <img class="lazy-load" src="/images/{{ $imgName }}" srcset="{{ delimit $origSrcSet ", " }}" sizes="{{ $sizesAttr }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
+        </picture>
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}

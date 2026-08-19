@@ -34,21 +34,13 @@ jobs:
         with:
           hugo-version: '0.165.0'
           extended: true
-      - name: Install image processing dependencies
-        # DEBIAN_FRONTEND=noninteractive avoids apt hanging forever on a
-        # debconf/needrestart prompt with no terminal to answer it. Skips
-        # `apt-get update` — runner images ship a recent-enough index for
-        # these long-stable Ubuntu archive packages.
-        env:
-          DEBIAN_FRONTEND: noninteractive
-        run: sudo apt-get install -y --no-install-recommends libvips-dev libvips-tools libpng-dev libjpeg-dev libwebp-dev libheif-dev webp
       - name: Build with Hugo
-        # Outputs to the './public' directory by default
+        # Outputs to the './public' directory by default. Hugo Extended's
+        # built-in libwebp handles resizing + WebP encoding natively, so
+        # there's no separate image-processing step or dependency to install.
         run: hugo --minify
         env:
           HUGO_ENV: production
-      - name: Generate responsive image variants
-        run: ./tools/generate_images.sh ./public
       - name: Minify JavaScript
         run: |
           npm install -g terser
@@ -77,16 +69,21 @@ jobs:
 
     - name: Deploy static site to S3 bucket
       run: |
-        # Generated image filenames are NOT content-hashed (base-widthw.ext),
-        # so a source image replaced under the same name would otherwise stay
-        # stale in browser caches for up to a year. Cap it at a week instead.
-        aws s3 sync ./site_content/generated s3://patrickmcdavid.com/generated --delete --acl public-read --cache-control "public, max-age=604800"
+        # Hugo's native image pipeline (layouts/partials/picture-core.html) publishes
+        # resized/webp variants as /images/<name>_hu_<contenthash>.<ext> — genuinely
+        # content-hashed, unlike the old libvips-script output, so they're safe to
+        # cache for a year: a source-image edit produces a new filename rather than
+        # invalidating a cached one. Skip --delete so a variant an old cached HTML
+        # page still points at isn't removed before that HTML's cache expires.
+        aws s3 sync ./site_content/images s3://patrickmcdavid.com/images --exclude "*" --include "*_hu_*" --acl public-read --cache-control "public, max-age=31536000, immutable"
         # CSS filenames ARE fingerprinted (content hash), but skip --delete so
         # an old fingerprinted file a client's cached HTML still points at
         # isn't removed out from under it before that HTML's cache expires.
         aws s3 sync ./site_content/css s3://patrickmcdavid.com/css --acl public-read --cache-control "public, max-age=86400"
         aws s3 sync ./site_content/js s3://patrickmcdavid.com/js --delete --acl public-read --cache-control "public, max-age=86400"
-        # Don't cache HTML (or short cache)
-        aws s3 sync ./site_content s3://patrickmcdavid.com --delete --acl public-read --cache-control "public, max-age=3600" --exclude "generated/*" --exclude "css/*" --exclude "js/*"
+        # Don't cache HTML (or short cache). Unprocessed image originals under
+        # /images/ (favicon, OG-image source, the <img> fallback src) aren't
+        # content-hashed, so they fall through to here too, capped at an hour.
+        aws s3 sync ./site_content s3://patrickmcdavid.com --delete --acl public-read --cache-control "public, max-age=3600" --exclude "images/*_hu_*" --exclude "css/*" --exclude "js/*"
     - name: Invalidate Cloudfront
       run: aws cloudfront create-invalidation --distribution-id E2BXX0VHQEULW0 --paths "/*"

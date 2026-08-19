@@ -16,7 +16,7 @@ I wish I'd went to the trouble of recording the presentation, and will try that 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRt-eZmBMsODFd77pOK362Ky40d8xSXgi3a7eLFpC_k1EqWFGRyXPFrbXFV5_kQ1moodSxF_6ijZDX9/embed?start=false&loop=false&delayms=3000" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="Serverless Hotdog Detection presentation"></iframe>
 
 ## Hotdog Cloud?
-<img src="/images/dogClip.gif" style="float:right;padding-left:20px;" alt="Animated hotdog clip">
+<div style="float:right;padding-left:20px;">{{< picture src="dogClip.gif" alt="Animated hotdog clip" >}}</div>
 
 The hottest space in tech in 2017 is inarguably hotdog detection and non-detection. Everybody's trying to get a piece of the action. So I spent a couple nights building <https://hotdog.cloud> a mobile-friendly hotdog detection app. Give it a try! It's especially good on your phone. [Hotdog cloud is open sourced on github](https://github.com/ehippy/hotdog), so feel free to fork away.
 

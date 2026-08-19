@@ -1,0 +1,8 @@
+{{- /* Body-content replacement for Jekyll's {% picture foo.jpg alt="..." %}.
+     Usage: {{< picture src="foo.jpg" alt="..." >}} or {{< picture "foo.jpg" "..." >}}
+     Source image must exist in static/images/; sized/webp variants are generated
+     by Hugo's native image pipeline via the "default" preset (override with preset="archive"). */ -}}
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $alt := .Get "alt" | default (.Get 1) -}}
+{{- $preset := .Get "preset" | default "default" -}}
+{{- partial "picture-core.html" (dict "imgName" $src "alt" $alt "preset" $preset) -}}

@@ -1,57 +1,5 @@
-{{- /* Port of jekyll_picture_tag.
-     Reads presets from data/picture.yml (formerly _data/picture.yml).
-     Emits a responsive <picture> with webp + original sources sized via srcset.
-     Sized variants live under /generated/ (built by tools/generate_images.sh in
-     CI, mirroring the old jekyll_picture_tag "generated" output on S3).
+{{- /* Featured-image wrapper around picture-core.html.
      $: dict "page" (context w/ .Params.featured_image and .Title)
           "preset" (default|archive) "fetchpriority" ("high" or omitted) */ -}}
 {{- $page := .page -}}
-{{- $imgName := $page.Params.featured_image -}}
-{{- with $imgName }}
-  {{- $preset := ($.preset | default "default") -}}
-  {{- $cfg := index (index ((hugo.Data).picture) "presets") $preset -}}
-  {{- with $cfg -}}
-    {{- $rawExt := $imgName | path.Ext -}}
-    {{- $ext := $rawExt | lower -}}
-    {{- $base := $imgName | path.Base | strings.TrimSuffix $rawExt -}}
-    {{- $alt := $page.Title -}}
-    {{- $sizes := slice -}}
-    {{- range .sizes }}
-      {{- $sizes = $sizes | append (int (strings.TrimSuffix "px" .)) -}}
-    {{- end -}}
-    {{- $lastWidth := 0 -}}
-    {{- range $sizes -}}
-      {{- if gt . $lastWidth }}{{ $lastWidth = . }}{{ end -}}
-    {{- end -}}
-    {{- $sizesAttr := printf "(max-width: %dpx) 100vw, %dpx" $lastWidth $lastWidth -}}
-    <picture class="lazy-load">
-      {{- range $format := .formats }}
-        {{- $isOriginal := eq $format "original" -}}
-        {{- $outExt := $ext -}}
-        {{- $type := "" -}}
-        {{- if $isOriginal }}
-          {{- if or (eq $ext ".jpg") (eq $ext ".jpeg") }}{{ $type = "image/jpeg" }}{{ else if eq $ext ".png" }}{{ $type = "image/png" }}{{ else if eq $ext ".gif" }}{{ $type = "image/gif" }}{{ else if eq $ext ".webp" }}{{ $type = "image/webp" }}{{ end -}}
-        {{- else }}
-          {{- $outExt = ".webp" -}}
-          {{- $type = "image/webp" -}}
-        {{- end }}
-        {{- $srcSet := slice -}}
-        {{- range $w := $sizes }}
-          {{- $entry := "" -}}
-          {{- if $isOriginal }}
-            {{- $entry = (printf "/generated/%s-%dw%s %dw" $base $w $outExt $w) -}}
-          {{- else }}
-            {{- $entry = (printf "/generated/%s-%s-%dw%s %dw" $base $format $w $outExt $w) -}}
-          {{- end }}
-          {{- $srcSet = $srcSet | append $entry -}}
-        {{- end }}
-        <source type="{{ $type }}" srcset="{{ delimit $srcSet ", " }}" sizes="{{ $sizesAttr }}">
-      {{- end }}
-      {{- $origSrcSet := slice -}}
-      {{- range $w := $sizes }}
-        {{- $origSrcSet = $origSrcSet | append (printf "/generated/%s-%dw%s %dw" $base $w $ext $w) -}}
-      {{- end }}
-      <img class="lazy-load" src="/images/{{ $imgName }}" srcset="{{ delimit $origSrcSet ", " }}" sizes="{{ $sizesAttr }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
-    </picture>
-  {{- end }}
-{{- end }}
+{{- partial "picture-core.html" (dict "imgName" $page.Params.featured_image "alt" $page.Title "preset" $.preset "fetchpriority" $.fetchpriority) -}}

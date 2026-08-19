@@ -9,7 +9,7 @@ Static Hugo blog hosted on S3 + CloudFront, optimized for performance and access
 - **Hugo (extended)** with SCSS compiled via Hugo Pipes (`toCSS` + dart-sass, `outputStyle: compressed`)
 - **GitHub Actions CI/CD** → S3 + CloudFront invalidation
 - **Minification**: `hugo --minify` handles HTML/CSS/JSON/XML; `js/app.js` (a static passthrough file, not run through Hugo Pipes) is minified with Terser in the workflow
-- **Image Processing**: `tools/generate_images.sh` (libvips + cwebp/gif2webp) — a from-scratch replacement for jekyll-picture-tag, driven by `data/picture.yml`
+- **Image Processing**: Hugo's native image pipeline (Hugo Extended's built-in libwebp — `resources.Get` + `.Resize` in `layouts/partials/picture-core.html`), driven by `data/picture.yml` — a from-scratch replacement for jekyll-picture-tag
 
 ### JavaScript
 - **Single bundled file**: `/js/app.js` (combines dark-mode, archive-filter, journal)
@@ -27,23 +27,30 @@ Static Hugo blog hosted on S3 + CloudFront, optimized for performance and access
 
 ### Responsive Images
 **Configuration** (`data/picture.yml`):
-- Quality: 70 (WebP compression, set in `tools/generate_images.sh`)
+- Quality: 70 (WebP compression + JPEG re-encode, set in `layouts/partials/picture-core.html`)
 - Presets:
   - `default`: 400px, 600px, 800px, 1000px (featured images, blog posts)
   - `archive`: 150px, 200px, 250px (related-posts thumbnails)
 - Formats: WebP + original (JPEG/PNG/GIF)
 
-**Usage** (in layouts, via the `picture.html` partial):
-```go-html-template
-{{ partial "picture.html" (dict "page" . "preset" "default" "fetchpriority" "high") }}  {{/* LCP images only */}}
-{{ partial "picture.html" (dict "page" . "preset" "default") }}                          {{/* Regular images */}}
-```
+**Usage**:
+- Featured images (in layouts, via the `picture.html` partial):
+  ```go-html-template
+  {{ partial "picture.html" (dict "page" . "preset" "default" "fetchpriority" "high") }}  {{/* LCP images only */}}
+  {{ partial "picture.html" (dict "page" . "preset" "default") }}                          {{/* Regular images */}}
+  ```
+- In-body post images (markdown content, via the `picture` shortcode):
+  ```
+  {{< picture src="foo.jpg" alt="..." >}}                {{/* default preset */}}
+  {{< picture src="foo.jpg" alt="..." preset="archive" >}}
+  ```
 
 **Important**:
 - Add `fetchpriority="high"` ONLY to LCP candidates (first featured image on index.html, hero image)
 - Use `default` preset for images displaying at 400px+
-- Source images must already exist in `static/images/`
-- Sized variants are NOT committed — `tools/generate_images.sh [output_dir]` (default `./public`) generates them into `<output_dir>/generated/` as a build step, mirroring the old S3 "generated" pipeline. Run it locally after `hugo` if you need working `<picture>` sources.
+- Source images must already exist in `static/images/` — the `static/images` → `assets/images` module mount in `hugo.toml` is what makes them available to Hugo Pipes; don't remove it
+- **Animated GIFs are never resized/converted** — Hugo's native `.Resize` flattens GIF animation to a single frame and can't encode animated WebP, so `picture-core.html` detects `.gif` and serves it unprocessed via a plain `<img>`. This is a Hugo limitation ([gohugoio/hugo#5030](https://github.com/gohugoio/hugo/issues/5030)), not a bug — don't try to route GIFs through the normal resize path
+- Sized variants are NOT committed — `hugo --minify` alone generates them at build time into `public/images/<name>_hu_<hash>.<ext>`, content-hashed by Hugo, alongside the unprocessed original at `public/images/<name>.<ext>`. Just run `hugo` locally; no separate script step
 
 ## HTML & Semantic Standards
 
@@ -94,9 +101,10 @@ Static Hugo blog hosted on S3 + CloudFront, optimized for performance and access
 - Featured images: Use default preset
 
 ### Cache Headers (S3)
-- Generated images: 1 year (content-hashed filenames)
-- CSS/JS: 1 day
-- HTML: 1 hour
+- Generated image variants (`/images/*_hu_*`): 1 year, immutable (content-hashed filenames via Hugo's image pipeline)
+- Unprocessed image originals (`/images/*`, not hashed): 1 hour, same as HTML
+- CSS: 1 day
+- JS: 1 day
 
 ## File Organization
 
@@ -114,9 +122,12 @@ layouts/
     header.html           # <header><nav>
     footer.html           # <footer>
     socials.html
-    picture.html          # Responsive <picture> partial
+    picture.html          # Featured-image wrapper around picture-core.html
+    picture-core.html     # Shared responsive <picture> rendering (Hugo native Resize/webp)
     related-posts.html    # Related posts grid
     reading-time.html
+  shortcodes/
+    picture.html          # In-body responsive image: {{< picture src="foo.jpg" alt="..." >}}
 content/
   post/                   # Blog posts (all with featured_image)
   about.md, archive.md, resume.md
@@ -124,10 +135,8 @@ assets/css/
   style.scss              # Imports all SCSS, templated + compiled by Hugo Pipes
   _sass/                   # Modular SCSS partials
 static/
-  images/                 # Source images (originals, not resized)
+  images/                 # Source images (originals, not resized; also mounted as assets/images/ for Hugo Pipes — see hugo.toml)
   js/app.js               # Single bundled file (dark-mode, archive-filter, journal)
-tools/
-  generate_images.sh      # Responsive image variant generator (build step, not committed output)
 ```
 
 ## Common Tasks
@@ -142,28 +151,26 @@ tools/
 Edit `data/settings.yml`, not CSS directly. SCSS variables auto-inject via `resources.ExecuteAsTemplate` in `layouts/_default/baseof.html` / `layouts/404.html`.
 
 ### Add a New Image Preset
-Edit `data/picture.yml` under `presets:`. Update `tools/generate_images.sh` output if you add a new preset name beyond `default`/`archive`.
+Edit `data/picture.yml` under `presets:`. No other changes needed — `picture-core.html` reads presets by name at build time.
 
 ### Change Performance Parameters
 - **JS minification**: Edit `.github/workflows/hugo.yml` (Terser step)
-- **Image quality**: Edit `tools/generate_images.sh` (`-q 70` flags)
+- **Image quality**: Edit `layouts/partials/picture-core.html` (`q70` in the `.Resize` spec strings)
 - **Cache headers**: Edit `.github/workflows/hugo.yml` (S3 sync steps)
 
 ## Build & Deployment
 
 ### Local Development
 ```bash
-hugo server -D                        # Live-reload dev server, drafts included
-./tools/generate_images.sh ./public   # Populate /generated/ if you need working <picture> sources
+hugo server -D                        # Live-reload dev server, drafts included — <picture> sources work out of the box
 ```
 
 ### Production (Automatic via GitHub Actions)
 1. `git push` to main
-2. GitHub Actions builds with `hugo --minify`
-3. Runs `tools/generate_images.sh` to produce responsive image variants
-4. Minifies `js/app.js` with Terser
-5. Syncs to S3 with cache headers
-6. Invalidates CloudFront
+2. GitHub Actions builds with `hugo --minify` (Hugo Extended's native image pipeline produces every resized/webp variant as part of this one step)
+3. Minifies `js/app.js` with Terser
+4. Syncs to S3 with cache headers
+5. Invalidates CloudFront
 
 ## Anti-Patterns to Avoid
 
