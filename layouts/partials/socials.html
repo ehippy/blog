@@ -9,7 +9,7 @@
 		{{- else }}
 		{{- $title := (replace (strings.TrimSuffix "_url" $key) "-" " ") | strings.Title }}
 		{{- $icon := (replace (strings.TrimSuffix "_url" $key) "facebook" "facebook-f") }}
-		<a href="{{ $value }}" target="_blank" class="socials__item__link" title="{{ $title }}">
+		<a href="{{ $value }}" target="_blank" rel="noopener" class="socials__item__link" title="{{ $title }}">
 			<i class="fab fa-{{ $icon }}" aria-hidden="true"></i>
 		</a>
 		{{- end }}
@@ -18,7 +18,7 @@
 	{{- end }}
 
 	<li class="socials__item">
-		<a href="https://mastodon.social/@ehippy" target="_blank" class="socials__item__link" title="Mastodon" rel="me">
+		<a href="https://mastodon.social/@ehippy" target="_blank" class="socials__item__link" title="Mastodon" rel="me noopener">
 			<i class="fab fa-mastodon" aria-hidden="true"></i>
 		</a>
 	</li>
