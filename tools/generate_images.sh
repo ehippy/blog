@@ -27,6 +27,15 @@ command -v vipsthumbnail >/dev/null 2>&1 || { echo "error: libvips (vipsthumbnai
 command -v cwebp >/dev/null 2>&1 || { echo "error: cwebp is required" >&2; exit 1; }
 command -v gif2webp >/dev/null 2>&1 || { echo "error: gif2webp is required" >&2; exit 1; }
 
+# vipsthumbnail renamed its output option from -o/--output to --path at some
+# point; support both so this works across the libvips version installed
+# locally (e.g. Homebrew) and whatever's on the CI runner (apt, often older).
+if vipsthumbnail --help 2>&1 | grep -q -- '--path'; then
+  vips_out() { vipsthumbnail -s "$1" --path="$2" "$3"; }
+else
+  vips_out() { vipsthumbnail -s "$1" -o "$2" "$3"; }
+fi
+
 # Parse the output widths (the "NNpx" values, not the breakpoint keys) out of a
 # preset's sizes block from data/picture.yml.
 preset_sizes() {
@@ -61,7 +70,7 @@ for img in "$SRC"/*; do
       [ -n "$width" ] || continue
       # Original format, resized
       resized="$OUT/$stem-${width}w.$lower_ext"
-      vipsthumbnail -s "$width" --path="$resized$save_opts" "$img"
+      vips_out "$width" "$resized$save_opts" "$img"
       # Webp variant. cwebp can't read GIF input, so re-encode the already-resized
       # GIF with gif2webp instead of resizing the source again.
       if [ "$lower_ext" = "gif" ]; then
