@@ -129,19 +129,20 @@
 }
 
 .pagination {
-	margin-top: 0;
-	padding: 40px 20px 0;
+	overflow: hidden;
+	padding: 70px 20px 0;
+	border-top: 1px solid $border-color;
 
 	@include mq(tabletp) {
-		padding: 55px 40px 0;
+		padding: 90px 40px 0;
 	}
 
 	@include mq(tabletl) {
-		padding: 75px 40px 0;
+		padding: 110px 40px 0;
 	}
 
 	@include mq(laptop) {
-		padding: 93px 60px 0;
+		padding: 133px 60px 0;
 	}
 }
 
@@ -152,6 +153,13 @@
 	.button {
 		display: block;
 		text-align: center;
+		background: transparent;
+		color: $accent-color;
+
+		&:hover {
+			background: $accent-color;
+			color: $background-color;
+		}
 	}
 }
 

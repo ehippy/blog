@@ -379,6 +379,21 @@ $grid-spacing: {{ (hugo.Data).settings.grid_settings.grid_spacing }}px;
 		}
 	}
 
+	.pagination {
+		border-top-color: $dark-border-color;
+	}
+
+	.pagination__prev .button,
+	.pagination__next .button {
+		color: $dark-accent-color !important;
+		border-color: $dark-accent-color;
+
+		&:hover {
+			background: $dark-accent-color;
+			color: $dark-background-color !important;
+		}
+	}
+
 	// Related posts dark mode styles
 	.related-posts {
 		border-top-color: $dark-border-color;
