@@ -47,3 +47,9 @@ section = ["RSS"]
   # token falls back to a title-derived slug when unset, not the filename.
   # Use :filename directly so URLs match the pre-migration site exactly.
   post = "/:filename/"
+
+# The Jekyll-era html-minifier kept quoted attribute values; Hugo's --minify
+# strips them by default, which the html-validate CI check (attr-quotes rule)
+# flags as an error on every page. Keep quoting to match prior output.
+[minify.tdewolff.html]
+  keepQuotes = true

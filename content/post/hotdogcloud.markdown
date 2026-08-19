@@ -16,6 +16,7 @@ I wish I'd went to the trouble of recording the presentation, and will try that 
 
 ## Hotdog Cloud?
 <img src="/images/dogClip.gif" style="float:right;padding-left:20px;" alt="Animated hotdog clip">
+
 The hottest space in tech in 2017 is inarguably hotdog detection and non-detection. Everybody's trying to get a piece of the action. So I spent a couple nights building <https://hotdog.cloud> a mobile-friendly hotdog detection app. Give it a try! It's especially good on your phone. [Hotdog cloud is open sourced on github](https://github.com/ehippy/hotdog), so feel free to fork away.
 
 [Hotdog Cloud](https://hotdog.cloud) ties together about half a dozen AWS services to offer an encrypted, zero-cost-at-rest web application. It's a pretty tight demonstration of the power available with some succinct glue-code to remix a number of ready-built cloud services to achieve a pretty slick outcome.
