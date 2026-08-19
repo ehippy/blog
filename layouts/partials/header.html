@@ -31,10 +31,10 @@
 		<p class="header__tagline">{{ $tagline }}</p>
 
 		<nav class="menu" aria-label="Main navigation">
-			<div class="menu__toggle js-menu-toggle">
+			<button type="button" class="menu__toggle js-menu-toggle" aria-expanded="false" aria-controls="menu-wrap" aria-label="Toggle menu">
 				<div class="menu__toggle__icon"><span></span></div>
-			</div>
-			<div class="menu__wrap">
+			</button>
+			<div class="menu__wrap" id="menu-wrap">
 				<ul class="menu__list">
 					{{- range index (index $settings "menu_settings") "menu_items" }}
 					<li class="menu__list__item">

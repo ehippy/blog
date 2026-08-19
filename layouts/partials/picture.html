@@ -39,9 +39,9 @@
         {{- range $w := $sizes }}
           {{- $entry := "" -}}
           {{- if $isOriginal }}
-            {{- $entry = (printf "/generated/%s-%dw%s" $base $w $outExt) -}}
+            {{- $entry = (printf "/generated/%s-%dw%s %dw" $base $w $outExt $w) -}}
           {{- else }}
-            {{- $entry = (printf "/generated/%s-%s-%dw%s" $base $format $w $outExt) -}}
+            {{- $entry = (printf "/generated/%s-%s-%dw%s %dw" $base $format $w $outExt $w) -}}
           {{- end }}
           {{- $srcSet = $srcSet | append $entry -}}
         {{- end }}
@@ -49,9 +49,9 @@
       {{- end }}
       {{- $origSrcSet := slice -}}
       {{- range $w := $sizes }}
-        {{- $origSrcSet = $origSrcSet | append (printf "/generated/%s-%dw%s" $base $w $ext) -}}
+        {{- $origSrcSet = $origSrcSet | append (printf "/generated/%s-%dw%s %dw" $base $w $ext $w) -}}
       {{- end }}
-      <img class="lazy-load" src="/images/{{ $imgName }}" srcset="{{ delimit $origSrcSet ", " }}" sizes="{{ $sizesAttr }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="lazy">
+      <img class="lazy-load" src="/images/{{ $imgName }}" srcset="{{ delimit $origSrcSet ", " }}" sizes="{{ $sizesAttr }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
     </picture>
   {{- end }}
 {{- end }}

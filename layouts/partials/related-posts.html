@@ -20,11 +20,11 @@
 
 {{- $selected := slice -}}
 {{- if gt (len $candidates) 0 -}}
-  {{- $seed := int (div (int $page.Date.Unix) 17) }}
+  {{- $seed := int $page.Date.Unix }}
   {{- $total := len $candidates }}
   {{- range seq 0 4 }}
     {{- if ge (len $selected) $maxRelated }}{{ break }}{{ end -}}
-    {{- $idx := int (math.Mod (add $seed (int .)) $total) }}
+    {{- $idx := int (math.Mod (mul (add $seed (int .)) 17) $total) }}
     {{- $pick := index $candidates $idx }}
     {{- $isDup := false }}
     {{- range $selected }}{{ if eq .RelPermalink $pick.RelPermalink }}{{ $isDup = true }}{{ end }}{{ end }}
@@ -48,7 +48,7 @@
         <article class="related-post">
           {{- with $post.Params.featured_image }}
             <a href="{{ $post.RelPermalink }}" class="related-post__image">
-              {{ partial "picture.html" (dict "page" $post "preset" "default") }}
+              {{ partial "picture.html" (dict "page" $post "preset" "archive") }}
             </a>
           {{- end }}
           <div class="related-post__content">

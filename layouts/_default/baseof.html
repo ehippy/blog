@@ -29,12 +29,12 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{{ $title }}">
 	<meta name="twitter:description" content="{{ if .Description }}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}">
-	<meta name="twitter:image:src" content="{{ site.BaseURL }}{{ with .Params.featured_image }}{{ . }}{{ end }}">
+	<meta name="twitter:image:src" content="{{ with .Params.featured_image }}{{ site.BaseURL }}images/{{ . }}{{ end }}">
 
 	<!-- Facebook OpenGraph -->
 	<meta property="og:title" content="{{ $title }}" />
 	<meta property="og:description" content="{{ if .Description }}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
-	<meta property="og:image" content="{{ site.BaseURL }}{{ with .Params.featured_image }}{{ . }}{{ end }}" />
+	<meta property="og:image" content="{{ with .Params.featured_image }}{{ site.BaseURL }}images/{{ . }}{{ end }}" />
 
 	<!-- Font Embed Code - loaded async to avoid render blocking -->
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,800|Muli:400,400i,600,800&display=swap">

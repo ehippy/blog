@@ -21,6 +21,11 @@ disableKinds = ["taxonomy", "term"]
 home = ["HTML", "RSS"]
 section = ["RSS"]
 
+[outputFormats.RSS]
+  # Jekyll served the feed at /feed.xml (see data/settings.yml rss_url);
+  # Hugo defaults to /index.xml. Keep the old path for existing subscribers.
+  baseName = "feed"
+
 # Jekyll: markdown: kramdown (GFM) + rouge highlighting.
 # Hugo: goldmark is GFM by default; Chroma is rouge-compatible.
 [markup]

@@ -255,11 +255,15 @@ pageFunctions();
 
 // Menu toggle
 document.addEventListener('click', function(e) {
-	if (e.target.closest('.js-menu-toggle')) {
-		document.body.classList.toggle('menu--open');
+	const toggle = e.target.closest('.js-menu-toggle');
+	if (toggle) {
+		const isOpen = document.body.classList.toggle('menu--open');
+		toggle.setAttribute('aria-expanded', isOpen);
 	}
 
 	if (e.target.closest('.menu__list__item__link') && document.body.classList.contains('menu--open')) {
 		document.body.classList.remove('menu--open');
+		const menuToggle = document.querySelector('.js-menu-toggle');
+		if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
 	}
 });

@@ -1,5 +1,6 @@
 ---
 title: "Résumé"
+description: "Patrick McDavid's résumé — engineering leadership experience in Colorado."
 featured_image: "sage.png"
 ---
 

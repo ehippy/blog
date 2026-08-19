@@ -158,7 +158,7 @@ hugo server -D                        # Live-reload dev server, drafts included
 ```
 
 ### Production (Automatic via GitHub Actions)
-1. `git push` to master
+1. `git push` to main
 2. GitHub Actions builds with `hugo --minify`
 3. Runs `tools/generate_images.sh` to produce responsive image variants
 4. Minifies `js/app.js` with Terser

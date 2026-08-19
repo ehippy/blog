@@ -20,8 +20,7 @@
 
 	<div class="wrap">
 
-		{{- range .Paginator.Pages }}
-		{{- $post := . }}
+		{{- range $i, $post := .Paginator.Pages }}
 
 		<article class="blog-post">
 
@@ -32,7 +31,7 @@
 
 			{{- with $post.Params.featured_image }}
 			<a href="{{ $post.RelPermalink }}" class="blog-post__image">
-				{{ partial "picture.html" (dict "page" $post "preset" "default" "fetchpriority" (cond (eq $.Paginator.PageNumber 1) "high" "")) }}
+				{{ partial "picture.html" (dict "page" $post "preset" "default" "fetchpriority" (cond (and (eq $.Paginator.PageNumber 1) (eq $i 0)) "high" "")) }}
 			</a>
 			{{- end }}
 			<div class="blog-post__content">
