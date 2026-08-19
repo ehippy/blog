@@ -58,8 +58,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - name: Download all workflow run artifacts
+    - name: Download site artifact
       uses: actions/download-artifact@v8
+      with:
+        name: site_content
+        path: ./site_content
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v6
       with:
