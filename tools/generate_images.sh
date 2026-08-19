@@ -22,6 +22,11 @@ OUTPUT="${1:-$ROOT/public}"
 SRC="$ROOT/static/images"
 OUT="$OUTPUT/generated"
 mkdir -p "$OUT"
+# The older vipsthumbnail -o/--output flag resolves a relative output path
+# relative to the *input* file's directory, not the CWD (a leftover from its
+# original %s-template batch-conversion design) — make sure it's absolute so
+# that quirk can't put files under static/images/ instead of $OUT.
+OUT="$(cd "$OUT" && pwd)"
 
 command -v vipsthumbnail >/dev/null 2>&1 || { echo "error: libvips (vipsthumbnail) is required" >&2; exit 1; }
 command -v cwebp >/dev/null 2>&1 || { echo "error: cwebp is required" >&2; exit 1; }
