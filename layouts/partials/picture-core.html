@@ -14,7 +14,7 @@
   {{- $alt := $.alt -}}
   {{- $ext := $imgName | path.Ext | lower -}}
   {{- if eq $ext ".gif" }}
-    <img class="lazy-load" src="/images/{{ $imgName }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
+    <img src="/images/{{ $imgName }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
   {{- else }}
     {{- $preset := ($.preset | default "default") -}}
     {{- $cfg := index (index ((hugo.Data).picture) "presets") $preset -}}
@@ -31,7 +31,7 @@
       {{- $imgRes := resources.Get (printf "images/%s" $imgName) -}}
       {{- with $imgRes -}}
         {{- $isJpeg := or (eq $ext ".jpg") (eq $ext ".jpeg") -}}
-        <picture class="lazy-load">
+        <picture>
           {{- range $format := $cfg.formats }}
             {{- $isOriginal := eq $format "original" -}}
             {{- $type := "" -}}
@@ -58,7 +58,7 @@
             {{- $resized := $imgRes.Resize (printf "%dx%s" $w (cond $isJpeg " q70" "")) -}}
             {{- $origSrcSet = $origSrcSet | append (printf "%s %dw" $resized.RelPermalink $w) -}}
           {{- end }}
-          <img class="lazy-load" src="/images/{{ $imgName }}" srcset="{{ delimit $origSrcSet ", " }}" sizes="{{ $sizesAttr }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
+          <img src="/images/{{ $imgName }}" srcset="{{ delimit $origSrcSet ", " }}" sizes="{{ $sizesAttr }}" alt="{{ $alt }}"{{ with $.fetchpriority }} fetchpriority="{{ . }}"{{ end }} loading="{{ if $.fetchpriority }}eager{{ else }}lazy{{ end }}">
         </picture>
       {{- end }}
     {{- end }}

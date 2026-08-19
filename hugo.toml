@@ -14,12 +14,15 @@ pagination.pagerSize = 6
 enableRobotsTXT = true
 
 # Tags/categories are surfaced via the client-side filter on /archive/, not
-# Hugo's native taxonomy pages, so skip generating those.
-disableKinds = ["taxonomy", "term"]
+# Hugo's native taxonomy pages, so skip generating those. The "post" section
+# page is unlinked and has no HTML template of its own (posts are listed via
+# the paginated home page instead), so disable it too rather than let it
+# leak an orphaned /post/feed.xml — a redundant duplicate of the home
+# page's already-linked /feed.xml — into sitemap.xml.
+disableKinds = ["taxonomy", "term", "section"]
 
 [outputs]
 home = ["HTML", "RSS"]
-section = ["RSS"]
 
 [outputFormats.RSS]
   # Jekyll served the feed at /feed.xml (see data/settings.yml rss_url);
