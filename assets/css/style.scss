@@ -35,6 +35,7 @@ $dark-text-medium-color: {{ (hugo.Data).settings.color_settings.dark_text_medium
 $dark-text-light-color: {{ (hugo.Data).settings.color_settings.dark_text_light_color }};
 $dark-border-color: {{ (hugo.Data).settings.color_settings.dark_border_color }};
 $dark-overlay-background-color: {{ (hugo.Data).settings.color_settings.dark_overlay_background_color }};
+$dark-accent-color: {{ (hugo.Data).settings.color_settings.dark_accent_color }};
 
 
 // Fonts
@@ -238,13 +239,17 @@ $grid-spacing: {{ (hugo.Data).settings.grid_settings.grid_spacing }}px;
 		}
 
 		a {
-			color: $accent-color;
+			color: $dark-accent-color;
+		}
+
+		.single p a {
+			border-bottom-color: $dark-accent-color;
 		}
 
 		blockquote {
 			background: $dark-background-alt-color;
-			border-left-color: $dark-border-color;
-			color: $dark-text-light-color;
+			border-left-color: $dark-accent-color;
+			color: $dark-text-dark-color;
 		}
 
 		pre, code {
@@ -280,34 +285,33 @@ $grid-spacing: {{ (hugo.Data).settings.grid_settings.grid_spacing }}px;
 		color: $dark-text-medium-color;
 
 		&:hover {
-			color: $accent-color;
+			color: $dark-accent-color;
 		}
 	}
 
 	// Blog post styles
-	.blog-grid {
-		.blog-post {
-			background: $dark-background-alt-color;
-			border-color: $dark-border-color;
+	.blog-post {
+		.blog-post__title a {
+			color: $dark-text-dark-color;
 
-			.blog-post__title a {
-				color: $dark-text-dark-color;
+			&:hover {
+				color: $dark-accent-color;
 			}
+		}
 
-			.blog-post__subtitle {
-				color: $dark-text-medium-color;
-			}
+		.blog-post__subtitle {
+			color: $dark-text-medium-color;
+		}
 
-			.blog-post__date {
-				color: $dark-text-light-color;
-			}
+		.blog-post__date {
+			color: $dark-text-light-color;
 		}
 	}
 
 	// Tag pills on archive page
 	.tag-pill {
-		background-color: $dark-border-color;
-		color: $dark-text-medium-color;
+		background-color: rgba($dark-accent-color, 0.15);
+		color: $dark-accent-color;
 	}
 
 	// Button styling fix for dark mode
@@ -323,9 +327,9 @@ $grid-spacing: {{ (hugo.Data).settings.grid_settings.grid_spacing }}px;
 	.archive-post {
 		a {
 			color: $dark-text-dark-color;
-			
+
 			&:hover {
-				color: $accent-color;
+				color: $dark-accent-color;
 			}
 		}
 	}
@@ -397,7 +401,7 @@ $grid-spacing: {{ (hugo.Data).settings.grid_settings.grid_spacing }}px;
 		color: $dark-text-dark-color;
 
 		&:hover {
-			color: $accent-color;
+			color: $dark-accent-color;
 		}
 	}
 
@@ -405,8 +409,8 @@ $grid-spacing: {{ (hugo.Data).settings.grid_settings.grid_spacing }}px;
 		color: $dark-text-light-color;
 
 		.tag {
-			background: rgba($accent-color, 0.2);
-			color: $accent-color;
+			background: rgba($dark-accent-color, 0.2);
+			color: $dark-accent-color;
 		}
 	}
 

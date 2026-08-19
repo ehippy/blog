@@ -186,16 +186,20 @@
 	}
 
 	table {
-		border: 2px solid $text-dark-color;
+		border: 1px solid $border-color;
+		border-radius: 10px;
+		overflow: hidden;
 
 		thead {
-			background: $text-dark-color;
-			color: $background-color;
+			background: $background-alt-color;
+			color: $text-dark-color;
 			text-align: left;
 			font-weight: $bold-weight;
 
 			th {
 				font-weight: $bold-weight;
+				background: $background-alt-color;
+				color: $text-dark-color;
 			}
 		}
 

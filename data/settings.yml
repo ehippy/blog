@@ -57,21 +57,22 @@ color_settings:
   text_dark_color: '#2A2F36'
   text_medium_color: '#6C7A89'
   text_light_color: '#ABB7B7'
-  text_zazz_color: '#0f9d57'
-  accent_color: '#0f9d57'
-  border_color: '#dddddd'
+  text_zazz_color: '#047857'
+  accent_color: '#047857'
+  border_color: '#e4e7eb'
   overlay_background_color: '#161B21'
   overlay_text_color: '#ffffff'
   error_color: '#D64541'
 
   # Dark mode colors
-  dark_background_color: '#1a1a1a'
-  dark_background_alt_color: '#2d2d2d'
-  dark_text_dark_color: '#ffffff'
-  dark_text_medium_color: '#b0b0b0'
-  dark_text_light_color: '#808080'
-  dark_border_color: '#404040'
-  dark_overlay_background_color: '#0d0d0d'
+  dark_background_color: '#17181a'
+  dark_background_alt_color: '#212226'
+  dark_text_dark_color: '#f2f2f2'
+  dark_text_medium_color: '#adb1b8'
+  dark_text_light_color: '#7d828a'
+  dark_border_color: '#34363b'
+  dark_overlay_background_color: '#0c0d0f'
+  dark_accent_color: '#34d399'
 
 font_settings:
   title_font: '"Merriweather", sans-serif'
@@ -79,11 +80,11 @@ font_settings:
   regular_weight: 400
   bold_weight: 800
   site_title:
-    small_size: 25
-    medium_size: 30
-    large_size: 35
-    weight: 400
-    letter_spacing: 0
+    small_size: 24
+    medium_size: 28
+    large_size: 32
+    weight: 800
+    letter_spacing: -0.01
   site_tagline:
     small_size: 16
     medium_size: 17
@@ -98,24 +99,24 @@ font_settings:
     weight: 400
     letter_spacing: 0
   h1:
-    small_size: 25
-    medium_size: 35
-    large_size: 45
-    weight: 400
-    letter_spacing: -0.02
-    line_height: 1.2
+    small_size: 28
+    medium_size: 42
+    large_size: 54
+    weight: 800
+    letter_spacing: -0.03
+    line_height: 1.1
   h2:
-    small_size: 20
-    medium_size: 28
-    large_size: 30
-    weight: 400
+    small_size: 22
+    medium_size: 30
+    large_size: 36
+    weight: 800
     letter_spacing: -0.02
-    line_height: 1.2
+    line_height: 1.15
   h3:
-    small_size: 18
-    medium_size: 22
-    large_size: 26
-    weight: 400
+    small_size: 19
+    medium_size: 23
+    large_size: 27
+    weight: 800
     letter_spacing: -0.02
     line_height: 1.3
   h4:

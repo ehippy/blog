@@ -33,6 +33,7 @@
 	font-size: 17px;
 	line-height: 1;
 	color: $background-color;
+	@include transition(all 0.15s ease-in-out);
 
 	@include mq(tabletp) {
 		width: 40px;
@@ -50,5 +51,6 @@
 	&:hover {
 		background: $accent-color;
 		color: $background-color;
+		transform: translateY(-2px);
 	}
 }
