@@ -1,6 +1,7 @@
 ---
 title: "Game Dev with Microsoft Makecode Arcade"
 date: "2020-02-23"
+slug: "makecodearcade"
 featured_image: "princessLastStandScreenShot01.png"
 tags: [Game Design, Personal Growth]
 ---

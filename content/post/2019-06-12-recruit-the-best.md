@@ -1,6 +1,7 @@
 ---
 title: "Recruit the best with Video"
 date: "2019-06-12"
+slug: "recruit-the-best"
 subtitle: "It's simple and fun!"
 featured_image: "elephant.jpg"
 tags: [Speaking]

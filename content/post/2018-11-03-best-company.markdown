@@ -1,6 +1,7 @@
 ---
 title: "Working for the Best Company"
 date: "2018-11-03"
+slug: "best-company"
 featured_image: "best-company.jpg"
 tags: [Business]
 ---

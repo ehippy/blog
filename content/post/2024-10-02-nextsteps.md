@@ -1,6 +1,7 @@
 ---
 title: "Playing with Computers"
 date: "2024-10-02"
+slug: "nextsteps"
 featured_image: "breakfastNm.jpg"
 tags: [Business, Personal, Software Engineering]
 ---

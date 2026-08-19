@@ -1,6 +1,7 @@
 ---
 title: "Practicing Making Choices"
 date: "2018-11-13"
+slug: "childs-choices"
 featured_image: "leo-blue.jpg"
 tags: [Personal Growth]
 ---

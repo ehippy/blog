@@ -1,6 +1,7 @@
 ---
 title: "VisionOS is too big"
 date: "2024-01-05"
+slug: "spatialwindowmanagement"
 featured_image: "VisionHomeScreenInKitchen-min.PNG"
 tags: [Technology]
 ---

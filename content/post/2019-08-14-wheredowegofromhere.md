@@ -1,6 +1,7 @@
 ---
 title: "Personal Goal Sheet!"
 date: "2019-08-14"
+slug: "wheredowegofromhere"
 subtitle: "It's simple and fun!"
 featured_image: "wrenAndLeo.jpg"
 tags: [Personal, Personal Growth, Software Engineering]

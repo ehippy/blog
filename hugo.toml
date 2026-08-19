@@ -42,11 +42,12 @@ section = ["RSS"]
 
 [permalinks]
   # Jekyll derived a post's URL from its filename (date prefix stripped), not
-  # its title. Content files were renamed to match those original filenames,
-  # but none of them set an explicit `slug:` front matter — and Hugo's :slug
-  # token falls back to a title-derived slug when unset, not the filename.
-  # Use :filename directly so URLs match the pre-migration site exactly.
-  post = "/:filename/"
+  # its title. Posts now use dated filenames (2018-11-03-best-company.md) for
+  # chronological browsability, with an explicit `slug:` front-matter field
+  # carrying the original date-free Jekyll slug — Hugo prefers an explicit
+  # slug over both the filename and its title-derived fallback, so URLs still
+  # match the pre-migration site exactly.
+  post = "/:slug/"
 
 # The Jekyll-era html-minifier kept quoted attribute values; Hugo's --minify
 # strips them by default, which the html-validate CI check (attr-quotes rule)

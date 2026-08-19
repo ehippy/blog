@@ -1,6 +1,7 @@
 ---
 title: "Single-Table Database Design"
 date: "2024-12-04"
+slug: "singletable"
 featured_image: "arcs.jpg"
 tags: [Infrastructure, Game Design, Software Engineering]
 ---

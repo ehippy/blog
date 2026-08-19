@@ -1,6 +1,7 @@
 ---
 title: "2026's Game"
 date: "2026-01-02"
+slug: "this-years-game"
 description: "Brainstorming something to build this year."
 featured_image: "recreate_at_your_own_risk.png"
 tags: [Game Design, Projects]

@@ -1,6 +1,7 @@
 ---
 title: "My Thesis"
 date: "2018-11-05"
+slug: "my-thesis"
 featured_image: "winter-graf.jpg"
 tags: [Ideas, Personal Growth, Personal]
 ---

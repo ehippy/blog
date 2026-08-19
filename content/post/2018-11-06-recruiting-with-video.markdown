@@ -1,6 +1,7 @@
 ---
 title: "Recruiting Top Talent with Video"
 date: "2018-11-06"
+slug: "recruiting-with-video"
 featured_image: "laptop-graf.jpg"
 tags: [Speaking]
 ---

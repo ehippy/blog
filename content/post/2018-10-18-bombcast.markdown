@@ -1,6 +1,7 @@
 ---
 title: "Podcast: Video Sales Strategies - The Bombcast!"
 date: "2018-10-18"
+slug: "bombcast"
 featured_image: "product-cast.jpg"
 tags: [Speaking, Product Strategy]
 ---

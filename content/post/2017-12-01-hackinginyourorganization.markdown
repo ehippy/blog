@@ -1,6 +1,7 @@
 ---
 title: "Monthly Hackathons at BombBomb"
 date: "2017-12-01"
+slug: "hackinginyourorganization"
 description: "Treat your engineers like artists."
 featured_image: "roots.jpg"
 tags: [Technology, Business, Software Engineering]

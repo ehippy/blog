@@ -1,6 +1,7 @@
 ---
 title: "DVLP Denver Serverless Presentation"
 date: "2019-02-26"
+slug: "hotdogtalk"
 subtitle: "Never leave an engineer on an island."
 featured_image: "jaws.jpg"
 tags: [Infrastructure, Speaking, AI/ML, Software Engineering]

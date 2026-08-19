@@ -1,6 +1,7 @@
 ---
 title: "Accidently Carbon-Neutral Blog"
 date: "2025-06-30"
+slug: "accidentally-carbon-neutral"
 categories: [infrastructure, sustainability]
 tags: [Infrastructure, Technical Excellence, Technology]
 featured_image: "gardenKid.jpeg"

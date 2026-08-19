@@ -1,6 +1,7 @@
 ---
 title: "Spoken Worlds"
 date: "2011-05-11"
+slug: "spoken-worlds"
 subtitle: "Language and Culture’s Creation of Reality"
 description: "Philosophy Thesis"
 featured_image: "aspens.JPG"

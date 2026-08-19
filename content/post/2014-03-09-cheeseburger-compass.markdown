@@ -1,6 +1,7 @@
 ---
 title: "Cheeseburger Compass"
 date: "2014-03-09"
+slug: "cheeseburger-compass"
 subtitle: "A handheld device to that navigates to flavor"
 description: "A GIS / python / raspberry pi collaboration!"
 featured_image: "white-castle.jpg"

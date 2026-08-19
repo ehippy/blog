@@ -1,6 +1,7 @@
 ---
 title: "The Gaia and the Hydra"
 date: "2017-03-01"
+slug: "gaia"
 subtitle: "Global Fault Tolerance"
 description: "Philosophy Thesis"
 featured_image: "hydra_final_by_forrestime.png"

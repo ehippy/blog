@@ -1,6 +1,7 @@
 ---
 title: "Beyond full stack"
 date: "2018-06-29"
+slug: "beyond-full-stack"
 featured_image: "bombbomb-team.jpg"
 tags: [Software Engineering, Business]
 ---

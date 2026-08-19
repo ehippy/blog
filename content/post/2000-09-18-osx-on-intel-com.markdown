@@ -1,6 +1,7 @@
 ---
 title: "OSXonIntel.com"
 date: "2000-09-18"
+slug: "osx-on-intel-com"
 subtitle: "A petition asking Apple to port OSX to Intel hardware"
 description: "A petition site from twenty years ago"
 featured_image: "osxOnIntelScreen.png"

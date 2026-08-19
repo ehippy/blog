@@ -1,6 +1,7 @@
 ---
 title: "Two-Slice Software Teams"
 date: "2018-12-15"
+slug: "twosliceteams"
 subtitle: "Never leave an engineer on an island."
 featured_image: "pizza.jpg"
 tags: [Software Engineering, Business]

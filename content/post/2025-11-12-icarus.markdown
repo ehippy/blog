@@ -1,6 +1,7 @@
 ---
 title: 'Icarus: My First Game Jam'
 date: "2025-11-12"
+slug: "icarus"
 description: 'Behind the scenes of creating Icarus: my entry in the TripTech² game jam for the Mothership RPG, from concept to Grand Prize and beyond.'
 featured_image: "icarusDeluxe.jpg"
 tags: [Game Design, Projects]

@@ -1,6 +1,7 @@
 ---
 title: "Email Authentication: Securing Digital Communication in an Insecure World"
 date: "2023-08-29"
+slug: "emailauthentication"
 featured_image: "SunsetDesk.png"
 tags: [Technical Excellence, Technology]
 ---

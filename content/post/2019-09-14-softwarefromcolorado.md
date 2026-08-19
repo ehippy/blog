@@ -1,6 +1,7 @@
 ---
 title: "Software, from the heart of Colorado"
 date: "2019-09-14"
+slug: "softwarefromcolorado"
 featured_image: "BombBomb_portraits_WEB_02.png"
 tags: [Software Engineering, Business]
 ---

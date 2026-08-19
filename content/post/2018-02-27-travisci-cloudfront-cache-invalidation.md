@@ -1,6 +1,7 @@
 ---
 title: "CloudFront Invalidation with TravisCI"
 date: "2018-02-27"
+slug: "travisci-cloudfront-cache-invalidation"
 featured_image: "cloudyMountain.jpg"
 tags: [Infrastructure, Software Engineering]
 ---

@@ -1,6 +1,7 @@
 ---
 title: "NASDAQ CTO Summit"
 date: "2017-11-30"
+slug: "cto-summit"
 description: "Feeling jazzed to hear some CTOs and VPEs drop knowledge next week."
 featured_image: "post-6.jpg"
 tags: [Travel, Business, Technology]
