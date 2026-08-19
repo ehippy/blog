@@ -133,8 +133,8 @@ tools/
 ## Common Tasks
 
 ### Add a Blog Post
-1. Create `content/post/slug.md`
-2. Add front matter: `title`, `description`, `date`, `featured_image`, `tags`
+1. Create `content/post/YYYY-MM-DD-slug.md`
+2. Add front matter: `title`, `description`, `date`, `slug` (date-free — this is what drives the URL, via `permalinks.post = "/:slug/"` in hugo.toml), `featured_image`, `tags`
 3. Featured image must exist in `static/images/`
 4. Use markdown for content; Hugo automatically generates a summary/excerpt
 
