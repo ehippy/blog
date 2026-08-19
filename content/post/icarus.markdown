@@ -1,0 +1,104 @@
+---
+title: 'Icarus: My First Game Jam'
+date: "2025-11-12"
+description: 'Behind the scenes of creating Icarus: my entry in the TripTech² game jam for the Mothership RPG, from concept to Grand Prize and beyond.'
+featured_image: "icarusDeluxe.jpg"
+tags: [Game Design, Projects]
+---
+
+Here's the story of how I wrote [a little piece of Sci-Fi Horror](https://kinggeekus.itch.io/icarus) for a game jam and ended up winning some stellar awards! Read on for a casual design diary of a ship in deep shit.
+<!--more--> 
+
+## Mothership
+<div style="float:right;width:15%; margin-left: 20px;">
+  {% picture mothership.png alt="Mothership Players Survival Guide" %}
+</div>
+
+In late 2019 some lovely friends and I got together and played Dungeons and Dragons together every couple weeks for more than two years. It's one of my favorite gaming memories ever and it introduced me to tabletop role playing games. Since then I've run and played a number of different tabletop games, and my latest favorite is a neat [lo-fi, sci-fi, zine-flavored horror thing called Mothership](https://www.tuesdayknightgames.com/pages/mothership-rpg).
+
+
+<div style="float:left;width:20%; margin-right: 20px;">
+  {% picture Ypsilon-14.png alt="The Haunting of Ypsilon-14" %}
+</div>
+
+One of the best things about Mothership is its rich third-party content ecosystem. There are hundreds of folks making all kinds of fun add-ons for the game. New stories, space ships, tools and more are published constantly. These range from [200 page, hardbound anthologies of fun stuff for $50](https://www.tuesdayknightgames.com/products/hull-breach) to little 10 page zines, all the way down to Mothership's hallmark trifolds. This yellow one to the left here is the quintessential mothership adventure, and the whole story fits on a double-sided sheet of paper.
+
+I adore these little publications because they're little fun-snacks. A whole scenario the game master can read and internalize in 15 minutes. The good ones all have some great hook, prime evil, or creative new thing for the players to stumble into and figure out.
+
+## A little push to get started
+
+I've never been a homebrew guy. I liked running authored adventures for my players, as I thought the whole endeavor of dreaming a whole world up was so terribly daunting. But, a little tri-fold? Shoot I could manage that. I'd been puttering around with an idea for one for a month or two when I came across an [in-progress game jam specifically for Mothership tri-folds](https://itch.io/jam/triptech2) called TripTech<sup>2</sup>. This game jam only went on for three weeks, and I was coming to it with only half that remaining.
+
+TripTech's theme was "Impossibly Perfect", so I sketched out some too-good-to-be-true space horror scenarios. I met some buddies for an evening at the pub and we shot some thoughts around and came up with a tight little sci-fi thriller about a fast spaceship that's going to do a close, faster-than-light slingshot-maneuver over the surface of a star. I'm not sure we nailed impossibly perfect with a ship that can use a sun to hop from planet to planet, but it does turn out too good to be true.
+
+{% picture icarusNotes.png alt="Notes about icarus" %}
+
+## Building a dying ship
+
+I brought the idea home and set to work trying to create a cast of characters and some challenges to overcome. Then for the next couple weeks I'd spend an hour or two most nights toiling over a hot design app to mash together something I liked.
+
+<div style="float:right;margin-left:20px;">
+    <img src="/images/icarusRefinements.gif" alt="Animated refinements to the layout" />
+</div>
+
+I started with layout first, and ended up writing the whole thing in a graphic design program, Figma, rather than in a word processor. I don't think I'll ever do that again, its spelling/grammar tools are weak. I fiddled and futzed with the language: I went with fun on-the-nose names like **Dr. Haste** and **Engineer Patch** for the characters, which I think made it simple to internalize. 
+
+Having to fit so much text into such precise little spaces was a fun little game.
+
+One big gamble I decided to go with was to have almost a whole panel of the two-sided trifold be an introductory narrative to set the stage and put the characters in harm's way. In some ways this is antithetical to the roleplaying to sink the characters like this without their agency. But I think it works really well as what the [Lazy Dungeonmaster calls a Strong Start](https://slyflourish.com/starting_strong.html).
+
+Another thing I wrestled with was the inclusion of a [Newt](https://avp.fandom.com/wiki/Rebecca_%22Newt%22_Jorden)-esque child in the story for the characters to discover, save and be aided by. I got some strong feedback that this was cheap or unnecessary. Two or three times I removed and re-added the character, and I'm glad I left them as a roleplay cornerstone and opposite to the big-bad of the story.
+
+I found a person willing to do a little art for a ship. I shared versions with the other jam participants and got lots of great feedback. It was a riot.
+
+## Shipping a disaster
+As I got close to final, I was able to get a license for *Icarus* from the Mothership publisher, and I submitted my entry to the game jam.
+
+<a href="https://kinggeekus.itch.io/icarus">{% picture IcarusItchCoverWithAwards.png alt="Cover art for Icarus, featuring a burning star" %}</a>
+
+I felt like I'd done a good job, but also like I had some stiff competition from the other submissions. I spent the next few days reading and rating all 32 entries to the jam. I was particularly impressed with some of the entries with really slick art:
+
+<br />
+<div style="display: flex; gap: 10px; justify-content: center;">
+    <div style="width: 33%;">
+      {% picture triptech_Minerva.png alt="Minerva" %}
+    </div>
+    <div style="width: 33%;">
+      {% picture triptech_NeonDreamGirl.png alt="Neon Dream Girl" %}
+    </div>
+    <div style="width: 33%;">
+      {% picture triptech_Xiao.png alt="Xiao" %}
+    </div>
+</div>
+It was fun to read through these murder mysteries, generation-ship intrigues and deadly dumpling houses.
+
+## Celebrations all around
+Immediately after the jam concluded, the community ratings were available on [itch.io](https://itch.io/jam/triptech2/results), and Icarus took second place under the delightful [Xiao! Long! Bao!](https://xiaofang64.itch.io/xiao-long-bao). 
+
+A week later TripTech's panel of judges handed out the awards for a number of categories and, blowing my mind, _Icarus took four of them:_
+
+- The **Jury Grand Prize** for Best Overall Entry
+- Best Writing
+- Best Game Design
+- Best Utility
+- Community Select (2nd place in community voting)
+
+I was blown away. There were so many cool entries! I think Icarus stood out in part for being very immediate and in your face. The scenario starts you essentially on fire, and needing to solve yourself out of harm's way from the jump. 
+
+## Playing with fire, and some other dads
+I had those same friends over last week and sat down to have an analog good time laughing and rolling dice playing through Icarus. They sent my little story through the wringer, they did a few different things I never expected. One player's character died walking through fire to save his friends. Another character died being torn apart by a reprogrammed android. In the end they saved the day and escaped.
+
+{% picture icarusOnTheTable.jpg alt="Dads rolling dice" %}
+
+They were able to short-circuit one of the puzzle challenges and skip a whole corner of the ship, but that's fine, those NPCs are still lurking on the ship for the next session. Much fun was had by all.
+
+## She's out there, somewhere
+
+I put it [up for sale on itch.io for a couple bucks](https://kinggeekus.itch.io/icarus). I invite you to take a look. I even added a little supplement to flesh out the titular ship herself in case she survives the scenario and the players, perhaps, comandeer her. 😉
+<br />
+<br />
+<div class="align-center">
+    <iframe src="https://itch.io/embed/3991400?bg_color=000000&amp;fg_color=ffffff&amp;link_color=d45800&amp;border_color=656c73" width="552" height="167" title="Icarus: A Hot Mothership One-Shot game"></iframe>
+</div>
+
+I'm looking forward to hearing from folks that run it how it went. I'm hoping to get the publishers of Mothership to stock some physical copies in their store. We'll see. In any case, what a fun ride. I may run Icarus for some other friends soon, and TripTech3 is only a few months away.

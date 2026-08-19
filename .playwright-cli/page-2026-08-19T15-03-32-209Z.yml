@@ -1,0 +1,162 @@
+- generic [active] [ref=f11e1]:
+  - banner [ref=f11e2]:
+    - img "Technology CTO and software engineer in Colorado" [ref=f11e5]
+    - generic [ref=f11e8]:
+      - link "Patrick McDavid" [ref=f11e9] [cursor=pointer]:
+        - /url: /
+      - paragraph [ref=f11e10]: Software and games from Colorado
+      - navigation "Main navigation" [ref=f11e11]:
+        - generic [ref=f11e12]:
+          - list [ref=f11e13]:
+            - listitem [ref=f11e14]:
+              - link "Home" [ref=f11e15] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f11e16]:
+              - link "All Posts" [ref=f11e17] [cursor=pointer]:
+                - /url: /archive/
+            - listitem [ref=f11e18]:
+              - link "Résumé" [ref=f11e19] [cursor=pointer]:
+                - /url: /resume/
+            - listitem [ref=f11e20]:
+              - link "About" [ref=f11e21] [cursor=pointer]:
+                - /url: /about
+          - list [ref=f11e22]:
+            - listitem [ref=f11e23]:
+              - link "Instagram" [ref=f11e24] [cursor=pointer]:
+                - /url: https://www.instagram.com/ehippy/
+            - listitem [ref=f11e27]:
+              - link "Github" [ref=f11e28] [cursor=pointer]:
+                - /url: https://github.com/ehippy/
+            - listitem [ref=f11e31]:
+              - link "Linkedin" [ref=f11e32] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/pmcdavid/
+            - listitem [ref=f11e35]:
+              - link "RSS Feed" [ref=f11e36] [cursor=pointer]:
+                - /url: http://patrickmcdavid.com/feed.xml
+            - listitem [ref=f11e39]:
+              - link "Mastodon" [ref=f11e40] [cursor=pointer]:
+                - /url: https://mastodon.social/@ehippy
+            - listitem [ref=f11e43]:
+              - link "Toggle dark mode" [ref=f11e44] [cursor=pointer]:
+                - /url: "#"
+  - main "Main content" [ref=f11e47]:
+    - generic [ref=f11e48]:
+      - generic [ref=f11e50]:
+        - article [ref=f11e51]:
+          - generic [ref=f11e52]:
+            - heading [level=2] [ref=f11e53]:
+              - link "2026's Game" [ref=f11e54] [cursor=pointer]:
+                - /url: /this-years-game/
+            - paragraph [ref=f11e55]: 02 January 2026
+          - link [ref=f11e56] [cursor=pointer]:
+            - /url: /this-years-game/
+            - img "2026's Game" [ref=f11e58]
+          - generic [ref=f11e59]:
+            - paragraph [ref=f11e60]:
+              - text: I’ve futzed with video game design in the past with my competitive multiplayer
+              - link "Infight" [ref=f11e61] [cursor=pointer]:
+                - /url: /infight/
+              - text: ", and the cutsie little handheld shooter,"
+              - link "Princess’ Last Stand" [ref=f11e62] [cursor=pointer]:
+                - /url: /makecodearcade/
+              - text: and a few other toys along the way. Last year’s
+              - link "Icarus" [ref=f11e63] [cursor=pointer]:
+                - /url: /icarus/
+              - text: was a pen and paper hit. So what’s it going to be in 2026? I want to put something new together.
+            - paragraph [ref=f11e64]:
+              - link "Read 2026's Game" [ref=f11e65] [cursor=pointer]:
+                - /url: /this-years-game/
+        - article [ref=f11e66]:
+          - generic [ref=f11e67]:
+            - heading [level=2] [ref=f11e68]:
+              - 'link "Icarus: My First Game Jam" [ref=f11e69] [cursor=pointer]':
+                - /url: /icarus/
+            - paragraph [ref=f11e70]: 12 November 2025
+          - link [ref=f11e71] [cursor=pointer]:
+            - /url: /icarus/
+            - 'img "Icarus: My First Game Jam" [ref=f11e73]'
+          - generic [ref=f11e74]:
+            - paragraph [ref=f11e75]:
+              - text: Here’s the story of how I wrote
+              - link "a little piece of Sci-Fi Horror" [ref=f11e76] [cursor=pointer]:
+                - /url: https://kinggeekus.itch.io/icarus
+              - text: for a game jam and ended up winning some stellar awards! Read on for a casual design diary of a ship in deep shit.
+            - paragraph [ref=f11e77]:
+              - 'link "Read Icarus: My First Game Jam" [ref=f11e78] [cursor=pointer]':
+                - /url: /icarus/
+        - article [ref=f11e79]:
+          - generic [ref=f11e80]:
+            - heading [level=2] [ref=f11e81]:
+              - link "Accidently Carbon-Neutral Blog" [ref=f11e82] [cursor=pointer]:
+                - /url: /accidentally-carbon-neutral/
+            - paragraph [ref=f11e83]: 30 June 2025
+          - link [ref=f11e84] [cursor=pointer]:
+            - /url: /accidentally-carbon-neutral/
+            - img "Accidently Carbon-Neutral Blog" [ref=f11e86]
+          - generic [ref=f11e87]:
+            - paragraph [ref=f11e88]:
+              - text: "I was a big hippie in college: birks, hacky sack, environmental minor. The whole deal. I’ve never been able to marry those halcyon days to the week to week technical work I’ve spent my career doing. Today, waiting on a little technical blocker, I thought about it some and went on a"
+              - link "green-software" [ref=f11e89] [cursor=pointer]:
+                - /url: https://greensoftware.foundation/
+              - text: micro-adventure.
+            - paragraph [ref=f11e90]:
+              - link "Read Accidently Carbon-Neutral Blog" [ref=f11e91] [cursor=pointer]:
+                - /url: /accidentally-carbon-neutral/
+        - article [ref=f11e92]:
+          - generic [ref=f11e93]:
+            - heading [level=2] [ref=f11e94]:
+              - link "A little fight on Discord" [ref=f11e95] [cursor=pointer]:
+                - /url: /infight/
+            - paragraph [ref=f11e96]: 11 December 2024
+          - link [ref=f11e97] [cursor=pointer]:
+            - /url: /infight/
+            - img "A little fight on Discord" [ref=f11e99]
+          - generic [ref=f11e100]:
+            - paragraph [ref=f11e101]:
+              - text: So I made
+              - link "a thing" [ref=f11e102] [cursor=pointer]:
+                - /url: https://infight.io
+              - text: "! I’ve wanted to build this game for over ten years. If you look through my"
+              - link "GitHub" [ref=f11e103] [cursor=pointer]:
+                - /url: https://github.com/ehippy
+              - text: ", there’re something like six discarded attempts since the early teens. I was handed some free time over the last couple months, and found my way to picking up my most recent attempt and actually getting it up and online! Here’re some thoughts on where it came from, what it is today, and where it might go."
+            - paragraph [ref=f11e104]:
+              - link "Read A little fight on Discord" [ref=f11e105] [cursor=pointer]:
+                - /url: /infight/
+        - article [ref=f11e106]:
+          - generic [ref=f11e107]:
+            - heading [level=2] [ref=f11e108]:
+              - link "Single-Table Database Design" [ref=f11e109] [cursor=pointer]:
+                - /url: /singletable/
+            - paragraph [ref=f11e110]: 04 December 2024
+          - link [ref=f11e111] [cursor=pointer]:
+            - /url: /singletable/
+            - img "Single-Table Database Design" [ref=f11e113]
+          - generic [ref=f11e114]:
+            - paragraph [ref=f11e115]: I’ve wanted to do this videogame for years. I’ve started it handful of times, in C#, Python, Node. Well, with some time on my hands, I finally got around to really taking a good swing at it. I started by picking up the last version of it I’d started a couple years ago. For the last two weeks, I’ve been enjoying really getting into some fullstack creation.
+            - paragraph [ref=f11e116]:
+              - link "Read Single-Table Database Design" [ref=f11e117] [cursor=pointer]:
+                - /url: /singletable/
+        - article [ref=f11e118]:
+          - generic [ref=f11e119]:
+            - heading [level=2] [ref=f11e120]:
+              - link "Playing with Computers" [ref=f11e121] [cursor=pointer]:
+                - /url: /nextsteps/
+            - paragraph [ref=f11e122]: 02 October 2024
+          - link [ref=f11e123] [cursor=pointer]:
+            - /url: /nextsteps/
+            - img "Playing with Computers" [ref=f11e125]
+          - generic [ref=f11e126]:
+            - paragraph [ref=f11e127]:
+              - text: I did poorly in high school. F’s finally after years of C’s and D’s coming up through junior high. Instead of homework, I spent my nights pushing my 75mhz win95 box further and further online. Geocities and
+              - link "early Bungie games" [ref=f11e128] [cursor=pointer]:
+                - /url: https://en.wikipedia.org/wiki/Myth:_The_Fallen_Lords
+              - text: . That phone line screamed moving bits around at 9600 baud. AOL discs piled up as I spent their promised “100 free hours” each to access the proto-internet. HTML and game-modding led to ColdFusion and IIS servers.
+            - paragraph [ref=f11e129]:
+              - link "Read Playing with Computers" [ref=f11e130] [cursor=pointer]:
+                - /url: /nextsteps/
+      - navigation "Pagination" [ref=f11e131]:
+        - link "Older Posts" [ref=f11e133] [cursor=pointer]:
+          - /url: /page2/
+  - contentinfo [ref=f11e136]:
+    - generic [ref=f11e137]: © 2026 Patrick McDavid

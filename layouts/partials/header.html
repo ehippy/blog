@@ -1,0 +1,51 @@
+{{- $settings := index (hugo.Data) "settings" -}}
+{{- $siteTitle := index $settings "basic_settings" "site_title" -}}
+{{- $tagline := index $settings "basic_settings" "site_tagline" -}}
+{{- $logo := index (index $settings "header_settings") "logo_image" -}}
+
+<header class="header">
+
+	{{- with .Params.featured_image }}
+	<div class="header-image header-image--on">
+		{{ partial "picture.html" (dict "page" $ "preset" "default" "fetchpriority" "high") }}
+	</div>
+	{{- else }}
+	<div class="header-image header-image--on"></div>
+	{{- end }}
+	<div class="header-image"></div>
+
+	<div class="header-overlay"></div>
+
+	<div class="header__content">
+
+		{{- if $logo }}
+		<a href="/" class="header__logo">
+			<img src="{{ $logo }}" class="header__logo__img">
+		</a>
+		{{- else }}
+		<a href="/" class="header__title">
+			{{ $siteTitle }}
+		</a>
+		{{- end }}
+
+		<p class="header__tagline">{{ $tagline }}</p>
+
+		<nav class="menu" aria-label="Main navigation">
+			<div class="menu__toggle js-menu-toggle">
+				<div class="menu__toggle__icon"><span></span></div>
+			</div>
+			<div class="menu__wrap">
+				<ul class="menu__list">
+					{{- range index (index $settings "menu_settings") "menu_items" }}
+					<li class="menu__list__item">
+						<a href="{{ .url }}" class="menu__list__item__link">{{ .title }}</a>
+					</li>
+					{{- end }}
+				</ul>
+				{{ partial "socials.html" . }}
+			</div>
+		</nav>
+
+	</div>
+
+</header>

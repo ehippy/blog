@@ -1,0 +1,56 @@
+{{ define "main" }}
+
+{{- if and .Title .Date }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify | safeJS }},
+  "description": {{ if .Description }}{{ .Description | jsonify | safeJS }}{{ else }}{{ .Summary | plainify | jsonify | safeJS }}{{ end }},
+  "datePublished": "{{ .Date.UTC.Format "2006-01-02T15:04:05-07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": {{ index (index hugo.Data.settings "basic_settings") "site_title" | jsonify | safeJS }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ index (index hugo.Data.settings "basic_settings") "site_title" | jsonify | safeJS }},
+    "url": {{ site.BaseURL | jsonify | safeJS }}
+  }{{- with .Params.tags }},
+  "keywords": {{ delimit . ", " | jsonify | safeJS }}
+  {{- end }}
+}
+</script>
+{{- end }}
+
+<section class="intro">
+
+	<div class="wrap">
+
+		<h1>{{ .Title }}</h1>
+		<p class="post-meta"><span class="post-date">{{ .Date.Format "January 2, 2006" }}</span> ~ {{ partial "reading-time.html" . }}
+		{{- with .Params.tags }}
+			~
+			{{- range $i, $tag := . }}
+				<a href="/archive/?tag={{ $tag | strings.ToLower }}">{{ $tag }}</a>{{ if ne $i (sub (len .) 1) }}, {{ end }}
+			{{- end }}
+		{{- end }}
+		</p>
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		{{ .Content }}
+
+	</div>
+
+</section>
+
+{{ partial "related-posts.html" . }}
+
+{{ end }}

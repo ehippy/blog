@@ -3,34 +3,34 @@
 Branch: `hugo-migration`
 
 ## Branch & scaffolding
-1. Create a branch (e.g. `hugo-migration`)
-2. Run `hugo new site` (in place or a temp dir) to scaffold Hugo config/layouts
-3. Verify `hugo` is installed locally (add `hugo` to the GitHub Actions workflow later)
+1. [x] Create a branch (e.g. `hugo-migration`)
+2. [x] Run `hugo new site` (in place or a temp dir) to scaffold Hugo config/layouts
+3. [x] Verify `hugo` is installed locally (added to the GitHub Actions workflow via `peaceiris/actions-hugo`)
 
 ## Content
-4. Move `_posts/*` → `content/post/`
-5. Move `_pages/*` → `content/` (about, archive, resume, 404)
-6. Move `_drafts/*` → `content/` with `draft: true`
-7. Move `_data/*.yml` → `data/`
-8. Move `images/` → `static/`
-9. Clean up front matter: drop `layout:` lines, add `date:` where missing
+4. [x] Move `_posts/*` → `content/post/`
+5. [x] Move `_pages/*` → `content/` (about, archive, resume; 404 is served by `layouts/404.html` directly, no content file needed)
+6. [x] Move `_drafts/*` → `content/post/` with `draft: true`
+7. [x] Move `_data/*.yml` → `data/`
+8. [x] Move `images/` → `static/`
+9. [x] Clean up front matter: drop `layout:` lines, add `date:` where missing
 
 ## Templates
-10. Port `_layouts/` → `layouts/` (default, post, page, index)
-11. Port `_includes/` → `layouts/partials/` (header, footer, socials, related-posts, reading-time)
-12. Move `css/style.scss` + `_sass/` into Hugo's asset pipeline
+10. [x] Port `_layouts/` → `layouts/` (default, post, page, index) — old `_layouts/` removed
+11. [x] Port `_includes/` → `layouts/partials/` (header, footer, socials, related-posts, reading-time, picture) — old `_includes/` removed
+12. [x] Move `css/style.scss` + `_sass/` into Hugo's asset pipeline (`assets/css/`, compiled via `resources.ExecuteAsTemplate` + `toCSS`)
 
 ## Config & features
-13. Write `hugo.toml` (site title/URL, pagination, menus from `settings.yml`)
-14. Set up RSS + sitemap (Hugo built-in; drop jekyll-feed/sitemap)
-15. Handle the picture/responsive-image pipeline (`_data/picture.yml` + `jekyll_picture_tag`)
-16. Port the JSON-LD snippets (index, post, about)
+13. [x] Write `hugo.toml` (site title/URL, pagination, menus from `settings.yml`)
+14. [x] Set up RSS + sitemap (Hugo built-in; dropped jekyll-feed/sitemap; disabled unused taxonomy/term output)
+15. [x] Handle the picture/responsive-image pipeline (`data/picture.yml` + `tools/generate_images.sh` + `picture.html` partial)
+16. [x] Port the JSON-LD snippets (index → Organization, post → BlogPosting, about → Person via `jsonld: person` front matter)
 
 ## Build & deploy
-17. Update GitHub Actions: swap `jekyll build` for `hugo`, output `public/` instead of `_site/`
-18. Update deploy script paths (`_site` → `public`, `generated` handling)
-19. Update Lighthouse + HTML validation workflows if they reference `_site`
+17. [x] Update GitHub Actions: swapped `jekyll build` for `hugo --minify` (renamed `jekyll.yml` → `hugo.yml`), output `public/` instead of `_site/`
+18. [x] Update deploy script paths (`_site` → `public`, `generated/` populated by `tools/generate_images.sh` as a build step)
+19. [x] Update Lighthouse + HTML validation workflows (`lighthouserc.json`, `lighthouse.yml`) to reference `public/` instead of `_site/`
 
 ## Verification
-20. Build locally, diff against current site, check posts/pages/pagination/images
-21. Deploy from the branch and eyeball the live site
+20. [x] Build locally, diff against current site, check posts/pages/pagination/images — `hugo --minify -D` builds clean with no warnings; spot-checked home, about, archive, resume, 404, and post pages; verified generated `<picture>` variants via a live `hugo server` smoke test
+21. [ ] Deploy from the branch and eyeball the live site — not done yet, needs a push + real S3/CloudFront deploy

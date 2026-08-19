@@ -1,0 +1,70 @@
+{{ define "main" }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ index (index hugo.Data.settings "basic_settings") "site_title" }}",
+  "url": "{{ site.BaseURL }}",
+  "description": "{{ index (index hugo.Data.settings "basic_settings") "site_tagline" }}",
+  "sameAs": [
+    {{- $social := index hugo.Data.settings "social_settings" }}
+    {{- if $social.github_url }}"{{ $social.github_url }}"{{ if or $social.linkedin_url $social.twitter_url }},{{ end }}{{ end }}
+    {{- if $social.linkedin_url }}"{{ $social.linkedin_url }}"{{ if $social.twitter_url }},{{ end }}{{ end }}
+    {{- if $social.twitter_url }}"{{ $social.twitter_url }}"{{ end }}
+  ]
+}
+</script>
+
+<section class="blog single">
+
+	<div class="wrap">
+
+		{{- range .Paginator.Pages }}
+		{{- $post := . }}
+
+		<article class="blog-post">
+
+			<div class="blog-post__header">
+				<h2 class="blog-post__title"><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></h2>
+				<p class="blog-post__subtitle">{{ $post.Date.Format "January 2, 2006" }}</p>
+			</div>
+
+			{{- with $post.Params.featured_image }}
+			<a href="{{ $post.RelPermalink }}" class="blog-post__image">
+				{{ partial "picture.html" (dict "page" $post "preset" "default" "fetchpriority" (cond (eq $.Paginator.PageNumber 1) "high" "")) }}
+			</a>
+			{{- end }}
+			<div class="blog-post__content">
+				{{ $post.Summary }}
+				<p><a href="{{ $post.RelPermalink }}" class="button">Read {{ $post.Title }}</a></p>
+			</div>
+
+		</article>
+
+		{{- end }}
+
+	</div>
+
+</section>
+
+{{- if gt .Paginator.TotalPages 1 }}
+
+<nav class="pagination" aria-label="Pagination">
+
+	{{- if .Paginator.HasPrev }}
+	<div class="pagination__prev">
+		<a href="{{ .Paginator.Prev.URL }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
+	</div>
+	{{- end }}
+	{{- if .Paginator.HasNext }}
+	<div class="pagination__next">
+		<a href="{{ .Paginator.Next.URL }}" class="button button--large"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	</div>
+	{{- end }}
+
+</nav>
+
+{{- end }}
+
+{{ end }}
