@@ -1,6 +1,6 @@
 //
 // App JS - Combined and Minified
-// Consolidates: dark-mode, archive-filter, journal
+// Consolidates: dark-mode, archive-filter, header-parallax, journal
 //
 
 // ============================================================================
@@ -220,6 +220,48 @@ if (window.matchMedia && defaultTheme === 'auto') {
 
     // Initialize archive filtering
     initializeArchiveFiltering();
+
+})();
+
+
+// ============================================================================
+// HEADER IMAGE PARALLAX
+// ============================================================================
+
+(function() {
+    'use strict';
+
+    // Pick a random pan direction (8-way compass) fresh on every page load
+    const panDirections = [
+        [0, -1], [0, 1], [1, 0], [-1, 0],
+        [1, -1], [-1, -1], [1, 1], [-1, 1]
+    ];
+    const [panX, panY] = panDirections[Math.floor(Math.random() * panDirections.length)];
+    document.documentElement.style.setProperty('--pan-x', panX);
+    document.documentElement.style.setProperty('--pan-y', panY);
+
+    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    let ticking = false;
+
+    function updateScrollProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollRange > 0 ? scrollTop / scrollRange : 0;
+        document.documentElement.style.setProperty('--scroll-progress', progress.toFixed(4));
+        ticking = false;
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateScrollProgress);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateScrollProgress();
 
 })();
 

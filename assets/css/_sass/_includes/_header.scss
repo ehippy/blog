@@ -24,6 +24,8 @@
 		bottom: 0;
 		width: 30%;
 		padding: 0;
+		-webkit-clip-path: polygon(0 0, calc(100% - 8vh) 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, calc(100% - 8vh) 0, 100% 100%, 0 100%);
 	}
 
 	@include mq(desktop) {
@@ -52,10 +54,20 @@
 		display: block;
 	}
 
+	img {
+		@include mq(tabletl) {
+			transform: scale(calc(1.12 + var(--scroll-progress, 0) * 0.14)) translate(calc(var(--scroll-progress, 0) * var(--pan-x, 0) * 6%), calc(var(--scroll-progress, 0) * var(--pan-y, -1) * 6%));
+			transform-origin: center;
+			will-change: transform;
+		}
+	}
+
 	@include mq(tabletl) {
 		position: fixed;
 		right: auto;
 		width: 30%;
+		-webkit-clip-path: polygon(0 0, calc(100% - 8vh) 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, calc(100% - 8vh) 0, 100% 100%, 0 100%);
 	}
 
 	@include mq(desktop) {
@@ -79,6 +91,8 @@
 		background: -moz-linear-gradient(top, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
 		background: -webkit-linear-gradient(top, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
 		background: linear-gradient(to bottom, rgba($overlay-background-color, 0) 0%, rgba($overlay-background-color, 0.01) 1%, rgba($overlay-background-color, $overlay-opacity) 70%, rgba($overlay-background-color, $overlay-opacity) 100%);
+		-webkit-clip-path: polygon(0 0, calc(100% - 8vh) 0, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, calc(100% - 8vh) 0, 100% 100%, 0 100%);
 	}
 }
 
