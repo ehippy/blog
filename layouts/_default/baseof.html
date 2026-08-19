@@ -25,16 +25,32 @@
 	<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
 	{{- end }}
 
+	<!-- Social preview image: resized to 1200px wide via the same Hugo image
+	     pipeline as picture-core.html, so crawlers don't fetch a multi-MB
+	     source original. GIFs are the one exception (see picture-core.html). -->
+	{{- $ogImage := "" -}}
+	{{- with .Params.featured_image }}
+		{{- $ext := . | path.Ext | lower }}
+		{{- if eq $ext ".gif" }}
+			{{- $ogImage = printf "%simages/%s" site.BaseURL . }}
+		{{- else }}
+			{{- with resources.Get (printf "images/%s" .) }}
+				{{- $isJpeg := or (eq $ext ".jpg") (eq $ext ".jpeg") }}
+				{{- $ogImage = (.Resize (printf "1200x%s" (cond $isJpeg " q70" ""))).Permalink }}
+			{{- end }}
+		{{- end }}
+	{{- end }}
+
 	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="{{ $title }}">
 	<meta name="twitter:description" content="{{ if .Description }}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}">
-	<meta name="twitter:image:src" content="{{ with .Params.featured_image }}{{ site.BaseURL }}images/{{ . }}{{ end }}">
+	<meta name="twitter:image:src" content="{{ $ogImage }}">
 
 	<!-- Facebook OpenGraph -->
 	<meta property="og:title" content="{{ $title }}" />
 	<meta property="og:description" content="{{ if .Description }}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}" />
-	<meta property="og:image" content="{{ with .Params.featured_image }}{{ site.BaseURL }}images/{{ . }}{{ end }}" />
+	<meta property="og:image" content="{{ $ogImage }}" />
 
 	<!-- Font Embed Code - loaded async to avoid render blocking -->
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,800|Muli:400,400i,600,800&display=swap">
