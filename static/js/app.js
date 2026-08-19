@@ -210,11 +210,7 @@ if (window.matchMedia && defaultTheme === 'auto') {
     function initializeArchiveFiltering() {
         // Only run if we're on a page with tag cloud items
         const tagButtons = document.querySelectorAll('.tag-cloud-item');
-        const urlParams = new URLSearchParams(window.location.search);
-        const tag = urlParams.get('tag');
-        const decodedTag = tag ? decodeURIComponent(tag) : null;
-        
-        
+
         if (tagButtons.length > 0) {
             handleInitialQuery();
             return true;
