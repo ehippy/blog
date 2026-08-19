@@ -35,9 +35,13 @@ jobs:
           hugo-version: '0.165.0'
           extended: true
       - name: Install image processing dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libvips-dev libvips-tools libpng-dev libjpeg-dev libwebp-dev libheif-dev webp
+        # DEBIAN_FRONTEND=noninteractive avoids apt hanging forever on a
+        # debconf/needrestart prompt with no terminal to answer it. Skips
+        # `apt-get update` — runner images ship a recent-enough index for
+        # these long-stable Ubuntu archive packages.
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: sudo apt-get install -y --no-install-recommends libvips-dev libvips-tools libpng-dev libjpeg-dev libwebp-dev libheif-dev webp
       - name: Build with Hugo
         # Outputs to the './public' directory by default
         run: hugo --minify
