@@ -1,0 +1,85 @@
+{{ define "main" }}
+
+<section class="intro">
+
+	<div class="wrap">
+
+		<h1>{{ .Title }}</h1>
+		{{- with .Params.subtitle }}
+		<p>{{ . }}</p>
+		{{- end }}
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		{{ .Content }}
+
+		<div class="tag-cloud-section">
+			<div class="tag-cloud">
+				<button type="button" class="tag-cloud-item active" data-tag="all" onclick="filterByTag('all', this)">All Posts</button>
+				{{- $allTags := slice }}
+				{{- range where site.RegularPages "Type" "post" }}
+					{{- range .Params.tags }}
+						{{- $t := . | strings.TrimSpace }}
+						{{- $exists := false }}
+						{{- range $allTags }}{{ if eq . $t }}{{ $exists = true }}{{ end }}{{ end -}}
+						{{- if and $t (not $exists) }}{{ $allTags = $allTags | append $t }}{{ end }}
+					{{- end }}
+				{{- end }}
+				{{- $allTags = $allTags | sort }}
+				{{- range $allTags }}
+					<button type="button" class="tag-cloud-item" data-tag="{{ . | strings.ToLower }}" onclick="filterByTag('{{ . | strings.ToLower }}', this)">{{ . }}</button>
+				{{- end }}
+			</div>
+		</div>
+
+		{{- $posts := (where site.RegularPages "Type" "post").ByDate.Reverse }}
+		{{- $currentYear := "" }}
+		{{- range $posts }}
+			{{- $post := . }}
+			{{- $year := $post.Date.Format "2006" }}
+			{{- if ne $year $currentYear }}
+				{{- if $currentYear }}
+		</ul>
+		</div>
+				{{- end }}
+				{{- $currentYear = $year }}
+		<div class="year-section">
+		<h3>{{ $year }}</h3>
+		<ul>
+			{{- end }}
+			<li class="archive-post" data-tags="{{ delimit (apply $post.Params.tags "strings.ToLower" ".") "|" }}">
+				{{- with $post.Params.featured_image }}
+					<div class="archive-thumbnail">
+						<a href="{{ $post.RelPermalink }}">
+							{{ partial "picture.html" (dict "page" $post "preset" "archive") }}
+						</a>
+					</div>
+				{{- end }}
+				<div class="archive-content">
+					<a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
+					{{- with $post.Params.tags }}
+						<div class="tag-pills">
+							{{- range . }}
+								<span class="tag-pill">{{ . | strings.Title }}</span>
+							{{- end }}
+						</div>
+					{{- end }}
+				</div>
+			</li>
+		{{- end }}
+		{{- if $currentYear }}
+		</ul>
+		</div>
+		{{- end }}
+
+	</div>
+
+</section>
+
+{{ end }}

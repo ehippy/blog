@@ -1,0 +1,49 @@
+# Hugo config — ported from Jekyll _config.yml
+# (jekyll-paginate → pagination.pagerSize, jekyll-feed/jekyll-sitemap → built-in
+#  RSS + sitemap, jekyll_picture_tag → tools/generate_images.sh + picture partial,
+#  kramdown+rouge → goldmark+chroma)
+
+baseURL = "https://patrickmcdavid.com/"
+locale = "en"
+title = "Patrick McDavid"
+description = "I'm a technology leader in Colorado speaking about serverless computing, team building, devops, and leadership development."
+
+# Jekyll: paginate: 6, paginate_path: /page:num/
+pagination.pagerSize = 6
+
+enableRobotsTXT = true
+
+# Tags/categories are surfaced via the client-side filter on /archive/, not
+# Hugo's native taxonomy pages, so skip generating those.
+disableKinds = ["taxonomy", "term"]
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["RSS"]
+
+[outputFormats.RSS]
+  # Jekyll served the feed at /feed.xml (see data/settings.yml rss_url);
+  # Hugo defaults to /index.xml. Keep the old path for existing subscribers.
+  baseName = "feed"
+
+# Jekyll: markdown: kramdown (GFM) + rouge highlighting.
+# Hugo: goldmark is GFM by default; Chroma is rouge-compatible.
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # Content contains raw HTML (JSON-LD scripts, floated divs)
+      unsafe = true
+  [markup.highlight]
+    noClasses = true
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    style = "base16-snazzy"
+
+[permalinks]
+  # Jekyll derived a post's URL from its filename (date prefix stripped), not
+  # its title. Content files were renamed to match those original filenames,
+  # but none of them set an explicit `slug:` front matter — and Hugo's :slug
+  # token falls back to a title-derived slug when unset, not the filename.
+  # Use :filename directly so URLs match the pre-migration site exactly.
+  post = "/:filename/"

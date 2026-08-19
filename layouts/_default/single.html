@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+{{- if eq .Params.jsonld "person" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ index (index hugo.Data.settings "basic_settings") "site_title" | jsonify | safeJS }},
+  "url": {{ site.BaseURL | jsonify | safeJS }},
+  "description": {{ index (index hugo.Data.settings "basic_settings") "site_tagline" | jsonify | safeJS }},
+  "sameAs": [
+    {{- $social := index hugo.Data.settings "social_settings" }}
+    {{- $sameAs := slice }}
+    {{- with $social.github_url }}{{ $sameAs = $sameAs | append . }}{{ end }}
+    {{- with $social.linkedin_url }}{{ $sameAs = $sameAs | append . }}{{ end }}
+    {{- with $social.twitter_url }}{{ $sameAs = $sameAs | append . }}{{ end }}
+    {{- range $i, $url := $sameAs }}{{ if $i }},{{ end }}{{ $url | jsonify | safeJS }}{{ end }}
+  ]
+}
+</script>
+{{- end }}
+
+<section class="intro">
+
+	<div class="wrap">
+
+		<h1>{{ .Title }}</h1>
+		{{- with .Params.subtitle }}
+		<p>{{ . }}</p>
+		{{- end }}
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		{{ .Content }}
+
+	</div>
+
+</section>
+
+{{ end }}

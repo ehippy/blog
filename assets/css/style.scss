@@ -1,0 +1,419 @@
+
+// - - - - - - - - - - Foundations
+
+@import "_reset";
+@import "_mixins";
+
+
+
+// - - - - - - - - - - Variables
+
+
+// Colors
+
+$background-color: {{ (hugo.Data).settings.color_settings.background_color }};
+$background-alt-color: {{ (hugo.Data).settings.color_settings.background_alt_color }};
+$border-color: {{ (hugo.Data).settings.color_settings.border_color }};
+
+$text-dark-color: {{ (hugo.Data).settings.color_settings.text_dark_color }};
+$text-medium-color: {{ (hugo.Data).settings.color_settings.text_medium_color }};
+$text-light-color: {{ (hugo.Data).settings.color_settings.text_light_color }};
+$text-accent-color: {{ (hugo.Data).settings.color_settings.accent_color }};
+
+$accent-color: {{ (hugo.Data).settings.color_settings.accent_color }};
+
+$overlay-background-color: {{ (hugo.Data).settings.color_settings.overlay_background_color }};
+$overlay-text-color: {{ (hugo.Data).settings.color_settings.overlay_text_color }};
+
+$error-color: {{ (hugo.Data).settings.color_settings.error_color }};
+
+// Dark mode colors
+$dark-background-color: {{ (hugo.Data).settings.color_settings.dark_background_color }};
+$dark-background-alt-color: {{ (hugo.Data).settings.color_settings.dark_background_alt_color }};
+$dark-text-dark-color: {{ (hugo.Data).settings.color_settings.dark_text_dark_color }};
+$dark-text-medium-color: {{ (hugo.Data).settings.color_settings.dark_text_medium_color }};
+$dark-text-light-color: {{ (hugo.Data).settings.color_settings.dark_text_light_color }};
+$dark-border-color: {{ (hugo.Data).settings.color_settings.dark_border_color }};
+$dark-overlay-background-color: {{ (hugo.Data).settings.color_settings.dark_overlay_background_color }};
+
+
+// Fonts
+
+$body-font: {{ (hugo.Data).settings.font_settings.body_font }};
+$title-font: {{ (hugo.Data).settings.font_settings.title_font }};
+
+$regular-weight: {{ (hugo.Data).settings.font_settings.regular_weight }};
+$bold-weight: {{ (hugo.Data).settings.font_settings.bold_weight }};
+
+
+// Typography
+
+$sitetitle-small: {{ (hugo.Data).settings.font_settings.site_title.small_size }}px;
+$sitetitle-medium: {{ (hugo.Data).settings.font_settings.site_title.medium_size }}px;
+$sitetitle-large: {{ (hugo.Data).settings.font_settings.site_title.large_size }}px;
+$sitetitle-weight: {{ (hugo.Data).settings.font_settings.site_title.weight }};
+$sitetitle-spacing: {{ (hugo.Data).settings.font_settings.site_title.letter_spacing }}em;
+
+$sitetagline-small: {{ (hugo.Data).settings.font_settings.site_tagline.small_size }}px;
+$sitetagline-medium: {{ (hugo.Data).settings.font_settings.site_tagline.medium_size }}px;
+$sitetagline-large: {{ (hugo.Data).settings.font_settings.site_tagline.large_size }}px;
+$sitetagline-weight: {{ (hugo.Data).settings.font_settings.site_tagline.weight }};
+$sitetagline-spacing: {{ (hugo.Data).settings.font_settings.site_tagline.letter_spacing }}em;
+$sitetagline-lineheight: {{ (hugo.Data).settings.font_settings.site_tagline.line_height }};
+
+$menu-small: {{ (hugo.Data).settings.font_settings.menu.small_size }}px;
+$menu-medium: {{ (hugo.Data).settings.font_settings.menu.medium_size }}px;
+$menu-large: {{ (hugo.Data).settings.font_settings.menu.large_size }}px;
+$menu-weight: {{ (hugo.Data).settings.font_settings.menu.weight }};
+$menu-spacing: {{ (hugo.Data).settings.font_settings.menu.letter_spacing }}em;
+
+$h1-small: {{ (hugo.Data).settings.font_settings.h1.small_size }}px;
+$h1-medium: {{ (hugo.Data).settings.font_settings.h1.medium_size }}px;
+$h1-large: {{ (hugo.Data).settings.font_settings.h1.large_size }}px;
+$h1-weight: {{ (hugo.Data).settings.font_settings.h1.weight }};
+$h1-spacing: {{ (hugo.Data).settings.font_settings.h1.letter_spacing }}em;
+$h1-lineheight: {{ (hugo.Data).settings.font_settings.h1.line_height }};
+
+$h2-small: {{ (hugo.Data).settings.font_settings.h2.small_size }}px;
+$h2-medium: {{ (hugo.Data).settings.font_settings.h2.medium_size }}px;
+$h2-large: {{ (hugo.Data).settings.font_settings.h2.large_size }}px;
+$h2-weight: {{ (hugo.Data).settings.font_settings.h2.weight }};
+$h2-spacing: {{ (hugo.Data).settings.font_settings.h2.letter_spacing }}em;
+$h2-lineheight: {{ (hugo.Data).settings.font_settings.h2.line_height }};
+
+$h3-small: {{ (hugo.Data).settings.font_settings.h3.small_size }}px;
+$h3-medium: {{ (hugo.Data).settings.font_settings.h3.medium_size }}px;
+$h3-large: {{ (hugo.Data).settings.font_settings.h3.large_size }}px;
+$h3-weight: {{ (hugo.Data).settings.font_settings.h3.weight }};
+$h3-spacing: {{ (hugo.Data).settings.font_settings.h3.letter_spacing }}em;
+$h3-lineheight: {{ (hugo.Data).settings.font_settings.h3.line_height }};
+
+$h4-small: {{ (hugo.Data).settings.font_settings.h4.small_size }}px;
+$h4-medium: {{ (hugo.Data).settings.font_settings.h4.medium_size }}px;
+$h4-large: {{ (hugo.Data).settings.font_settings.h4.large_size }}px;
+$h4-weight: {{ (hugo.Data).settings.font_settings.h4.weight }};
+$h4-spacing: {{ (hugo.Data).settings.font_settings.h4.letter_spacing }}em;
+$h4-lineheight: {{ (hugo.Data).settings.font_settings.h4.line_height }};
+
+$h5-small: {{ (hugo.Data).settings.font_settings.h5.small_size }}px;
+$h5-medium: {{ (hugo.Data).settings.font_settings.h5.medium_size }}px;
+$h5-large: {{ (hugo.Data).settings.font_settings.h5.large_size }}px;
+$h5-weight: {{ (hugo.Data).settings.font_settings.h5.weight }};
+$h5-spacing: {{ (hugo.Data).settings.font_settings.h5.letter_spacing }}em;
+$h5-lineheight: {{ (hugo.Data).settings.font_settings.h5.line_height }};
+
+$h6-small: {{ (hugo.Data).settings.font_settings.h6.small_size }}px;
+$h6-medium: {{ (hugo.Data).settings.font_settings.h6.medium_size }}px;
+$h6-large: {{ (hugo.Data).settings.font_settings.h6.large_size }}px;
+$h6-weight: {{ (hugo.Data).settings.font_settings.h6.weight }};
+$h6-spacing: {{ (hugo.Data).settings.font_settings.h6.letter_spacing }}em;
+$h6-lineheight: {{ (hugo.Data).settings.font_settings.h6.line_height }};
+
+$p-small: {{ (hugo.Data).settings.font_settings.p.small_size }}px;
+$p-medium: {{ (hugo.Data).settings.font_settings.p.medium_size }}px;
+$p-large: {{ (hugo.Data).settings.font_settings.p.large_size }}px;
+$p-weight: {{ (hugo.Data).settings.font_settings.p.weight }};
+$p-spacing: {{ (hugo.Data).settings.font_settings.p.letter_spacing }}em;
+$p-lineheight: {{ (hugo.Data).settings.font_settings.p.line_height }};
+
+$blockquote-small: {{ (hugo.Data).settings.font_settings.blockquote.small_size }}px;
+$blockquote-medium: {{ (hugo.Data).settings.font_settings.blockquote.medium_size }}px;
+$blockquote-large: {{ (hugo.Data).settings.font_settings.blockquote.large_size }}px;
+$blockquote-weight: {{ (hugo.Data).settings.font_settings.blockquote.weight }};
+$blockquote-spacing: {{ (hugo.Data).settings.font_settings.blockquote.letter_spacing }}em;
+$blockquote-lineheight: {{ (hugo.Data).settings.font_settings.blockquote.line_height }};
+
+$button-weight: {{ (hugo.Data).settings.font_settings.buttons.weight }};
+$button-spacing: {{ (hugo.Data).settings.font_settings.buttons.letter_spacing }}em;
+
+
+// Header
+$overlay-opacity: {{ (hugo.Data).settings.header_settings.overlay_opacity }};
+
+
+// Logo
+$logo-width: {{ (hugo.Data).settings.header_settings.logo_width }}px;
+
+
+// Grid item
+$grid-spacing: {{ (hugo.Data).settings.grid_settings.grid_spacing }}px;
+
+
+
+// - - - - - - - - - - Global styles
+
+@import "_basic";
+
+@import "_includes/_header";
+@import "_includes/_footer";
+
+@import "_includes/_content";
+@import "_includes/_socials";
+@import "_includes/_syntax";
+
+
+
+// - - - - - - - - - - Section styles
+
+@import "_includes/_portfolio";
+@import "_includes/_blog";
+
+
+// - - - - - - - - - - Dark Mode Styles
+
+{{- if (hugo.Data).settings.theme_settings.enable_dark_mode }}
+// Dark mode toggle (styled as social icon with green accent)
+.theme-toggle {
+	// Override social icon styling to make it green/special
+	background: $accent-color !important;
+	color: white !important;
+	
+	&:hover {
+		background: adjust-hue($accent-color, 15deg) !important;
+		color: white !important;
+	}
+	
+	// Show moon icon in light mode (default)
+	.theme-icon-moon {
+		display: block;
+	}
+	
+	.theme-icon-sun {
+		display: none;
+	}
+}
+
+// Dark mode styles
+[data-theme="dark"] {
+	body {
+		background: $dark-background-color;
+		color: $dark-text-medium-color;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: $dark-text-dark-color;
+	}
+
+	.page {
+		background: $dark-background-color;
+	}
+
+	// Switch theme toggle icons in dark mode
+	.theme-toggle {
+		.theme-icon-moon {
+			display: none;
+		}
+		
+		.theme-icon-sun {
+			display: block;
+		}
+	}
+
+	.header {
+		.header__title,
+		.header__tagline {
+			color: $dark-text-dark-color;
+		}
+	}
+
+	.menu__list__item__link {
+		color: $dark-text-medium-color;
+
+		&:hover {
+			color: $dark-text-dark-color;
+		}
+
+		&.active-link {
+			color: $dark-text-dark-color;
+		}
+	}
+
+	.post__content,
+	.page__content {
+		background: $dark-background-color;
+		color: $dark-text-medium-color;
+
+		p, li, td {
+			color: $dark-text-medium-color;
+		}
+
+		a {
+			color: $accent-color;
+		}
+
+		blockquote {
+			background: $dark-background-alt-color;
+			border-left-color: $dark-border-color;
+			color: $dark-text-light-color;
+		}
+
+		pre, code {
+			background: $dark-background-alt-color;
+			color: $dark-text-dark-color;
+		}
+
+		table {
+			border-color: $dark-border-color;
+
+			th, td {
+				border-color: $dark-border-color;
+				color: $dark-text-medium-color;
+			}
+
+			th {
+				background: $dark-background-alt-color;
+				color: $dark-text-dark-color;
+			}
+
+			tr:nth-child(2n) {
+				background: $dark-background-alt-color;
+			}
+		}
+	}
+
+	.footer {
+		background: $dark-background-alt-color;
+		color: $dark-text-medium-color;
+	}
+
+	.socials a {
+		color: $dark-text-medium-color;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	// Blog post styles
+	.blog-grid {
+		.blog-post {
+			background: $dark-background-alt-color;
+			border-color: $dark-border-color;
+
+			.blog-post__title a {
+				color: $dark-text-dark-color;
+			}
+
+			.blog-post__subtitle {
+				color: $dark-text-medium-color;
+			}
+
+			.blog-post__date {
+				color: $dark-text-light-color;
+			}
+		}
+	}
+
+	// Tag pills on archive page
+	.tag-pill {
+		background-color: $dark-border-color;
+		color: $dark-text-medium-color;
+	}
+
+	// Button styling fix for dark mode
+	.button {
+		color: white !important;
+		
+		&:hover {
+			color: white !important;
+		}
+	}
+
+	// Archive post styling
+	.archive-post {
+		a {
+			color: $dark-text-dark-color;
+			
+			&:hover {
+				color: $accent-color;
+			}
+		}
+	}
+
+	// Header image styling for dark mode
+	.header-image {
+		filter: brightness(0.9) contrast(1.1);
+	}
+
+	.header-overlay {
+		background: rgba($dark-overlay-background-color, 0.8);
+
+		@include mq(tabletl) {
+			background: -moz-linear-gradient(top, rgba($dark-overlay-background-color, 0.2) 0%, rgba($dark-overlay-background-color, 0.4) 1%, rgba($dark-overlay-background-color, 0.8) 70%, rgba($dark-overlay-background-color, 0.9) 100%);
+			background: -webkit-linear-gradient(top, rgba($dark-overlay-background-color, 0.2) 0%, rgba($dark-overlay-background-color, 0.4) 1%, rgba($dark-overlay-background-color, 0.8) 70%, rgba($dark-overlay-background-color, 0.9) 100%);
+			background: linear-gradient(to bottom, rgba($dark-overlay-background-color, 0.2) 0%, rgba($dark-overlay-background-color, 0.4) 1%, rgba($dark-overlay-background-color, 0.8) 70%, rgba($dark-overlay-background-color, 0.9) 100%);
+		}
+	}
+
+	// Tag cloud dark mode styles
+	.tag-cloud-section {
+		h3 {
+			color: $dark-text-dark-color;
+		}
+	}
+	
+	.tag-cloud-item {
+		border-color: $dark-border-color;
+		color: $dark-text-medium-color;
+		
+		&:hover {
+			background-color: $dark-background-alt-color;
+			border-color: $dark-text-light-color;
+			color: $dark-text-dark-color;
+		}
+		
+		&.active {
+			background-color: $accent-color;
+			border-color: $accent-color;
+			color: white;
+			
+			&:hover {
+				background-color: adjust-hue($accent-color, 15deg);
+				border-color: adjust-hue($accent-color, 15deg);
+				color: white;
+			}
+		}
+	}
+
+	// Related posts dark mode styles
+	.related-posts {
+		border-top-color: $dark-border-color;
+
+		h3 {
+			color: $dark-text-dark-color;
+		}
+	}
+
+	.related-post {
+		background: $dark-background-alt-color;
+		box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+
+		&:hover {
+			box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+		}
+	}
+
+	.related-post__title a {
+		color: $dark-text-dark-color;
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+
+	.related-post__meta {
+		color: $dark-text-light-color;
+
+		.tag {
+			background: rgba($accent-color, 0.2);
+			color: $accent-color;
+		}
+	}
+
+	.related-post__excerpt {
+		color: $dark-text-medium-color;
+	}
+}
+{{- end }}
+
+

@@ -1,0 +1,3 @@
+{{- /* Jekyll's kramdown config used auto_id_prefix: 'heading-'; match it here
+     so old inbound #heading-... fragment links keep resolving. */ -}}
+<h{{ .Level }} id="heading-{{ .Anchor }}">{{ .Text | safeHTML }}</h{{ .Level }}>

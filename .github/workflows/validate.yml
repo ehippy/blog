@@ -2,7 +2,7 @@ name: HTML Validation
 
 on:
   workflow_run:
-    workflows: ["Deploy Jekyll site to S3"]
+    workflows: ["Deploy Hugo site to S3"]
     types: [completed]
 
 jobs:

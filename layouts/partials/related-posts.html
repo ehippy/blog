@@ -1,0 +1,76 @@
+{{- /* Related posts: shares 1+ tags with the current post, picks up to 4.
+     Port of Jekyll related-posts.html, including its date-seeded pseudo-random
+     selection ((unixSeed + i) * 17 mod total) followed by order-fill dedupe. */ -}}
+{{- $page := . -}}
+{{- $maxRelated := 4 -}}
+{{- $minCommonTags := 1 -}}
+
+{{- $candidates := slice -}}
+{{- range where site.RegularPages "Type" "post" }}
+  {{- if ne .RelPermalink $page.RelPermalink }}
+    {{- $common := 0 -}}
+    {{- range $tag := .Params.tags }}
+      {{- $shared := false }}
+      {{- range $page.Params.tags }}{{ if eq . $tag }}{{ $shared = true }}{{ end }}{{ end -}}
+      {{- if $shared }}{{ $common = add $common 1 }}{{ end -}}
+    {{- end }}
+    {{- if ge $common $minCommonTags }}{{ $candidates = append . $candidates }}{{ end -}}
+  {{- end }}
+{{- end }}
+
+{{- $selected := slice -}}
+{{- if gt (len $candidates) 0 -}}
+  {{- $seed := int $page.Date.Unix }}
+  {{- $total := len $candidates }}
+  {{- range seq 0 4 }}
+    {{- if ge (len $selected) $maxRelated }}{{ break }}{{ end -}}
+    {{- $idx := int (math.Mod (mul (add $seed (int .)) 17) $total) }}
+    {{- $pick := index $candidates $idx }}
+    {{- $isDup := false }}
+    {{- range $selected }}{{ if eq .RelPermalink $pick.RelPermalink }}{{ $isDup = true }}{{ end }}{{ end }}
+    {{- if not $isDup }}{{ $selected = append $pick $selected }}{{ end -}}
+  {{- end }}
+  {{- range $candidate := $candidates }}
+    {{- if ge (len $selected) $maxRelated }}{{ break }}{{ end -}}
+    {{- $isDup := false }}
+    {{- range $selected }}{{ if eq .RelPermalink $candidate.RelPermalink }}{{ $isDup = true }}{{ end }}{{ end }}
+    {{- if not $isDup }}{{ $selected = append $candidate $selected }}{{ end -}}
+  {{- end }}
+{{- end }}
+
+{{- if gt (len $selected) 0 }}
+<section class="related-posts">
+  <div class="wrap">
+    <h3>Related Posts</h3>
+    <div class="related-posts__grid">
+      {{- range first $maxRelated $selected }}
+        {{- $post := . }}
+        <article class="related-post">
+          {{- with $post.Params.featured_image }}
+            <a href="{{ $post.RelPermalink }}" class="related-post__image">
+              {{ partial "picture.html" (dict "page" $post "preset" "archive") }}
+            </a>
+          {{- end }}
+          <div class="related-post__content">
+            <h4 class="related-post__title">
+              <a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a>
+            </h4>
+            <p class="related-post__meta">
+              {{ $post.Date.Format "January 02, 2006" }}
+              {{- with $post.Params.tags }}
+                ~
+                {{- range first 2 . }}
+                  <span class="tag">{{ . }}</span>
+                {{- end }}
+              {{- end }}
+            </p>
+            {{- with $post.Summary }}
+              <p class="related-post__excerpt">{{ . | plainify | truncate 120 }}</p>
+            {{- end }}
+          </div>
+        </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+{{- end }}

@@ -1,0 +1,5 @@
+{{- /* Reading time at 225 wpm (Jekyll reading-time.html equivalent; Hugo's
+     built-in .ReadingTime uses 200 wpm) */ -}}
+{{- $words := .WordCount -}}
+{{- $minutes := (math.Ceil (math.Div (float $words) 225.0)) | int -}}
+<span class="reading-time">{{ $minutes }} min read</span>

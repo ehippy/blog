@@ -2,7 +2,7 @@ name: Lighthouse CI
 
 on:
   workflow_run:
-    workflows: ["Deploy Jekyll site to S3"]
+    workflows: ["Deploy Hugo site to S3"]
     types:
       - completed
 
@@ -17,7 +17,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site_content
-          path: ./_site
+          path: ./public
           github-token: ${{ github.token }}
           run-id: ${{ github.event.workflow_run.id }}
       
