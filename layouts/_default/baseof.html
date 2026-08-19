@@ -11,10 +11,12 @@
 
 	<!-- Page Info -->
 	<link rel="shortcut icon" href="{{ index $settings "basic_settings" "favicon_image" }}">
+	<link rel="canonical" href="{{ .Permalink }}">
 	{{- $pageTitle := (cond (eq .RelPermalink "/") $siteTitle .Title) -}}
 	{{- $title := (cond (eq .RelPermalink "/") (printf "%s – %s" $siteTitle .Title) (printf "%s – %s" .Title $siteTitle)) -}}
 	<title>{{ $title }}</title>
 	<meta name="description" content="{{ if .Description }}{{ .Description | plainify }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+	{{ hugo.Generator }}
 
 	<!-- Preconnect to font services -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +75,7 @@
 	<style>{{ . }}</style>
 	{{- end }}
 
+	{{- if hugo.IsProduction }}
 	{{- with index $settings "advanced_settings" "analytics_code" }}
 	<!-- Analytics Code -->
 	{{ . }}
@@ -81,6 +84,7 @@
 	{{- with index $settings "advanced_settings" "header_js" }}
 	<!-- Extra Header JS Code -->
 	{{ . }}
+	{{- end }}
 	{{- end }}
 
 	{{- if index $settings "theme_settings" "enable_dark_mode" }}
@@ -131,9 +135,11 @@
 	<!-- Javascript Assets -->
 	<script defer src="/js/app.js"></script>
 
+	{{- if hugo.IsProduction }}
 	{{- with index $settings "advanced_settings" "footer_js" }}
 	<!-- Extra Footer JS Code -->
 	{{ . }}
+	{{- end }}
 	{{- end }}
 
 

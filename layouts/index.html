@@ -4,15 +4,15 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "{{ index (index hugo.Data.settings "basic_settings") "site_title" }}",
-  "url": "{{ site.BaseURL }}",
-  "description": "{{ index (index hugo.Data.settings "basic_settings") "site_tagline" }}",
-  "sameAs": [
-    {{- $social := index hugo.Data.settings "social_settings" }}
-    {{- if $social.github_url }}"{{ $social.github_url }}"{{ if or $social.linkedin_url $social.twitter_url }},{{ end }}{{ end }}
-    {{- if $social.linkedin_url }}"{{ $social.linkedin_url }}"{{ if $social.twitter_url }},{{ end }}{{ end }}
-    {{- if $social.twitter_url }}"{{ $social.twitter_url }}"{{ end }}
-  ]
+  "name": {{ index (index hugo.Data.settings "basic_settings") "site_title" | jsonify | safeJS }},
+  "url": {{ site.BaseURL | jsonify | safeJS }},
+  "description": {{ index (index hugo.Data.settings "basic_settings") "site_tagline" | jsonify | safeJS }},
+  {{- $social := index hugo.Data.settings "social_settings" -}}
+  {{- $sameAs := slice -}}
+  {{- with $social.github_url }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with $social.linkedin_url }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  {{- with $social.twitter_url }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+  "sameAs": {{ $sameAs | jsonify | safeJS }}
 }
 </script>
 
